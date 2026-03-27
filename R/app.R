@@ -25,8 +25,8 @@ plan(multisession)
 cfg <- yaml::read_yaml('config/paths.yaml')
 root_path <- cfg$paths$enquiries_root
 
-source('R/file_scanner.R')
-source('R/helpers.R')
+source('file_scanner.R')
+source('helpers.R')
 
 safe_read_lines <- function(file){
   if(requireNamespace('readr', quietly=TRUE)){
