@@ -1,0 +1,190 @@
+/* -----------------------------------------------------
+   GLOBAL
+----------------------------------------------------- */
+
+body, html {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  background-color: #f4f6f9;
+}
+
+/* Improve text readability */
+.content-wrapper, .right-side {
+  background: #f7f7f7 !important;
+  padding: 15px !important;
+}
+
+/* -----------------------------------------------------
+   HEADER / NAVBAR
+----------------------------------------------------- */
+
+.skin-blue .main-header .logo {
+  background-color: #2c3e50 !important;
+  color: white !important;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.skin-blue .main-header .navbar {
+  background-color: #2c3e50 !important;
+}
+
+.skin-blue .main-header .logo:hover,
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+  background-color: #233240 !important;
+}
+
+/* -----------------------------------------------------
+   SIDEBAR
+----------------------------------------------------- */
+
+.skin-blue .main-sidebar {
+  background-color: #2c3e50 !important;
+}
+
+.skin-blue .sidebar-menu > li > a {
+  color: #ecf0f1 !important;
+  font-size: 15px;
+}
+
+.skin-blue .sidebar-menu > li.active > a,
+.skin-blue .sidebar-menu > li:hover > a {
+  background: #1abc9c !important;
+  color: #fff !important;
+}
+
+/* -----------------------------------------------------
+   BOXES
+----------------------------------------------------- */
+
+.box {
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.box-header {
+  background: #f5f5f5 !important;
+  border-bottom: 1px solid #ddd !important;
+  padding: 12px 15px !important;
+}
+
+.box-title {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* -----------------------------------------------------
+   VALUE BOXES
+----------------------------------------------------- */
+
+.small-box {
+  border-radius: 6px;
+}
+
+.small-box .inner {
+  padding: 12px;
+}
+
+.small-box .icon {
+  top: 5px;
+  right: 10px;
+  opacity: 0.25;
+}
+
+/* -----------------------------------------------------
+   DATATABLES
+----------------------------------------------------- */
+
+table.dataTable {
+  font-size: 14px;
+  width: 100% !important;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+}
+
+.dataTables_wrapper .dataTables_length select {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 4px 10px;
+  margin: 2px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background: #1abc9c !important;
+  border: 1px solid #1abc9c !important;
+  color: white !important;
+}
+
+/* Highlight table rows on hover */
+table.dataTable tbody tr:hover {
+  background-color: #e8f8f5 !important;
+}
+
+/* -----------------------------------------------------
+   PLOT AREAS
+----------------------------------------------------- */
+
+.plotly {
+  border-radius: 6px;
+}
+
+/* -----------------------------------------------------
+   DETAIL PAGE
+----------------------------------------------------- */
+
+.well {
+  background: #fbfbfb;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+.well strong {
+  display: inline-block;
+  width: 120px;
+}
+
+/* -----------------------------------------------------
+   INPUTS (sidebar filters)
+----------------------------------------------------- */
+
+.control-label {
+  font-weight: 600;
+}
+
+.form-control {
+  border-radius: 4px !important;
+  border: 1px solid #ccc !important;
+}
+
+/* -----------------------------------------------------
+   BUTTONS
+----------------------------------------------------- */
+
+.btn {
+  border-radius: 4px !important;
+}
+
+.btn-default {
+  border: 1px solid #ccc !important;
+}
+
+/* -----------------------------------------------------
+   OVERFLOW & SPACING FIXES
+----------------------------------------------------- */
+
+#requests_table {
+  overflow-x: auto;
+}
+
+.sidebar {
+  padding-bottom: 50px;
+}
