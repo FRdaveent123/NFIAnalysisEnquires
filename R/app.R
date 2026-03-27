@@ -1,5 +1,5 @@
 # =====================================================================
-# app.R  -- Upload-based NFI Enquiries Dashboard (FINAL WORKING VERSION)
+# app.R  -- Enquiries Dashboard
 # =====================================================================
 
 library(shiny)
@@ -16,19 +16,197 @@ library(shinycssloaders)
 library(shinyjs)
 
 # =====================================================================
-# UI SECTIONS
+# FOREST RESEARCH BRANDING CSS
 # =====================================================================
 
-upload_gate_ui <- fluidPage(
-  tags$br(), tags$br(),
+fr_branding_css <- tags$head(
+  tags$style(HTML("
+    :root {
+      --fr-purple: #6E177E;
+      --fr-purple-dark: #4E0F59;
+      --fr-purple-light: #A884B2;
+      --fr-bg-light: #FAF9FC;
+      --fr-bg-panel: #FFFFFF;
+      --fr-border: #DDDDE2;
+      --fr-text: #2A2A2A;
+    }
+
+    /* =========================================================
+       GLOBAL PAGE STYLE
+       ========================================================= */
+    body {
+      background-color: var(--fr-bg-light) !important;
+      color: var(--fr-text);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+    .main-header .navbar,
+    .main-header .logo {
+      background-color: var(--fr-purple) !important;
+      height: 60px !important;
+      line-height: 60px !important;
+      padding-left: 15px !important;
+      border: none !important;
+      color: white !important;
+      font-weight: 600 !important;
+      font-size: 22px !important;
+      text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+    }
+
+    /* Header logo position */
+    .fr-header-logo {
+      position: absolute;
+      right: 20px;
+      top: 5px;
+      height: 50px;
+    }
+
+    /* Content area spacing fix */
+    .content-wrapper,
+    .right-side {
+      margin-top: 0 !important;
+      background-color: var(--fr-bg-light) !important;
+    }
+
+    /* =========================================================
+       SIDEBAR (WHITE)
+       ========================================================= */
+    .main-sidebar {
+      margin-top: 60px !important; /* align below header */
+      background-color: white !important;
+      border-right: 1px solid var(--fr-border);
+    }
+
+    /* Sidebar menu items */
+    .sidebar-menu > li > a {
+      background-color: transparent !important;
+      color: var(--fr-text) !important;
+      padding: 12px 20px !important;
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      border-radius: 4px;
+    }
+
+    /* Hover + active state */
+    .sidebar-menu > li.active > a,
+    .sidebar-menu > li:hover > a {
+      background-color: var(--fr-purple-light) !important;
+      color: white !important;
+    }
+
+    /* Sidebar icons */
+    .sidebar-menu i {
+      color: var(--fr-purple) !important;
+    }
+
+    /* =========================================================
+       SIDEBAR TEXT FIXES (Filter labels etc.)
+       ========================================================= */
+    .main-sidebar h4,
+    .sidebar .header,
+    .sidebar .control-label,
+    .sidebar .form-group label,
+    .sidebar span,
+    .sidebar p {
+      color: var(--fr-text) !important;
+      font-weight: 600 !important;
+    }
+
+    /* =========================================================
+       BOXES / PANELS
+       ========================================================= */
+    .box {
+      background-color: var(--fr-bg-panel) !important;
+      border-radius: 10px !important;
+      border: 1px solid var(--fr-border) !important;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06) !important;
+    }
+
+    .box-header {
+      background-color: var(--fr-purple) !important;
+      color: white !important;
+      font-weight: 600 !important;
+      border-radius: 10px 10px 0 0 !important;
+      border-bottom: 1px solid var(--fr-border) !important;
+    }
+
+    /* =========================================================
+       VALUE BOXES
+       ========================================================= */
+    .small-box {
+      border-radius: 10px !important;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07) !important;
+    }
+
+    .small-box.bg-purple { background-color: var(--fr-purple) !important; }
+    .small-box.bg-red { background-color: #E34B4B !important; }
+    .small-box.bg-green { background-color: #4CAF50 !important; }
+
+    /* =========================================================
+       TABLES + INPUTS
+       ========================================================= */
+    table.dataTable {
+      background-color: white !important;
+      border-radius: 6px !important;
+    }
+
+    .dataTables_wrapper {
+      background-color: white !important;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid var(--fr-border);
+    }
+
+    /* Inputs */
+    .form-control {
+      border-radius: 6px !important;
+      border: 1px solid var(--fr-border) !important;
+      box-shadow: none !important;
+      color: var(--fr-text) !important;
+    }
+
+    /* Buttons */
+    .btn-default {
+      background-color: var(--fr-purple) !important;
+      color: white !important;
+      border-radius: 6px !important;
+      border: none !important;
+    }
+
+    .btn-default:hover {
+      background-color: var(--fr-purple-dark) !important;
+    }
+
+    /* =========================================================
+       GENERAL LAYOUT
+       ========================================================= */
+    .content {
+      padding-top: 15px !important;
+    }
+  "))
+)
+
+
+# =====================================================================
+# UPLOAD GATE
+# =====================================================================
+
+upload_gate_ui <- div(
+  class = "upload-bg",
+  tags$img(src = "FR_RGB.jpg", class = "fr-logo-top-right"),
   fluidRow(
     column(
       width = 6, offset = 3,
       box(
-        width = NULL, title = "Upload NFI Dashboard Export File",
-        status = "primary", solidHeader = TRUE,
-        fileInput("upload_data", "Upload .rds file generated by the export script",
-                  accept = ".rds"),
+        width = NULL,
+        title = "Upload NFI Dashboard Export File",
+        status = "primary",
+        solidHeader = TRUE,
+        class = "upload-card",
+        fileInput("upload_data","Upload .rds file generated by the export script", accept = ".rds"),
         tags$p("This dashboard requires an export file generated by the local NFI export script."),
         tags$p("Only users with access to the network directory can generate this file.")
       )
@@ -36,28 +214,36 @@ upload_gate_ui <- fluidPage(
   )
 )
 
-# -------------------- Main Dashboard UI --------------------
+# =====================================================================
+# DASHBOARD UI
+# =====================================================================
 
 dashboard_ui <- dashboardPage(
-  dashboardHeader(title = "NFI Enquiries Dashboard"),
+  dashboardHeader(
+    title = tagList(
+      span("Enquiries Dashboard"),
+      tags$img(src = "FR_RGB.jpg", class = "fr-header-logo")
+    )
+  ),
+  
   dashboardSidebar(
     width = 300,
     sidebarMenu(
       id = "tabs",
       menuItem("Overview", tabName = "overview", icon = icon("table")),
-      menuItem("Detail",   tabName = "detail", icon = icon("file-alt"))
+      menuItem("Detail",   tabName = "detail",  icon = icon("file-alt"))
     ),
     hr(),
     tags$h4("Filters"),
-    textInput("search_text", "Search title / notes", placeholder = "Type to search..."),
-    sliderInput("age_filter", "Age (days)", min = 0, max = 180, value = c(0, 180)),
-    hr(),
-    helpText("Upload-based dashboard — no filesystem access required.")
+    textInput("search_text", "Search title / notes"),
+    sliderInput("age_filter", "Age (days)", min = 0, max = 180, value = c(0,180)),
+    hr()
   ),
+  
   dashboardBody(
-    tags$head(tags$link(rel="stylesheet", type="text/css", href="style.css")),
     tabItems(
-      # OVERVIEW TAB ----------------------------------------------------
+      
+      # Overview Tab
       tabItem(
         tabName = "overview",
         fluidRow(
@@ -67,40 +253,36 @@ dashboard_ui <- dashboardPage(
           valueBoxOutput("kpi_last_refreshed", width = 3)
         ),
         fluidRow(
-          box(title = "Open Requests", width = 12, status = "primary",
-              solidHeader = TRUE, DTOutput("requests_table") %>% withSpinner())
+          box(title="Open Requests", width=12, status="primary",
+              solidHeader=TRUE, DTOutput("requests_table") %>% withSpinner())
         ),
         fluidRow(
-          box(title = "Chargeable (Y/N)", width = 4, status = "info",
-              solidHeader = TRUE, plotlyOutput("chargeable_plot") %>% withSpinner()),
-          box(title = "Status Distribution", width = 4, status = "info",
-              solidHeader = TRUE, plotlyOutput("statusid_plot") %>% withSpinner()),
-          box(title = "Requests by Owner", width = 4, status = "info",
-              solidHeader = TRUE, plotlyOutput("owner_plot") %>% withSpinner()),
-          box(title = "Organisation Distribution", width = 12, status = "info",
-              solidHeader = TRUE, plotlyOutput("organisation_plot") %>% withSpinner())
+          box(title="Chargeable", width=4, status="info",
+              plotlyOutput("chargeable_plot") %>% withSpinner()),
+          
+          box(title="Status Distribution", width=4, status="info",
+              plotlyOutput("statusid_plot") %>% withSpinner()),
+          
+          box(title="Requests by Owner", width=4, status="info",
+              plotlyOutput("owner_plot") %>% withSpinner()),
+          
+          box(title="Organisation Distribution", width=12, status="info",
+              plotlyOutput("organisation_plot") %>% withSpinner())
         )
       ),
       
-      # DETAIL TAB ------------------------------------------------------
+      # Detail Tab
       tabItem(
         tabName = "detail",
         fluidRow(
-          box(
-            title = "Selected Request",
-            width = 4, status = "primary", solidHeader = TRUE,
-            uiOutput("detail_meta")
-          ),
-          box(
-            title = "ReadMe Timeline",
-            width = 8, status = "primary", solidHeader = TRUE,
-            reactableOutput("timeline_reactable")
-          )
+          box(title="Selected Request", width=4, status="primary", uiOutput("detail_meta")),
+          box(title="ReadMe Timeline", width=8, status="primary", reactableOutput("timeline_reactable"))
         )
       )
     )
   ),
-  skin = "blue"
+  
+  skin = "black"
 )
 
 # =====================================================================
@@ -109,22 +291,12 @@ dashboard_ui <- dashboardPage(
 
 server <- function(input, output, session) {
   
-  # -------------------------------------------------------------------
-  # 1. Upload Gate
-  # -------------------------------------------------------------------
-  
   uploaded_data <- reactiveVal(NULL)
   
   observeEvent(input$upload_data, {
     req(input$upload_data)
     data <- readRDS(input$upload_data$datapath)
     uploaded_data(data)
-    
-    showModal(modalDialog(
-      title = "Data loaded!",
-      "The NFI export file has been successfully loaded.",
-      easyClose = TRUE
-    ))
   })
   
   # Show dashboard after upload
@@ -133,36 +305,15 @@ server <- function(input, output, session) {
     show("dashboard_section")
   })
   
-  # -------------------------------------------------------------------
-  # 2. Auto-Navigation (this now works because dashboard exists on load)
-  # -------------------------------------------------------------------
-  
+  # When table row clicked → open detail tab
   observeEvent(input$requests_table_rows_selected, {
     updateTabItems(session, "tabs", "detail")
   })
   
-  # -------------------------------------------------------------------
-  # 3. Loaded data access
-  # -------------------------------------------------------------------
-  
-  requests <- reactive({
-    req(uploaded_data())
-    uploaded_data()$df
-  })
-  
-  timeline_cache <- reactive({
-    req(uploaded_data())
-    uploaded_data()$timeline_cache
-  })
-  
-  header_meta_df <- reactive({
-    req(uploaded_data())
-    uploaded_data()$header_meta
-  })
-  
-  # -------------------------------------------------------------------
-  # 4. Filtering Logic
-  # -------------------------------------------------------------------
+  # Data
+  requests <- reactive(uploaded_data()$df)
+  timeline_cache <- reactive(uploaded_data()$timeline_cache)
+  header_meta_df <- reactive(uploaded_data()$header_meta)
   
   add_buckets <- function(df) {
     df %>% mutate(
@@ -180,8 +331,12 @@ server <- function(input, output, session) {
     req(nrow(df) > 0)
     
     df <- add_buckets(df)
+    
     df <- df %>%
-      filter(is.na(age_days) | between(age_days, input$age_filter[1], input$age_filter[2]))
+      filter(
+        is.na(age_days) |
+          between(age_days, input$age_filter[1], input$age_filter[2])
+      )
     
     if (isTruthy(input$search_text)) {
       s <- tolower(input$search_text)
@@ -192,10 +347,7 @@ server <- function(input, output, session) {
     df
   })
   
-  # -------------------------------------------------------------------
-  # 5. Overview Table
-  # -------------------------------------------------------------------
-  
+  # Table data
   table_df <- reactive({
     df <- filtered()
     meta <- header_meta_df()
@@ -228,6 +380,7 @@ server <- function(input, output, session) {
     df2
   })
   
+  # Table
   output$requests_table <- renderDT({
     df <- table_df()
     datatable(
@@ -239,19 +392,17 @@ server <- function(input, output, session) {
     )
   })
   
+  # Selected row
   selected_request <- reactive({
     s <- input$requests_table_rows_selected
     df <- table_df()
-    if (length(s) == 0) return(NULL)
+    if (!length(s)) return(NULL)
     df[s,]
   })
   
-  # -------------------------------------------------------------------
-  # 6. KPIs
-  # -------------------------------------------------------------------
-  
+  # KPIs
   output$kpi_total <- renderValueBox({
-    valueBox(nrow(filtered()), "Open Requests", icon = icon("inbox"), color = "aqua")
+    valueBox(nrow(filtered()), "Open Requests", icon = icon("inbox"), color = "purple")
   })
   
   output$kpi_overdue <- renderValueBox({
@@ -261,8 +412,8 @@ server <- function(input, output, session) {
   
   output$kpi_avg_age <- renderValueBox({
     df <- filtered()
-    avg <- ifelse(nrow(df) == 0, 0, round(mean(df$age_days, na.rm = TRUE), 1))
-    valueBox(avg, "Average Age (days)", icon = icon("calendar-day"), color = "yellow")
+    avg <- ifelse(nrow(df)==0,0, round(mean(df$age_days, na.rm=TRUE),1))
+    valueBox(avg, "Average Age (days)", icon = icon("calendar-day"), color = "purple")
   })
   
   output$kpi_last_refreshed <- renderValueBox({
@@ -270,77 +421,49 @@ server <- function(input, output, session) {
              "Data Load Time", icon = icon("sync"), color = "green")
   })
   
-  # -------------------------------------------------------------------
-  # 7. Metadata Plots
-  # -------------------------------------------------------------------
+  # Plots
+  meta_df2 <- reactive(header_meta_df())
   
-  meta_df2 <- reactive({
-    header_meta_df()
-  })
-  
-  # Chargeable
   output$chargeable_plot <- renderPlotly({
     m <- meta_df2()
-    d <- m %>% count(`Chargeable (Y/N)`) %>%
-      filter(`Chargeable (Y/N)` %in% c("Y","N"))
-    
-    plot_ly(
-      d,
-      labels = ~`Chargeable (Y/N)`,
-      values = ~n,
-      type = "pie",
-      textinfo = "label+percent",
-      insidetextorientation = "radial",
-      marker = list(colors = c("#4CAF50", "#F44336"))
-    )
+    d <- m %>% count(`Chargeable (Y/N)`) %>% filter(`Chargeable (Y/N)` %in% c("Y","N"))
+    plot_ly(d, labels=~`Chargeable (Y/N)`, values=~n, type="pie")
   })
   
-  # Organisation
   output$organisation_plot <- renderPlotly({
     m <- meta_df2()
-    d <- m %>%
-      filter(!is.na(Organisation), Organisation != "", Organisation != "0") %>%
-      count(Organisation)
-    
+    d <- m %>% filter(!is.na(Organisation), Organisation!="", Organisation!="0") %>% count(Organisation)
     plot_ly(d, x=~Organisation, y=~n, type="bar")
   })
   
-  # StatusID
   output$statusid_plot <- renderPlotly({
     m <- meta_df2()
-    
     d <- m %>%
       mutate(StatusID = recode(
         as.character(StatusID),
         "1"="waiting on client",
         "2"="work in progress",
         "3"="internal meeting planned",
-        "4"="client review/completed",
-        .default="(unknown)"
+        "4"="client review/completed"
       )) %>%
-      filter(StatusID != "(unknown)") %>%
       count(StatusID)
     
     plot_ly(d, x=~StatusID, y=~n, type="bar")
   })
   
-  # Owner
   output$owner_plot <- renderPlotly({
     d <- meta_df2() %>% count(`Owner (initials)`)
     plot_ly(d, x=~`Owner (initials)`, y=~n, type="bar")
   })
   
-  # -------------------------------------------------------------------
-  # 8. Detail View
-  # -------------------------------------------------------------------
-  
+  # DETAIL — META
   output$detail_meta <- renderUI({
     req <- selected_request()
     if (is.null(req)) return(NULL)
-    req <- as.list(req)
+    req_list <- as.list(req)
     
     meta <- header_meta_df()
-    h <- meta %>% filter(path == req$path)
+    h <- meta %>% filter(path == req_list$path)
     
     owner       <- h$`Owner (initials)` %||% "(None)"
     chargeable  <- h$`Chargeable (Y/N)` %||% "(None)"
@@ -349,21 +472,25 @@ server <- function(input, output, session) {
     statusid    <- h$StatusID %||% "(None)"
     
     wellPanel(
-      strong("Code:"), req$code, br(),
-      strong("User:"), req$user, br(),
-      strong("Title:"), req$title, br(),
+      strong("Code:"), req_list$code, br(),
+      strong("User:"), req_list$user, br(),
+      strong("Title:"), req_list$title, br(),
       hr(),
       strong("Owner:"), owner, br(),
       strong("Chargeable:"), chargeable, br(),
       strong("Organisation:"), org, br(),
-      strong("Time Spent (days):"), timespent, br(),
+      strong("Time Spent:"), timespent, br(),
       strong("StatusID:"), statusid, br(),
       hr(),
-      strong("Age (days):"), req$age_days, br(),
-      strong("Last update:"), req$last_update, br(),
-      strong("Last note:"), req$last_note
+      strong("Age (days):"), req_list$age_days, br(),
+      strong("Last update:"), req_list$last_update, br(),
+      strong("Last note:"), req_list$last_note
     )
   })
+  
+  # =====================================================================
+  # DETAIL — TIMELINE (AUTO‑EXPAND ALL)
+  # =====================================================================
   
   output$timeline_reactable <- renderReactable({
     req <- selected_request()
@@ -372,47 +499,41 @@ server <- function(input, output, session) {
     tl_obj <- timeline_cache()[[req$path]]
     tl <- tl_obj$timeline
     
-    if (is.null(tl) || nrow(tl)==0)
-      return(reactable(data.frame(Message="No timeline entries found")))
+    if (is.null(tl) || nrow(tl) == 0)
+      return(reactable(data.frame(Message = "No timeline entries found")))
     
     reactable(
       tl,
-      columns=list(
-        date = colDef(name="Date", width=120),
-        text = colDef(show=FALSE)
+      columns = list(
+        date = colDef(name = "Date", width = 120),
+        text = colDef(show = FALSE)
       ),
-      striped=TRUE, highlight=TRUE, pagination=TRUE,
-      defaultPageSize=10,
-      details=function(i){
+      striped = TRUE,
+      highlight = TRUE,
+      pagination = TRUE,
+      defaultPageSize = 1000,
+      details = function(i) {
         htmltools::div(
-          style="background-color:#f8f9fa; padding:12px; border-left:3px solid #007bff;
+          style = "background-color:#f8f9fa; padding:12px; 
+                 border-left:3px solid var(--fr-purple); 
                  white-space:pre-wrap; font-family:Consolas;",
           tl$text[i]
         )
-      }
+      },
+      defaultExpanded = TRUE
     )
   })
-  
 }
 
 # =====================================================================
-# RUN APP (PRE-RENDERED DASHBOARD + UPLOAD GATE)
+# RUN APP
 # =====================================================================
 
 ui <- fluidPage(
   useShinyjs(),
-  
-  # Upload section (shown first)
-  div(id = "upload_section",
-      upload_gate_ui
-  ),
-  
-  # Dashboard section (hidden until upload)
-  hidden(
-    div(id = "dashboard_section",
-        dashboard_ui
-    )
-  )
+  fr_branding_css,
+  div(id = "upload_section", upload_gate_ui),
+  hidden(div(id = "dashboard_section", dashboard_ui))
 )
 
 shinyApp(ui = ui, server = server)
