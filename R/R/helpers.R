@@ -6,6 +6,19 @@ library(stringr)
 library(lubridate)
 
 # ------------------------------------------------------------------------------
+# Get the most recent timeline entry for a request folder
+# ------------------------------------------------------------------------------
+get_latest_update <- function(path) {
+  parsed <- parse_readme_safe(path)
+  if (is.null(parsed) || is.null(parsed$timeline)) return(NULL)
+  
+  tl <- parsed$timeline
+  if (nrow(tl) == 0) return(NULL)
+  
+  tl %>% arrange(desc(date)) %>% slice(1)
+}
+
+# ------------------------------------------------------------------------------
 # Extract likely responsible initials from update text (fallback)
 # ------------------------------------------------------------------------------
 extract_person <- function(text) {

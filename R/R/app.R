@@ -19,7 +19,6 @@ library(future)
 library(future.apply)
 plan(multisession)
 
-setwd('C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFI_Enquiries_Dashboard')
 
 `%||%` <- function(x,y) if (is.null(x)) y else x
 
