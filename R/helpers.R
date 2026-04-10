@@ -18,6 +18,7 @@ get_latest_update <- function(path) {
   tl %>% arrange(desc(date)) %>% slice(1)
 }
 
+
 # ------------------------------------------------------------------------------
 # Extract likely responsible initials from update text (fallback)
 # ------------------------------------------------------------------------------

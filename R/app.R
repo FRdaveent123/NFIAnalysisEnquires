@@ -1,5 +1,5 @@
 # =====================================================================
-# app.R  -- Enquiries Dashboard
+# app.R  -- Enquiries Dashboard (Posit-safe, no folder button)
 # =====================================================================
 
 library(shiny)
@@ -21,6 +21,7 @@ library(shinyjs)
 
 fr_branding_css <- tags$head(
   tags$style(HTML("
+
     :root {
       --fr-purple: #6E177E;
       --fr-purple-dark: #4E0F59;
@@ -31,24 +32,18 @@ fr_branding_css <- tags$head(
       --fr-text: #2A2A2A;
     }
 
-    /* =========================================================
-       GLOBAL PAGE STYLE
-       ========================================================= */
     body {
       background-color: var(--fr-bg-light) !important;
       color: var(--fr-text);
       font-family: 'Segoe UI', sans-serif;
     }
 
-    /* =========================================================
-       HEADER
-       ========================================================= */
-    .main-header .navbar,
-    .main-header .logo {
+    .skin-black .main-header .navbar,
+    .skin-black .main-header .logo {
       background-color: var(--fr-purple) !important;
       height: 60px !important;
       line-height: 60px !important;
-      padding-left: 15px !important;
+      padding-left: 20px !important;
       border: none !important;
       color: white !important;
       font-weight: 600 !important;
@@ -56,7 +51,6 @@ fr_branding_css <- tags$head(
       text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
     }
 
-    /* Header logo position */
     .fr-header-logo {
       position: absolute;
       right: 20px;
@@ -64,60 +58,48 @@ fr_branding_css <- tags$head(
       height: 50px;
     }
 
-    /* Content area spacing fix */
+    /* Remove sidebar toggle entirely */
+    .skin-black .main-header .navbar .sidebar-toggle,
+    .sidebar-toggle {
+      display: none !important;
+      visibility: hidden !important;
+    }
+
+    body.sidebar-collapse .main-sidebar {
+      margin-left: 0 !important;
+    }
+    body.sidebar-collapse .content-wrapper {
+      margin-left: 300px !important;
+    }
+
     .content-wrapper,
     .right-side {
       margin-top: 0 !important;
       background-color: var(--fr-bg-light) !important;
     }
 
-    /* =========================================================
-       SIDEBAR (WHITE)
-       ========================================================= */
     .main-sidebar {
-      margin-top: 60px !important; /* align below header */
+      margin-top: 60px !important;
       background-color: white !important;
       border-right: 1px solid var(--fr-border);
+      width: 300px !important;
     }
 
-    /* Sidebar menu items */
     .sidebar-menu > li > a {
-      background-color: transparent !important;
       color: var(--fr-text) !important;
       padding: 12px 20px !important;
       font-size: 15px !important;
       font-weight: 500 !important;
-      border-radius: 4px;
     }
 
-    /* Hover + active state */
     .sidebar-menu > li.active > a,
     .sidebar-menu > li:hover > a {
       background-color: var(--fr-purple-light) !important;
       color: white !important;
     }
 
-    /* Sidebar icons */
-    .sidebar-menu i {
-      color: var(--fr-purple) !important;
-    }
+    .sidebar-menu i { color: var(--fr-purple) !important; }
 
-    /* =========================================================
-       SIDEBAR TEXT FIXES (Filter labels etc.)
-       ========================================================= */
-    .main-sidebar h4,
-    .sidebar .header,
-    .sidebar .control-label,
-    .sidebar .form-group label,
-    .sidebar span,
-    .sidebar p {
-      color: var(--fr-text) !important;
-      font-weight: 600 !important;
-    }
-
-    /* =========================================================
-       BOXES / PANELS
-       ========================================================= */
     .box {
       background-color: var(--fr-bg-panel) !important;
       border-radius: 10px !important;
@@ -133,42 +115,11 @@ fr_branding_css <- tags$head(
       border-bottom: 1px solid var(--fr-border) !important;
     }
 
-    /* =========================================================
-       VALUE BOXES
-       ========================================================= */
-    .small-box {
-      border-radius: 10px !important;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.07) !important;
-    }
-
-    .small-box.bg-purple { background-color: var(--fr-purple) !important; }
-    .small-box.bg-red { background-color: #E34B4B !important; }
-    .small-box.bg-green { background-color: #4CAF50 !important; }
-
-    /* =========================================================
-       TABLES + INPUTS
-       ========================================================= */
-    table.dataTable {
-      background-color: white !important;
-      border-radius: 6px !important;
-    }
-
-    .dataTables_wrapper {
-      background-color: white !important;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid var(--fr-border);
-    }
-
-    /* Inputs */
     .form-control {
       border-radius: 6px !important;
       border: 1px solid var(--fr-border) !important;
-      box-shadow: none !important;
-      color: var(--fr-text) !important;
     }
 
-    /* Buttons */
     .btn-default {
       background-color: var(--fr-purple) !important;
       color: white !important;
@@ -180,18 +131,11 @@ fr_branding_css <- tags$head(
       background-color: var(--fr-purple-dark) !important;
     }
 
-    /* =========================================================
-       GENERAL LAYOUT
-       ========================================================= */
-    .content {
-      padding-top: 15px !important;
-    }
   "))
 )
 
-
 # =====================================================================
-# UPLOAD GATE
+# UPLOAD GATE — CLEAN VERSION (NO folder button)
 # =====================================================================
 
 upload_gate_ui <- div(
@@ -206,9 +150,15 @@ upload_gate_ui <- div(
         status = "primary",
         solidHeader = TRUE,
         class = "upload-card",
-        fileInput("upload_data","Upload .rds file generated by the export script", accept = ".rds"),
-        tags$p("This dashboard requires an export file generated by the local NFI export script."),
-        tags$p("Only users with access to the network directory can generate this file.")
+        
+        fileInput(
+          "upload_data",
+          "Choose the exported .rds file",
+          accept = ".rds",
+          width = "100%"
+        ),
+        
+        tags$p("Please upload the latest nfi_dashboard_export.rds file generated by the export script.")
       )
     )
   )
@@ -243,7 +193,6 @@ dashboard_ui <- dashboardPage(
   dashboardBody(
     tabItems(
       
-      # Overview Tab
       tabItem(
         tabName = "overview",
         fluidRow(
@@ -259,19 +208,15 @@ dashboard_ui <- dashboardPage(
         fluidRow(
           box(title="Chargeable", width=4, status="info",
               plotlyOutput("chargeable_plot") %>% withSpinner()),
-          
           box(title="Status Distribution", width=4, status="info",
               plotlyOutput("statusid_plot") %>% withSpinner()),
-          
           box(title="Requests by Owner", width=4, status="info",
               plotlyOutput("owner_plot") %>% withSpinner()),
-          
           box(title="Organisation Distribution", width=12, status="info",
               plotlyOutput("organisation_plot") %>% withSpinner())
         )
       ),
       
-      # Detail Tab
       tabItem(
         tabName = "detail",
         fluidRow(
@@ -293,24 +238,26 @@ server <- function(input, output, session) {
   
   uploaded_data <- reactiveVal(NULL)
   
+  # Load uploaded file safely
   observeEvent(input$upload_data, {
     req(input$upload_data)
-    data <- readRDS(input$upload_data$datapath)
-    uploaded_data(data)
+    uploaded_data(readRDS(input$upload_data$datapath))
   })
   
-  # Show dashboard after upload
+  # Reveal dashboard once file is uploaded
   observeEvent(uploaded_data(), {
     hide("upload_section")
     show("dashboard_section")
   })
   
-  # When table row clicked → open detail tab
+  # ✅ Auto-switch to Detail tab after a row is clicked
   observeEvent(input$requests_table_rows_selected, {
-    updateTabItems(session, "tabs", "detail")
+    if (!is.null(uploaded_data())) {
+      updateTabItems(session, "tabs", "detail")
+    }
   })
   
-  # Data
+  # Data accessors
   requests <- reactive(uploaded_data()$df)
   timeline_cache <- reactive(uploaded_data()$timeline_cache)
   header_meta_df <- reactive(uploaded_data()$header_meta)
@@ -332,22 +279,17 @@ server <- function(input, output, session) {
     
     df <- add_buckets(df)
     
-    df <- df %>%
-      filter(
-        is.na(age_days) |
-          between(age_days, input$age_filter[1], input$age_filter[2])
-      )
+    df <- df %>% filter(is.na(age_days) |
+                          between(age_days, input$age_filter[1], input$age_filter[2]))
     
     if (isTruthy(input$search_text)) {
       s <- tolower(input$search_text)
-      df <- df %>%
-        filter(grepl(s, tolower(title)) | grepl(s, tolower(last_note)))
+      df <- df %>% filter(grepl(s, tolower(title)) | grepl(s, tolower(last_note)))
     }
     
     df
   })
   
-  # Table data
   table_df <- reactive({
     df <- filtered()
     meta <- header_meta_df()
@@ -380,7 +322,6 @@ server <- function(input, output, session) {
     df2
   })
   
-  # Table
   output$requests_table <- renderDT({
     df <- table_df()
     datatable(
@@ -392,7 +333,6 @@ server <- function(input, output, session) {
     )
   })
   
-  # Selected row
   selected_request <- reactive({
     s <- input$requests_table_rows_selected
     df <- table_df()
@@ -400,7 +340,6 @@ server <- function(input, output, session) {
     df[s,]
   })
   
-  # KPIs
   output$kpi_total <- renderValueBox({
     valueBox(nrow(filtered()), "Open Requests", icon = icon("inbox"), color = "purple")
   })
@@ -421,7 +360,6 @@ server <- function(input, output, session) {
              "Data Load Time", icon = icon("sync"), color = "green")
   })
   
-  # Plots
   meta_df2 <- reactive(header_meta_df())
   
   output$chargeable_plot <- renderPlotly({
@@ -439,12 +377,11 @@ server <- function(input, output, session) {
   output$statusid_plot <- renderPlotly({
     m <- meta_df2()
     d <- m %>%
-      mutate(StatusID = recode(
-        as.character(StatusID),
-        "1"="waiting on client",
-        "2"="work in progress",
-        "3"="internal meeting planned",
-        "4"="client review/completed"
+      mutate(StatusID = recode(as.character(StatusID),
+                               "1"="waiting on client",
+                               "2"="work in progress",
+                               "3"="internal meeting planned",
+                               "4"="client review/completed"
       )) %>%
       count(StatusID)
     
@@ -456,7 +393,7 @@ server <- function(input, output, session) {
     plot_ly(d, x=~`Owner (initials)`, y=~n, type="bar")
   })
   
-  # DETAIL — META
+  # DETAIL PANEL
   output$detail_meta <- renderUI({
     req <- selected_request()
     if (is.null(req)) return(NULL)
@@ -465,22 +402,16 @@ server <- function(input, output, session) {
     meta <- header_meta_df()
     h <- meta %>% filter(path == req_list$path)
     
-    owner       <- h$`Owner (initials)` %||% "(None)"
-    chargeable  <- h$`Chargeable (Y/N)` %||% "(None)"
-    org         <- h$Organisation %||% "(None)"
-    timespent   <- h$`Time Spent (number counting days)` %||% "(None)"
-    statusid    <- h$StatusID %||% "(None)"
-    
     wellPanel(
       strong("Code:"), req_list$code, br(),
       strong("User:"), req_list$user, br(),
       strong("Title:"), req_list$title, br(),
       hr(),
-      strong("Owner:"), owner, br(),
-      strong("Chargeable:"), chargeable, br(),
-      strong("Organisation:"), org, br(),
-      strong("Time Spent:"), timespent, br(),
-      strong("StatusID:"), statusid, br(),
+      strong("Owner:"), h$`Owner (initials)` %||% "(None)", br(),
+      strong("Chargeable:"), h$`Chargeable (Y/N)` %||% "(None)", br(),
+      strong("Organisation:"), h$Organisation %||% "(None)", br(),
+      strong("Time Spent:"), h$`Time Spent (number counting days)` %||% "(None)", br(),
+      strong("StatusID:"), h$StatusID %||% "(None)", br(),
       hr(),
       strong("Age (days):"), req_list$age_days, br(),
       strong("Last update:"), req_list$last_update, br(),
@@ -488,16 +419,12 @@ server <- function(input, output, session) {
     )
   })
   
-  # =====================================================================
-  # DETAIL — TIMELINE (AUTO‑EXPAND ALL)
-  # =====================================================================
-  
+  # TIMELINE PANEL
   output$timeline_reactable <- renderReactable({
     req <- selected_request()
     if (is.null(req)) return(NULL)
     
-    tl_obj <- timeline_cache()[[req$path]]
-    tl <- tl_obj$timeline
+    tl <- timeline_cache()[[req$path]]$timeline
     
     if (is.null(tl) || nrow(tl) == 0)
       return(reactable(data.frame(Message = "No timeline entries found")))
@@ -514,9 +441,9 @@ server <- function(input, output, session) {
       defaultPageSize = 1000,
       details = function(i) {
         htmltools::div(
-          style = "background-color:#f8f9fa; padding:12px; 
-                 border-left:3px solid var(--fr-purple); 
-                 white-space:pre-wrap; font-family:Consolas;",
+          style = "background-color:#f8f9fa; padding:12px;
+                   border-left:3px solid var(--fr-purple);
+                   white-space:pre-wrap; font-family:Consolas;",
           tl$text[i]
         )
       },
