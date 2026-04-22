@@ -97,13 +97,16 @@ if (!dir.exists(export_dir)) dir.create(export_dir, recursive = TRUE)
 
 export_path <- file.path(export_dir, "nfi_dashboard_export.rds")
 
+export_object <- list(
+  df = df,
+  timeline_cache = timeline_cache,
+  header_meta = header_meta,
+  exported_at = Sys.time()
+)
+
 saveRDS(
-  list(
-    df = df,
-    timeline_cache = timeline_cache,
-    header_meta = header_meta
-  ),
-  export_path
+  export_object,
+  "O:/0600_Advice_Enquiries_Support/0602_Open_Requests/enquires_dashboard_files/nfi_dashboard_export.rds"
 )
 
 cat("✅ Export complete →", export_path, "\n")
