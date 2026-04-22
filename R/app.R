@@ -236,56 +236,120 @@ fr_branding_css <- tags$head(
 }
 
 /* ======================================================
-   RESPONSIVE LAYOUT FIXES (SMALLER SCREENS)
+   AGGRESSIVE SIDEBAR SQUEEZE (LAPTOP SCREENS)
    ====================================================== */
 
-/* ----- Reduce sidebar width on smaller screens ----- */
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
+
+  /* Shrink sidebar hard */
   .main-sidebar {
-    width: 240px !important;
+    width: 150px !important;
+    padding: 6px !important;
   }
 
+  /* Force main content to move left */
   .content-wrapper,
   .right-side {
-    margin-left: 240px !important;
+    margin-left: 150px !important;
+  }
+
+  /* Compress sidebar menu */
+  .sidebar-menu > li > a {
+    padding: 8px 10px !important;
+    font-size: 13px !important;
+  }
+
+  /* Compress filter blocks */
+  .sidebar .form-group {
+    padding: 6px !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* Smaller filter headings */
+  .sidebar h4 {
+    font-size: 13px !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* Smaller labels */
+  .sidebar .control-label {
+    font-size: 12px !important;
+  }
+
+  /* Compact inputs */
+  .sidebar .form-control {
+    font-size: 12px !important;
+    padding: 4px 6px !important;
   }
 }
 
-/* ----- Stack KPI boxes into 2 per row ----- */
-@media (max-width: 1024px) {
-  .small-box {
-    width: 50% !important;
-    float: left;
+/* ===============================
+   COMPACT PLOTLY CHARTS (LAPTOP)
+   =============================== */
+@media (max-width: 1600px) {
+  .plotly.html-widget {
+    height: 180px !important;
   }
 }
 
-/* ----- Stack table + charts vertically ----- */
-@media (max-width: 1024px) {
-  .content .box {
-    width: 100% !important;
-  }
 
-  /* Ensure columns don’t sit side-by-side */
-  .content .col-md-8,
-  .content .col-md-4 {
-    width: 100% !important;
-  }
+/* ======================================================
+   REMOVE DEAD SPACE – DASHBOARD DENSITY TUNING
+   ====================================================== */
+
+/* Reduce vertical spacing between rows */
+.content .row {
+  margin-bottom: 6px !important;
 }
 
-/* ----- Slightly reduce padding inside boxes ----- */
-@media (max-width: 1024px) {
-  .box-body {
-    padding: 10px !important;
-  }
+/* Reduce space between boxes */
+.content .box {
+  margin-bottom: 8px !important;
 }
 
-/* ----- Allow tables to scroll horizontally if needed ----- */
-@media (max-width: 1024px) {
-  .dataTables_wrapper {
-    overflow-x: auto;
-  }
+/* Tighten box headers */
+.box-header {
+  padding: 6px 10px !important;
+  min-height: auto !important;
 }
-  "))
+
+/* Tighten box bodies */
+.box-body {
+  padding: 8px 10px !important;
+}
+
+/* Reduce spacing between stacked chart boxes */
+.content .col-md-4 .box {
+  margin-bottom: 6px !important;
+}
+
+/* Table container padding */
+.dataTables_wrapper {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+
+/* ===============================
+   TIGHTEN VERTICAL SPACING
+   =============================== */
+
+.content .row {
+  margin-bottom: 4px !important;
+}
+
+.content .box {
+  margin-bottom: 6px !important;
+}
+
+.box-header {
+  padding: 6px 10px !important;
+}
+
+.box-body {
+  padding: 6px 10px !important;
+}
+
+"))
 )
 
 # =====================================================================
@@ -542,11 +606,12 @@ server <- function(input, output, session) {
         code, user, title,
         Owner = `Owner (initials)`,
         Status = StatusID,
-        Chargeable = `Chargeable (Y/N)`,
         Organisation,
+        Chargeable = `Chargeable (Y/N)`,
         age_days,
         path
       )
+    
     
   })
   
@@ -556,9 +621,17 @@ server <- function(input, output, session) {
       filter = "top",
       rownames = FALSE,
       selection = "single",
-      options = list(pageLength = 10, scrollX = TRUE)
+      options = list(
+        pageLength = 10,
+        scrollX = TRUE,          # force horizontal scroll
+        scrollCollapse = TRUE,
+        autoWidth = TRUE,        # let columns size naturally
+        dom = "tip"
+      )
+      
     )
   })
+  
   
   selected_request <- reactive({
     s <- input$requests_table_rows_selected
@@ -618,6 +691,7 @@ server <- function(input, output, session) {
     ) %>%
       layout(
         yaxis = list(title = ""),
+        xaxis = list(title = ""),
         showlegend = FALSE
       )
   })
@@ -637,6 +711,7 @@ server <- function(input, output, session) {
     ) %>%
       layout(
         yaxis = list(title = ""),
+        xaxis = list(title = ""),
         showlegend = FALSE
       )
   })
@@ -664,6 +739,7 @@ server <- function(input, output, session) {
     ) %>%
       layout(
         yaxis = list(title = ""),
+        xaxis = list(title = ""),
         showlegend = FALSE
       )
   })

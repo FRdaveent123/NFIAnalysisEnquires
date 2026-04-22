@@ -1,3 +1,7 @@
+cat(Sys.time(), " - scheduler started\n",
+    file = "scheduler_run.log",
+    append = TRUE)
+
 # ----------------------------------------------------------
 # NFI Dashboard Export Script (fully compatible with app.R)
 # ----------------------------------------------------------
@@ -13,6 +17,23 @@ source("helpers.R")
 source("readme_parser.R")
 
 root_path <- "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests"
+setwd("O:/0600_Advice_Enquiries_Support/0602_Open_Requests/enquires_dashboard_files")
+
+log_file <- "task_scheduler_log.txt"
+log_con <- file(log_file, open = "wt")
+
+sink(log_con)
+sink(log_con, type = "message")
+
+cat(Sys.time(), "- Script started\n")
+
+on.exit({
+  cat(Sys.time(), "- Script finished\n")
+  sink(type = "message")
+  sink()
+  close(log_con)
+})
+
 
 # -------------------------------------------------------------------
 # 1. Build core dataframe
