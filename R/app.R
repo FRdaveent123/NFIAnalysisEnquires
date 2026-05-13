@@ -2,6 +2,8 @@
 # app.R  -- Enquiries Dashboard (Stable, Posit-safe)
 # =====================================================================
 
+#setwd("C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R")
+
 library(shiny)
 library(shinydashboard)
 library(DT)
@@ -14,343 +16,9 @@ library(htmltools)
 library(tidyr)
 library(shinycssloaders)
 library(shinyjs)
+source("fr_branding_css.R")
+source("helpers.R")
 
-# =====================================================================
-# FOREST RESEARCH BRANDING CSS
-# =====================================================================
-
-fr_branding_css <- tags$head(
-  tags$style(HTML("
-
-    :root {
-      --fr-purple: #6E177E;
-      --fr-purple-dark: #4E0F59;
-      --fr-purple-light: #A884B2;
-      --fr-bg-light: #FAF9FC;
-      --fr-bg-panel: #FFFFFF;
-      --fr-border: #DDDDE2;
-      --fr-text: #2A2A2A;
-    }
-
-    body {
-      background-color: var(--fr-bg-light) !important;
-      color: var(--fr-text);
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    /* ===============================
-       HEADER
-       =============================== */
-    .skin-black .main-header .navbar,
-    .skin-black .main-header .logo {
-      background-color: var(--fr-purple) !important;
-      height: 60px !important;
-      line-height: 60px !important;
-      padding-left: 20px !important;
-      border: none !important;
-      color: white !important;
-      font-weight: 600 !important;
-      font-size: 22px !important;
-      text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
-    }
-
-    .fr-header-logo {
-      position: absolute;
-      right: 20px;
-      top: 5px;
-      height: 50px;
-    }
-
-    /* Remove sidebar toggle entirely */
-    .skin-black .main-header .navbar .sidebar-toggle,
-    .sidebar-toggle {
-      display: none !important;
-    }
-
-    body.sidebar-collapse .main-sidebar {
-      margin-left: 0 !important;
-    }
-    body.sidebar-collapse .content-wrapper {
-      margin-left: 300px !important;
-    }
-
-    .content-wrapper,
-    .right-side {
-      margin-top: 0 !important;
-      background-color: var(--fr-bg-light) !important;
-    }
-
-    /* ===============================
-       SIDEBAR
-       =============================== */
-    .main-sidebar {
-      margin-top: 60px !important;
-      background-color: white !important;
-      border-right: 1px solid var(--fr-border);
-      width: 300px !important;
-      padding: 10px;
-    }
-
-    .sidebar-menu > li > a {
-      color: var(--fr-text) !important;
-      padding: 12px 20px !important;
-      font-size: 15px !important;
-      font-weight: 500 !important;
-    }
-
-    .sidebar-menu > li.active > a,
-    .sidebar-menu > li:hover > a {
-      background-color: var(--fr-purple-light) !important;
-      color: white !important;
-    }
-
-    .sidebar-menu i { 
-      color: var(--fr-purple) !important; 
-    }
-
-    /* ===============================
-       FILTERS – VISUAL CLARITY ✅
-       =============================== */
-
-    /* Filters heading */
-    .sidebar h4 {
-      color: #000000 !important;
-      font-weight: 700;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-
-    /* Group filter controls visually */
-    .sidebar .form-group {
-      background-color: #F6F6F9;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #E0E0E5;
-      margin-bottom: 12px;
-    }
-
-    /* Search box text + border */
-    .sidebar .form-control {
-      background-color: #FFFFFF !important;
-      color: #000000 !important;
-      border: 1px solid #8F8FA3 !important;
-      border-radius: 6px !important;
-    }
-
-    .sidebar .form-control::placeholder {
-      color: #6F6F6F;
-    }
-
-    .sidebar .form-control:focus {
-      border-color: var(--fr-purple) !important;
-      box-shadow: 0 0 0 2px rgba(110,23,126,0.15);
-    }
-
-    /* Slider label text (Age (days)) */
-    .sidebar .control-label {
-      color: #000000 !important;
-      font-weight: 600;
-    }
-
-    /* Slider track */
-    .sidebar .irs-bar,
-    .sidebar .irs-bar-edge {
-      background-color: var(--fr-purple) !important;
-    }
-
-    /* Slider handles */
-    .sidebar .irs-handle {
-      border-color: var(--fr-purple) !important;
-      background-color: #FFFFFF !important;
-    }
-
-    /* Slider min/max bubbles */
-    .sidebar .irs-from,
-    .sidebar .irs-to,
-    .sidebar .irs-single {
-      background-color: var(--fr-purple) !important;
-      color: white !important;
-      font-size: 11px;
-    }
-
-    /* ===============================
-       BOXES
-       =============================== */
-    .box {
-      background-color: var(--fr-bg-panel) !important;
-      border-radius: 10px !important;
-      border: 1px solid var(--fr-border) !important;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06) !important;
-    }
-
-    .box-header {
-      background-color: var(--fr-purple) !important;
-      color: white !important;
-      font-weight: 600 !important;
-      border-radius: 10px 10px 0 0 !important;
-      border-bottom: 1px solid var(--fr-border) !important;
-    }
-
-    /* ===============================
-       BUTTONS
-       =============================== */
-    .btn-default {
-      background-color: var(--fr-purple) !important;
-      color: white !important;
-      border-radius: 6px !important;
-      border: none !important;
-    }
-
-    .btn-default:hover {
-      background-color: var(--fr-purple-dark) !important;
-    }
-    
-    /* ===============================
-   CHART BOX COLOURS (FR BRANDING)
-   =============================== */
-
-/* Open Requests (primary) */
-.box.box-primary > .box-header {
-  background-color: #6E177E !important;  /* FR Purple */
-}
-
-/* Requests by Owner */
-.box.box-info > .box-header {
-  background-color: #2E6F7E !important;  /* Muted teal */
-}
-
-/* Status Distribution */
-.box.box-warning > .box-header {
-  background-color: #2A4F8A !important;  /* Deep blue */
-}
-
-/* Organisation Distribution */
-.box.box-danger > .box-header {
-  background-color: #8D5A7A !important;  /* Soft plum */
-}
-
-/* Ensure header text is readable */
-.box > .box-header {
-  color: #FFFFFF !important;
-  font-weight: 600;
-}
-
-/* ======================================================
-   AGGRESSIVE SIDEBAR SQUEEZE (LAPTOP SCREENS)
-   ====================================================== */
-
-@media (max-width: 1600px) {
-
-  /* Shrink sidebar hard */
-  .main-sidebar {
-    width: 150px !important;
-    padding: 6px !important;
-  }
-
-  /* Force main content to move left */
-  .content-wrapper,
-  .right-side {
-    margin-left: 150px !important;
-  }
-
-  /* Compress sidebar menu */
-  .sidebar-menu > li > a {
-    padding: 8px 10px !important;
-    font-size: 13px !important;
-  }
-
-  /* Compress filter blocks */
-  .sidebar .form-group {
-    padding: 6px !important;
-    margin-bottom: 6px !important;
-  }
-
-  /* Smaller filter headings */
-  .sidebar h4 {
-    font-size: 13px !important;
-    margin-bottom: 6px !important;
-  }
-
-  /* Smaller labels */
-  .sidebar .control-label {
-    font-size: 12px !important;
-  }
-
-  /* Compact inputs */
-  .sidebar .form-control {
-    font-size: 12px !important;
-    padding: 4px 6px !important;
-  }
-}
-
-/* ===============================
-   COMPACT PLOTLY CHARTS (LAPTOP)
-   =============================== */
-@media (max-width: 1600px) {
-  .plotly.html-widget {
-    height: 180px !important;
-  }
-}
-
-
-/* ======================================================
-   REMOVE DEAD SPACE – DASHBOARD DENSITY TUNING
-   ====================================================== */
-
-/* Reduce vertical spacing between rows */
-.content .row {
-  margin-bottom: 6px !important;
-}
-
-/* Reduce space between boxes */
-.content .box {
-  margin-bottom: 8px !important;
-}
-
-/* Tighten box headers */
-.box-header {
-  padding: 6px 10px !important;
-  min-height: auto !important;
-}
-
-/* Tighten box bodies */
-.box-body {
-  padding: 8px 10px !important;
-}
-
-/* Reduce spacing between stacked chart boxes */
-.content .col-md-4 .box {
-  margin-bottom: 6px !important;
-}
-
-/* Table container padding */
-.dataTables_wrapper {
-  padding-top: 4px !important;
-  padding-bottom: 4px !important;
-}
-
-/* ===============================
-   TIGHTEN VERTICAL SPACING
-   =============================== */
-
-.content .row {
-  margin-bottom: 4px !important;
-}
-
-.content .box {
-  margin-bottom: 6px !important;
-}
-
-.box-header {
-  padding: 6px 10px !important;
-}
-
-.box-body {
-  padding: 6px 10px !important;
-}
-
-"))
-)
 
 # =====================================================================
 # UPLOAD GATE
@@ -394,6 +62,13 @@ upload_gate_ui <- div(
 # DASHBOARD UI
 # =====================================================================
 
+status_colours <- c(
+  "waiting on client"        = "#FF7F0E",
+  "work in progress"         = "#1F77B4",
+  "internal meeting planned" = "#9467BD",
+  "client review/completed"  = "#2CA02C"
+)
+
 dashboard_ui <- dashboardPage(
   dashboardHeader(
     title = tagList(
@@ -434,6 +109,15 @@ dashboard_ui <- dashboardPage(
             width = 8,
             status = "primary",
             solidHeader = TRUE,
+            
+            actionButton(
+              "reset_chart_filter",
+              "Reset filter",
+              icon = icon("undo"),
+              class = "btn-default",
+              style = "margin-bottom:6px;"
+            ),
+            
             DTOutput("requests_table") %>% withSpinner()
           ),
           
@@ -445,14 +129,14 @@ dashboard_ui <- dashboardPage(
               title = "Requests by Owner",
               width = 12,
               status = "info",
-              plotlyOutput("owner_plot") %>% withSpinner()
+              plotlyOutput("owner_plot", height = "240px") %>% withSpinner()
             ),
             
             box(
               title = "Status Distribution",
               width = 12,
               status = "info",
-              plotlyOutput("statusid_plot") %>% withSpinner()
+              plotlyOutput("statusid_plot", height = "240px") %>% withSpinner()
             )
           )
         ),
@@ -502,6 +186,7 @@ server <- function(input, output, session) {
       return()
     }
     
+    
     obj <- try(readRDS(input$upload_data$datapath), silent = TRUE)
     
     # Structure validation (minimal, non-breaking)
@@ -539,6 +224,34 @@ server <- function(input, output, session) {
   timeline_cache <- reactive(uploaded_data()$timeline_cache)
   header_meta_df <- reactive(uploaded_data()$header_meta)
   
+  
+  
+  filtered_meta_with_charts <- reactive({
+    df <- filtered_meta()
+    
+    if (!is.null(chart_status_filter())) {
+      df <- df %>% filter(Status == chart_status_filter())
+    }
+    
+    if (!is.null(chart_owner_filter())) {
+      df <- df %>% filter(Owner == chart_owner_filter())
+    }
+    
+    df
+  })
+  
+  
+  
+  chart_status_filter <- reactiveVal(NULL)
+  chart_owner_filter  <- reactiveVal(NULL)
+  
+  observeEvent(input$reset_chart_filter, {
+    chart_status_filter(NULL)
+    chart_owner_filter(NULL)
+  })
+  
+
+  
   add_buckets <- function(df) {
     df %>% mutate(
       age_bucket = case_when(
@@ -569,6 +282,24 @@ server <- function(input, output, session) {
     }
     
     df
+  })
+
+  filtered_meta <- reactive({
+    df <- filtered()
+    meta <- header_meta_df()
+    
+    df %>%
+      left_join(meta, by = "path") %>%
+      mutate(
+        Owner = str_replace(`Owner (initials)`, "^\\(initials\\):\\s*", ""),
+        Status = recode(
+          as.character(StatusID),
+          "1" = "waiting on client",
+          "2" = "work in progress",
+          "3" = "internal meeting planned",
+          "4" = "client review/completed"
+        )
+      )
   })
   
   table_df <- reactive({
@@ -616,20 +347,39 @@ server <- function(input, output, session) {
   })
   
   output$requests_table <- renderDT({
+    
+    df <- table_df()
+    
+    if (!is.null(chart_status_filter())) {
+      df <- df %>% filter(Status == chart_status_filter())
+    }
+    
+    if (!is.null(chart_owner_filter())) {
+      df <- df %>% filter(Owner == chart_owner_filter())
+    }
+    
     datatable(
-      table_df() %>% select(-path),
+      df %>% select(-path),
       filter = "top",
       rownames = FALSE,
       selection = "single",
       options = list(
         pageLength = 10,
-        scrollX = TRUE,          # force horizontal scroll
+        scrollX = TRUE,
         scrollCollapse = TRUE,
-        autoWidth = TRUE,        # let columns size naturally
+        autoWidth = TRUE,
         dom = "tip"
       )
-      
-    )
+    ) %>%
+      formatStyle(
+        "Status",
+        backgroundColor = styleEqual(
+          names(status_colours),
+          unname(status_colours)
+        ),
+        color = "white",
+        fontWeight = "600"
+      )
   })
   
   
@@ -640,54 +390,57 @@ server <- function(input, output, session) {
   })
   
   output$kpi_total <- renderValueBox({
-    valueBox(nrow(filtered()), "Open Requests", icon = icon("inbox"), color = "purple")
+    styledValueBox(
+      nrow(filtered()),
+      "Open Requests",
+      icon("inbox"),
+      "purple"
+    )
   })
   
   output$kpi_overdue <- renderValueBox({
-    valueBox(
+    styledValueBox(
       nrow(filtered() %>% filter(age_days >= 90)),
       "90d+ Overdue",
-      icon = icon("hourglass-end"),
-      color = "red"
+      icon("hourglass-end"),
+      "red"
     )
   })
   
   output$kpi_avg_age <- renderValueBox({
     df <- filtered()
     avg <- ifelse(nrow(df)==0,0, round(mean(df$age_days, na.rm=TRUE),1))
-    valueBox(avg, "Average Age (days)", icon = icon("calendar-day"), color = "purple")
-  })
-  
-  output$kpi_last_refreshed <- renderValueBox({
-    valueBox(
-      format(Sys.time(), "%Y-%m-%d %H:%M:%S"),
-      "Data Load Time",
-      icon = icon("sync"),
-      color = "green"
+    styledValueBox(
+      avg,
+      "Average Age (days)",
+      icon("calendar-day"),
+      "purple"
     )
   })
   
-  meta_df2 <- reactive({
-    header_meta_df() %>%
-      mutate(
-        `Owner (initials)` = str_replace(
-          `Owner (initials)`,
-          "^\\(initials\\):\\s*",
-          ""
-        )
-      )
+  output$kpi_last_refreshed <- renderValueBox({
+    styledValueBox(
+      format(Sys.time(), "%Y-%m-%d %H:%M:%S"),
+      "Data Load Time",
+      icon("sync"),
+      "green"
+    )
+    
   })
   
+
   output$owner_plot <- renderPlotly({
     
-    d <- meta_df2() %>% count(`Owner (initials)`)
+    d <- filtered_meta_with_charts() %>%
+      filter(!is.na(Owner), Owner != "") %>%
+      count(Owner)
     
     plot_ly(
       data = d,
-      x = ~`Owner (initials)`,
+      x = ~Owner,
       y = ~n,
       type = "bar",
-      color = ~`Owner (initials)`
+      source = "owner_plot"
     ) %>%
       layout(
         yaxis = list(title = ""),
@@ -696,9 +449,10 @@ server <- function(input, output, session) {
       )
   })
   
+  
   output$organisation_plot <- renderPlotly({
     
-    d <- meta_df2() %>%
+    d <- filtered_meta_with_charts() %>%
       filter(!is.na(Organisation), Organisation != "", Organisation != "0") %>%
       count(Organisation)
     
@@ -706,8 +460,7 @@ server <- function(input, output, session) {
       data = d,
       x = ~Organisation,
       y = ~n,
-      type = "bar",
-      color = ~Organisation
+      type = "bar"
     ) %>%
       layout(
         yaxis = list(title = ""),
@@ -718,24 +471,18 @@ server <- function(input, output, session) {
   
   output$statusid_plot <- renderPlotly({
     
-    d <- meta_df2() %>%
-      mutate(
-        StatusID = recode(
-          as.character(StatusID),
-          "1" = "waiting on client",
-          "2" = "work in progress",
-          "3" = "internal meeting planned",
-          "4" = "client review/completed"
-        )
-      ) %>%
-      count(StatusID)
+    d <- filtered_meta_with_charts() %>%
+      filter(Status %in% names(status_colours)) %>%
+      count(Status)
     
     plot_ly(
       data = d,
-      x = ~StatusID,
+      x = ~Status,
       y = ~n,
       type = "bar",
-      color = ~StatusID
+      color = ~Status,
+      colors = status_colours,
+      source = "status_plot"
     ) %>%
       layout(
         yaxis = list(title = ""),
@@ -743,6 +490,31 @@ server <- function(input, output, session) {
         showlegend = FALSE
       )
   })
+
+  # ---------------------------
+  # Chart click interactions
+  # ---------------------------
+  
+  status_clicked <- reactive({
+    d <- event_data("plotly_click", source = "status_plot")
+    if (is.null(d)) return(NULL)
+    d$x
+  })
+  
+  owner_clicked <- reactive({
+    d <- event_data("plotly_click", source = "owner_plot")
+    if (is.null(d)) return(NULL)
+    d$x
+  })
+  
+  observeEvent(status_clicked(), {
+    chart_status_filter(status_clicked())
+  })
+  
+  observeEvent(owner_clicked(), {
+    chart_owner_filter(owner_clicked())
+  })
+  
   
   output$detail_meta <- renderUI({
     req <- selected_request()
@@ -776,6 +548,7 @@ server <- function(input, output, session) {
     reactable(tl, striped = TRUE, highlight = TRUE, defaultPageSize = 1000)
   })
 }
+
 
 # =====================================================================
 # RUN APP
