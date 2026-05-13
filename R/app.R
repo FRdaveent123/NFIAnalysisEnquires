@@ -1,8 +1,17 @@
 # =====================================================================
-# app.R  -- Enquiries Dashboard (Stable, Posit-safe)
+# app.R  -- Enquiries Dashboard
+# =====================================================================
+# Purpose: Overview and triage of open enquiries
+
+#setwd("C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires_local")
+
+# =====================================================================
+# Package setup:
 # =====================================================================
 
-#setwd("C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R")
+# =====================================================================
+# Package load
+# =====================================================================
 
 library(shiny)
 library(shinydashboard)
@@ -16,58 +25,12 @@ library(htmltools)
 library(tidyr)
 library(shinycssloaders)
 library(shinyjs)
-source("fr_branding_css.R")
 source("helpers.R")
-
-
-# =====================================================================
-# UPLOAD GATE
-# =====================================================================
-
-upload_gate_ui <- div(
-  class = "upload-bg",
-  tags$img(src = "FR_RGB.jpg", class = "fr-logo-top-right"),
-  fluidRow(
-    column(
-      width = 6, offset = 3,
-      box(
-        width = NULL,
-        title = "Upload NFI Dashboard Export File",
-        status = "primary",
-        solidHeader = TRUE,
-        class = "upload-card",
-        
-        tags$p(strong("Export folder location (copy & paste into File Explorer):")),
-        tags$pre(
-          "O:\\0600_Advice_Enquiries_Support\\0602_Open_Requests\\enquires_dashboard_files"
-        ),
-        tags$p(
-          "Upload the file: ",
-          strong("nfi_dashboard_export.rds")
-        ),
-        br(),
-        
-        fileInput(
-          "upload_data",
-          "Choose nfi_dashboard_export.rds",
-          accept = ".rds",
-          width = "100%"
-        )
-      )
-    )
-  )
-)
+source("fr_branding_css.R")
 
 # =====================================================================
 # DASHBOARD UI
 # =====================================================================
-
-status_colours <- c(
-  "waiting on client"        = "#FF7F0E",
-  "work in progress"         = "#1F77B4",
-  "internal meeting planned" = "#9467BD",
-  "client review/completed"  = "#2CA02C"
-)
 
 dashboard_ui <- dashboardPage(
   dashboardHeader(
@@ -103,7 +66,6 @@ dashboard_ui <- dashboardPage(
           valueBoxOutput("kpi_last_refreshed", width = 3)
         ),
         fluidRow(
-          # LEFT: Open Requests table
           box(
             title = "Open Requests",
             width = 8,
@@ -121,7 +83,6 @@ dashboard_ui <- dashboardPage(
             DTOutput("requests_table") %>% withSpinner()
           ),
           
-          # RIGHT: stacked charts
           column(
             width = 4,
             
@@ -136,12 +97,12 @@ dashboard_ui <- dashboardPage(
               title = "Status Distribution",
               width = 12,
               status = "info",
+              
               plotlyOutput("statusid_plot", height = "240px") %>% withSpinner()
             )
           )
         ),
         
-        # Keep lower charts full width
         fluidRow(
           box(
             title="Organisation Distribution",
@@ -171,29 +132,33 @@ dashboard_ui <- dashboardPage(
 
 server <- function(input, output, session) {
   
-  uploaded_data <- reactiveVal(NULL)
+  RDS_PATH <- "nfi_dashboard_export.rds"
   
-  observeEvent(input$upload_data, {
-    req(input$upload_data)
+  uploaded_data <- reactiveVal(NULL)
+  chart_status_filter <- reactiveVal(NULL)
+  chart_owner_filter  <- reactiveVal(NULL)
+  
+  
+  # Load dashboard data  
+  
+  observe({
+    if (!is.null(uploaded_data())) return()
     
-    # Filename validation
-    if (basename(input$upload_data$name) != "nfi_dashboard_export.rds") {
+    if (!file.exists(RDS_PATH)) {
       showNotification(
-        "Incorrect file selected. Please upload nfi_dashboard_export.rds.",
+        "Dashboard data file not found.",
         type = "error",
         duration = NULL
       )
       return()
     }
     
+    obj <- try(readRDS(RDS_PATH), silent = TRUE)
     
-    obj <- try(readRDS(input$upload_data$datapath), silent = TRUE)
-    
-    # Structure validation (minimal, non-breaking)
     required <- c("df", "timeline_cache", "header_meta")
     if (inherits(obj, "try-error") || !all(required %in% names(obj))) {
       showNotification(
-        "Invalid export file. Please re-run the export script.",
+        "Failed to load dashboard data. Check the export file.",
         type = "error",
         duration = NULL
       )
@@ -203,28 +168,35 @@ server <- function(input, output, session) {
     uploaded_data(obj)
     
     showNotification(
-      paste("Export loaded successfully.", "Requests:", nrow(obj$df)),
+      paste("Data loaded automatically.", "Requests:", nrow(obj$df)),
       type = "message"
     )
   })
   
-  observeEvent(uploaded_data(), {
-    hide("upload_section")
-    show("dashboard_section")
-  })
-  
   observeEvent(input$requests_table_rows_selected, {
-    if (!is.null(uploaded_data())) {
-      updateTabItems(session, "tabs", "detail")
-    }
+    req(uploaded_data())
+    updateTabItems(session, "tabs", "detail")
   })
   
-  # Data accessors
-  requests <- reactive(uploaded_data()$df)
-  timeline_cache <- reactive(uploaded_data()$timeline_cache)
-  header_meta_df <- reactive(uploaded_data()$header_meta)
+  observeEvent(input$reset_chart_filter, {
+    chart_status_filter(NULL)
+    chart_owner_filter(NULL)
+  })
   
+  requests <- reactive({
+    req(uploaded_data())
+    uploaded_data()$df
+  })
   
+  timeline_cache <- reactive({
+    req(uploaded_data())
+    uploaded_data()$timeline_cache
+  })
+  
+  header_meta_df <- reactive({
+    req(uploaded_data())
+    uploaded_data()$header_meta
+  })
   
   filtered_meta_with_charts <- reactive({
     df <- filtered_meta()
@@ -241,24 +213,13 @@ server <- function(input, output, session) {
   })
   
   
-  
-  chart_status_filter <- reactiveVal(NULL)
-  chart_owner_filter  <- reactiveVal(NULL)
-  
-  observeEvent(input$reset_chart_filter, {
-    chart_status_filter(NULL)
-    chart_owner_filter(NULL)
-  })
-  
-
-  
   add_buckets <- function(df) {
     df %>% mutate(
       age_bucket = case_when(
         age_days < 30 ~ "<30d",
         age_days < 60 ~ "30–59d",
         age_days < 90 ~ "60–89d",
-        TRUE ~ "90d+"
+        TRUE          ~ "90d+"
       )
     )
   }
@@ -283,7 +244,36 @@ server <- function(input, output, session) {
     
     df
   })
-
+  
+  table_df <- reactive({
+    df <- filtered()
+    meta <- header_meta_df()
+    
+    df %>%
+      left_join(meta, by = "path") %>%
+      mutate(
+        `Owner (initials)` = str_replace(`Owner (initials)`, "^\\(initials\\):\\s*", ""),
+        `Chargeable (Y/N)` = str_replace(`Chargeable (Y/N)`, "^\\(Y/N\\):\\s*", ""),
+        StatusID = recode(
+          as.character(StatusID),
+          "1" = "waiting on client",
+          "2" = "work in progress",
+          "3" = "internal meeting planned",
+          "4" = "client review/completed",
+          .default = "(unknown)"
+        )
+      ) %>%
+      select(
+        code, user, title,
+        Owner = `Owner (initials)`,
+        Status = StatusID,
+        Organisation,
+        Chargeable = `Chargeable (Y/N)`,
+        age_days,
+        path
+      )
+  })
+  
   filtered_meta <- reactive({
     df <- filtered()
     meta <- header_meta_df()
@@ -302,49 +292,12 @@ server <- function(input, output, session) {
       )
   })
   
-  table_df <- reactive({
-    df <- filtered()
-    meta <- header_meta_df()
-    
-    df %>%
-      left_join(meta, by = "path") %>%
-      mutate(
-        # Remove "(initials): " from Owner
-        `Owner (initials)` = str_replace(
-          `Owner (initials)`,
-          "^\\(initials\\):\\s*",
-          ""
-        ),
-        
-        # Remove "(Y/N): " from Chargeable
-        `Chargeable (Y/N)` = str_replace(
-          `Chargeable (Y/N)`,
-          "^\\(Y/N\\):\\s*",
-          ""
-        ),
-        
-        # Recode StatusID
-        StatusID = recode(
-          as.character(StatusID),
-          "1"="waiting on client",
-          "2"="work in progress",
-          "3"="internal meeting planned",
-          "4"="client review/completed",
-          .default="(unknown)"
-        )
-      ) %>%
-      select(
-        code, user, title,
-        Owner = `Owner (initials)`,
-        Status = StatusID,
-        Organisation,
-        Chargeable = `Chargeable (Y/N)`,
-        age_days,
-        path
-      )
-    
-    
-  })
+  status_colours <- c(
+    "waiting on client"        = "#FF7F0E",
+    "work in progress"         = "#1F77B4",
+    "internal meeting planned" = "#9467BD",
+    "client review/completed"  = "#2CA02C"
+  )
   
   output$requests_table <- renderDT({
     
@@ -382,11 +335,10 @@ server <- function(input, output, session) {
       )
   })
   
-  
   selected_request <- reactive({
     s <- input$requests_table_rows_selected
     if (!length(s)) return(NULL)
-    table_df()[s,]
+    table_df()[s, ]
   })
   
   output$kpi_total <- renderValueBox({
@@ -407,9 +359,11 @@ server <- function(input, output, session) {
     )
   })
   
+  
   output$kpi_avg_age <- renderValueBox({
     df <- filtered()
-    avg <- ifelse(nrow(df)==0,0, round(mean(df$age_days, na.rm=TRUE),1))
+    avg <- ifelse(nrow(df) == 0, 0, round(mean(df$age_days, na.rm = TRUE), 1))
+    
     styledValueBox(
       avg,
       "Average Age (days)",
@@ -420,26 +374,30 @@ server <- function(input, output, session) {
   
   output$kpi_last_refreshed <- renderValueBox({
     styledValueBox(
-      format(Sys.time(), "%Y-%m-%d %H:%M:%S"),
-      "Data Load Time",
+      format(file.info(RDS_PATH)$mtime, "%Y-%m-%d %H:%M:%S"),
+      "Data Last Refreshed",
       icon("sync"),
       "green"
     )
-    
   })
   
-
+  meta_df2 <- reactive({
+    header_meta_df() %>%
+      mutate(
+        `Owner (initials)` = str_replace(`Owner (initials)`, "^\\(initials\\):\\s*", "")
+      )
+  })
+  
   output$owner_plot <- renderPlotly({
-    
     d <- filtered_meta_with_charts() %>%
       filter(!is.na(Owner), Owner != "") %>%
       count(Owner)
     
     plot_ly(
-      data = d,
-      x = ~Owner,
-      y = ~n,
-      type = "bar",
+      data   = d,
+      x      = ~Owner,
+      y      = ~n,
+      type   = "bar",
       source = "owner_plot"
     ) %>%
       layout(
@@ -449,15 +407,13 @@ server <- function(input, output, session) {
       )
   })
   
-  
   output$organisation_plot <- renderPlotly({
-    
     d <- filtered_meta_with_charts() %>%
       filter(!is.na(Organisation), Organisation != "", Organisation != "0") %>%
       count(Organisation)
     
     plot_ly(
-      data = d,
+      d,
       x = ~Organisation,
       y = ~n,
       type = "bar"
@@ -470,17 +426,16 @@ server <- function(input, output, session) {
   })
   
   output$statusid_plot <- renderPlotly({
-    
     d <- filtered_meta_with_charts() %>%
       filter(Status %in% names(status_colours)) %>%
       count(Status)
     
     plot_ly(
-      data = d,
-      x = ~Status,
-      y = ~n,
-      type = "bar",
-      color = ~Status,
+      data   = d,
+      x      = ~Status,
+      y      = ~n,
+      type   = "bar",
+      color  = ~Status,
       colors = status_colours,
       source = "status_plot"
     ) %>%
@@ -490,15 +445,12 @@ server <- function(input, output, session) {
         showlegend = FALSE
       )
   })
-
-  # ---------------------------
-  # Chart click interactions
-  # ---------------------------
   
+  # Capture chart interactions
   status_clicked <- reactive({
     d <- event_data("plotly_click", source = "status_plot")
     if (is.null(d)) return(NULL)
-    d$x
+    d$x   
   })
   
   owner_clicked <- reactive({
@@ -543,12 +495,13 @@ server <- function(input, output, session) {
   output$timeline_reactable <- renderReactable({
     req <- selected_request()
     tl <- timeline_cache()[[req$path]]$timeline
-    if (is.null(tl) || nrow(tl) == 0)
-      return(reactable(data.frame(Message = "No timeline entries found")))
-    reactable(tl, striped = TRUE, highlight = TRUE, defaultPageSize = 1000)
+    if (is.null(tl) || nrow(tl) == 0) {
+      reactable(data.frame(Message = "No timeline entries found"))
+    } else {
+      reactable(tl, striped = TRUE, highlight = TRUE, defaultPageSize = 1000)
+    }
   })
 }
-
 
 # =====================================================================
 # RUN APP
@@ -557,8 +510,7 @@ server <- function(input, output, session) {
 ui <- fluidPage(
   useShinyjs(),
   fr_branding_css,
-  div(id = "upload_section", upload_gate_ui),
-  hidden(div(id = "dashboard_section", dashboard_ui))
+  dashboard_ui
 )
 
 shinyApp(ui = ui, server = server)
