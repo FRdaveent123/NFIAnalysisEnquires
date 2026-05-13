@@ -50,7 +50,7 @@ dashboard_ui <- dashboardPage(
     hr(),
     tags$h4("Filters"),
     textInput("search_text", "Search title / notes"),
-    sliderInput("age_filter", "Age (days)", min = 0, max = 180, value = c(0,180)),
+    uiOutput("age_filter_ui"),
     hr()
   ),
   
@@ -137,7 +137,7 @@ server <- function(input, output, session) {
   uploaded_data <- reactiveVal(NULL)
   chart_status_filter <- reactiveVal(NULL)
   chart_owner_filter  <- reactiveVal(NULL)
-  
+  chart_org_filter <- reactiveVal(NULL)
   
   # Load dashboard data  
   
@@ -181,6 +181,7 @@ server <- function(input, output, session) {
   observeEvent(input$reset_chart_filter, {
     chart_status_filter(NULL)
     chart_owner_filter(NULL)
+    chart_org_filter(NULL)
   })
   
   requests <- reactive({
@@ -209,8 +210,28 @@ server <- function(input, output, session) {
       df <- df %>% filter(Owner == chart_owner_filter())
     }
     
+    if (!is.null(chart_org_filter())) {
+      df <- df %>% filter(Organisation == chart_org_filter())
+    }
+    
     df
   })
+  
+  output$age_filter_ui <- renderUI({
+    df <- requests()
+    req(df)
+    
+    max_age <- max(df$age_days, na.rm = TRUE)
+    
+    sliderInput(
+      "age_filter",
+      "Age (days)",
+      min = 0,
+      max = max_age,
+      value = c(0, max_age)
+    )
+  })
+  
   
   
   add_buckets <- function(df) {
@@ -413,10 +434,11 @@ server <- function(input, output, session) {
       count(Organisation)
     
     plot_ly(
-      d,
+      data = d,
       x = ~Organisation,
       y = ~n,
-      type = "bar"
+      type = "bar",
+      source = "org_plot"
     ) %>%
       layout(
         yaxis = list(title = ""),
@@ -457,6 +479,16 @@ server <- function(input, output, session) {
     d <- event_data("plotly_click", source = "owner_plot")
     if (is.null(d)) return(NULL)
     d$x
+  })
+  
+  org_clicked <- reactive({
+    d <- event_data("plotly_click", source = "org_plot")
+    if (is.null(d)) return(NULL)
+    d$x
+  })
+  
+  observeEvent(org_clicked(), {
+    chart_org_filter(org_clicked())
   })
   
   observeEvent(status_clicked(), {

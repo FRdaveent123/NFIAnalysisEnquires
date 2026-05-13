@@ -164,14 +164,29 @@ parse_readme_safe <- function(request_path) {
   
   if (nrow(m) == 0) return(NULL)
   
-  dates <- suppressWarnings(dmy(m[, 2]))
-  dates[is.na(dates)] <- suppressWarnings(dmy(str_replace_all(m[, 2], "[^0-9]", "")))
-  dates[is.na(dates)] <- suppressWarnings(ymd(m[, 2]))
+  clean_dates <- m[, 2] %>%
+    str_replace_all("[^0-9/\\-]", "") %>%
+    
+    # Fix 2-digit years → force into 20xx (adjust if needed)
+    str_replace(
+      "(\\d{2}[/-]\\d{2}[/-])(\\d{2})$",
+      "\\120\\2"
+    )
+  
+  dates <- suppressWarnings(dmy(clean_dates))
+  dates[is.na(dates)] <- suppressWarnings(ymd(clean_dates))
+  
   
   tl <- tibble(
     date = dates,
     text = m[, 3]
-  ) %>% filter(!is.na(date))
+  )
+  
+  # If ALL dates failed → don't drop everything
+  if (all(is.na(tl$date))) return(NULL)
+  
+  # Otherwise keep valid ones
+  tl <- tl %>% filter(!is.na(date))
   
   list(timeline = tl)
 }
