@@ -3,7 +3,7 @@
 # =====================================================================
 # Purpose: Overview and triage of open enquiries
 
-setwd("C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R")
+#setwd("C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R")
 
 # =====================================================================
 # Package setup:
