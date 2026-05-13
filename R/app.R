@@ -3,7 +3,7 @@
 # =====================================================================
 # Purpose: Overview and triage of open enquiries
 
-#setwd("C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires_local")
+setwd("C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R")
 
 # =====================================================================
 # Package setup:
@@ -523,9 +523,7 @@ server <- function(input, output, session) {
       strong("Time Spent:"), h$`Time Spent (number counting days)` %||% "(None)", br(),
       strong("StatusID:"), h$StatusID %||% "(None)", br(),
       hr(),
-      strong("Age (days):"), req_list$age_days, br(),
-      strong("Last update:"), req_list$last_update, br(),
-      strong("Last note:"), req_list$last_note
+      strong("Age (days):"), req_list$age_days
     )
   })
   
