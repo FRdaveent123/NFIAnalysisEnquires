@@ -332,6 +332,10 @@ server <- function(input, output, session) {
       df <- df %>% filter(Owner == chart_owner_filter())
     }
     
+    if (!is.null(chart_org_filter())) {
+      df <- df %>% filter(Organisation == chart_org_filter())
+    }
+    
     datatable(
       df %>% select(-path),
       filter = "top",
@@ -355,6 +359,7 @@ server <- function(input, output, session) {
         fontWeight = "600"
       )
   })
+  
   
   selected_request <- reactive({
     s <- input$requests_table_rows_selected
