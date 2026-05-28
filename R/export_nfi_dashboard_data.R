@@ -17,7 +17,7 @@ source("helpers.R")
 source("readme_parser.R")
 
 root_path <- "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests"
-setwd("O:/0600_Advice_Enquiries_Support/0602_Open_Requests/enquires_dashboard_files")
+setwd("C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R")
 
 log_file <- "task_scheduler_log.txt"
 log_con <- file(log_file, open = "wt")
