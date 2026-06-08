@@ -6,6 +6,9 @@ cat(Sys.time(), " - scheduler started\n",
 # NFI Dashboard Export Script (fully compatible with app.R)
 # ----------------------------------------------------------
 
+root_path <- "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests"
+setwd("C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R")
+
 library(dplyr)
 library(purrr)
 library(readr)
@@ -15,9 +18,6 @@ library(stringr)
 source("file_scanner.R")
 source("helpers.R")
 source("readme_parser.R")
-
-root_path <- "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests"
-setwd("C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R")
 
 log_file <- "task_scheduler_log.txt"
 log_con <- file(log_file, open = "wt")
@@ -113,7 +113,7 @@ header_meta <- map_dfr(folders, function(p) {
 # -------------------------------------------------------------------
 # 4. Save RDS
 # -------------------------------------------------------------------
-export_dir <- file.path(root_path, "enquires_dashboard_files")
+export_dir <- file.path(root_path)
 if (!dir.exists(export_dir)) dir.create(export_dir, recursive = TRUE)
 
 export_path <- file.path(export_dir, "nfi_dashboard_export.rds")
