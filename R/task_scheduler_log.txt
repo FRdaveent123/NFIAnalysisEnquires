@@ -1,20 +1,2 @@
-1781166508 - Script started
-Warning messages:
-1: In NextMethod(.Generic) :
-  number of items to replace is not a multiple of replacement length
-2: In NextMethod(.Generic) :
-  number of items to replace is not a multiple of replacement length
-3: In NextMethod(.Generic) :
-  number of items to replace is not a multiple of replacement length
-4: In NextMethod(.Generic) :
-  number of items to replace is not a multiple of replacement length
-5: In NextMethod(.Generic) :
-  number of items to replace is not a multiple of replacement length
-6: In NextMethod(.Generic) :
-  number of items to replace is not a multiple of replacement length
-Warning messages:
-1: In NextMethod(.Generic) :
-  number of items to replace is not a multiple of replacement length
-2: In NextMethod(.Generic) :
-  number of items to replace is not a multiple of replacement length
+1781255969 - Script started
 ✅ Export complete → U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/nfi_dashboard_export.rds 
