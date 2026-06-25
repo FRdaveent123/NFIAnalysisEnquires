@@ -400,7 +400,7 @@ server <- function(input, output, session) {
   
   output$kpi_last_refreshed <- renderValueBox({
     styledValueBox(
-      format(file.info(RDS_PATH)$mtime, "%Y-%m-%d %H:%M:%S"),
+      format(file.info(RDS_PATH)$mtime, "%Y-%m-%d %H:%M:%S", tz = "Europe/London"),
       "Data Last Refreshed",
       icon("sync"),
       "green"
