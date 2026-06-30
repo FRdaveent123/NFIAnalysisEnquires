@@ -113,10 +113,9 @@ header_meta <- map_dfr(folders, function(p) {
 # -------------------------------------------------------------------
 # 4. Save RDS
 # -------------------------------------------------------------------
-export_dir <- file.path(root_path)
-if (!dir.exists(export_dir)) dir.create(export_dir, recursive = TRUE)
-
-export_path <- file.path(export_dir, "nfi_dashboard_export.rds")
+# -------------------------------------------------------------------
+# 4. Save RDS (to TWO locations)
+# -------------------------------------------------------------------
 
 export_object <- list(
   df = df,
@@ -125,9 +124,14 @@ export_object <- list(
   exported_at = Sys.time()
 )
 
-saveRDS(
-  export_object,
-  "O:/0600_Advice_Enquiries_Support/0602_Open_Requests/enquires_dashboard_files/nfi_dashboard_export.rds"
-)
+# Location 1 (existing network location)
+path1 <- "O:/0600_Advice_Enquiries_Support/0602_Open_Requests/enquires_dashboard_files/nfi_dashboard_export.rds"
 
-cat("✅ Export complete →", export_path, "\n")
+# Location 2 (your OneDrive location)
+path2 <- "C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R/nfi_dashboard_export.rds"
+
+# Save both
+saveRDS(export_object, path1)
+saveRDS(export_object, path2)
+
+cat("✅ Export complete →\n", path1, "\n", path2, "\n")
