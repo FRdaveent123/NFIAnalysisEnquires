@@ -1,2 +1,11 @@
-1782738723 - Script started
+1782821550 - Script started
 ✅ Export complete → U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/nfi_dashboard_export.rds 
+Error in library(reshape2) : there is no package called ‘reshape2’
+Error in library(reshape2) : there is no package called ‘reshape2’
+G2;H2;Warningh: package ‘reshape2’ was built under R version 4.5.3g
+G3;
+Listening on http://127.0.0.1:4938
+gG2;H2;Warningh: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+This warning is displayed once every 8 hours.
+Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.g
