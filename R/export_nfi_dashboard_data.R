@@ -134,4 +134,19 @@ path2 <- "C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/
 saveRDS(export_object, path1)
 saveRDS(export_object, path2)
 
+# -------------------------------------------------------------------
+# 5. Git commit & push
+# -------------------------------------------------------------------
+
+repo_path <- "C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires"
+
+# Build commit message with timestamp
+commit_msg <- paste("Automated update:", Sys.time())
+
+# Run git commands
+system(paste0('git -C "', repo_path, '" add .'))
+system(paste0('git -C "', repo_path, '" commit -m "', commit_msg, '"'))
+system(paste0('git -C "', repo_path, '" push origin main'))
+
+cat("✅ Git commit & push complete\n")
 cat("✅ Export complete →\n", path1, "\n", path2, "\n")
