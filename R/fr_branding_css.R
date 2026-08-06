@@ -94,6 +94,30 @@ fr_branding_css <- tags$head(
       margin-top: 10px;
       margin-bottom: 10px;
     }
+        
+    /* Open / Closed radio buttons */
+    .sidebar .radio label {
+      color: #333333 !important;
+      font-size: 14px !important;
+      font-weight: 400 !important;
+    }
+    
+    .sidebar .radio {
+      margin-top: 2px !important;
+      margin-bottom: 2px !important;
+    }
+    
+    /* Open / Closed radio buttons */
+    .sidebar .radio label {
+      color: #000000 !important;
+      font-weight: 700 !important;
+      font-size: 14px !important;
+    }
+    
+    .sidebar .radio {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
 
     /* Group filter controls visually */
     .sidebar .form-group {

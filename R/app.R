@@ -43,9 +43,11 @@ dashboard_ui <- dashboardPage(
   dashboardSidebar(
     width = 300,
     
+    tags$h4("Request Type"),
+    
     radioButtons(
       "dashboard_type",
-      "Request Type",
+      label = NULL,
       choices = c(
         "Open Requests" = "open",
         "Closed Requests" = "closed"
