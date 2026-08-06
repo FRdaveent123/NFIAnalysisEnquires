@@ -6,7 +6,7 @@ cat(Sys.time(), " - scheduler started\n",
 # NFI Dashboard Export Script (fully compatible with app.R)
 # ----------------------------------------------------------
 
-root_path <- "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests"
+root_path <- "U:/Forest Inventory/0600_Advice_Enquiries_Support/0603_Closed_Requests"
 setwd("C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R")
 
 library(dplyr)
