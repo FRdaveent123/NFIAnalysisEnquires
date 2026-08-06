@@ -7,7 +7,7 @@ cat(Sys.time(), " - scheduler started\n",
 # ----------------------------------------------------------
 
 root_path <- "U:/Forest Inventory/0600_Advice_Enquiries_Support/0603_Closed_Requests"
-setwd("C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/CLOSED_NFIAnalysisEnquires/R")
+ setwd("C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R")
 
 library(dplyr)
 library(purrr)
@@ -38,7 +38,7 @@ on.exit({
 # -------------------------------------------------------------------
 # 1. Build core dataframe
 # -------------------------------------------------------------------
-df <- build_request_data(root_path)
+df <- build_request_data(root_path, closed_request = TRUE)
 
 if (!"path" %in% names(df)) {
   stop("build_request_data() did not return a 'path' column")

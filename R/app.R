@@ -25,6 +25,7 @@ library(htmltools)
 library(tidyr)
 library(shinycssloaders)
 library(shinyjs)
+library(shinyWidgets)
 source("helpers.R")
 source("fr_branding_css.R")
 
@@ -43,14 +44,17 @@ dashboard_ui <- dashboardPage(
   dashboardSidebar(
     width = 300,
     
-    radioButtons(
+    pickerInput(
       "dashboard_type",
-      "Show",
+      "Request Type",
       choices = c(
         "Open Requests" = "open",
         "Closed Requests" = "closed"
       ),
-      selected = "open"
+      selected = "open",
+      options = list(
+        `style` = "btn-primary"
+      )
     ),
     
     sidebarMenu(
@@ -160,6 +164,7 @@ server <- function(input, output, session) {
     } else {
       OPEN_RDS_PATH
     }
+    
     
     if (!file.exists(rds_path)) {
       showNotification(

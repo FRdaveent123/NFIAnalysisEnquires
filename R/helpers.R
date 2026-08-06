@@ -77,7 +77,7 @@ extract_assigned_from_readme <- function(request_path) {
   first_non_na[1]
 }
 
-process_request <- function(request_row) {
+process_request <- function(request_row, closed_request = FALSE) {
   
   latest <- get_latest_update(request_row$path)
   if (is.null(latest)) return(NULL)
@@ -91,12 +91,20 @@ process_request <- function(request_row) {
   if (!inherits(tl_safe, "try-error") &&
       !is.null(tl_safe) &&
       nrow(tl_safe) > 0) {
+    
     first_date <- min(tl_safe$date, na.rm = TRUE)
+    
+    if (closed_request) {
+      age_val <- as.numeric(Sys.Date() - latest$date)
+    } else {
+      age_val <- as.numeric(Sys.Date() - first_date)
+    }
+    
   } else {
-    first_date <- latest$date
+    
+    age_val <- NA_real_
+    
   }
-  
-  age_val <- as.numeric(Sys.Date() - first_date)
   
   tibble(
     code        = request_row$code,
@@ -111,29 +119,36 @@ process_request <- function(request_row) {
   )
 }
 
-build_request_data <- function(root_path) {
+build_request_data <- function(root_path, closed_request = FALSE) {
   
   folders <- scan_request_folders(root_path)
   
   results <- lapply(seq_len(nrow(folders)), function(i) {
+    
     row <- folders[i, ]
     
-    if (is.na(row$code) || is.na(row$title)) return(NULL)
+    if (is.na(row$code) || is.na(row$title))
+      return(NULL)
     
-    out <- process_request(row)
+    out <- process_request(
+      row,
+      closed_request = closed_request
+    )
     
     if (is.null(out)) {
-      return(tibble(
-        code        = row$code,
-        user        = row$user,
-        title       = row$title,
-        path        = row$path,
-        last_update = NA,
-        last_note   = "No ReadMe.txt",
-        responsible = NA,
-        status      = "No Data",
-        age_days    = NA_real_
-      ))
+      return(
+        tibble(
+          code        = row$code,
+          user        = row$user,
+          title       = row$title,
+          path        = row$path,
+          last_update = NA,
+          last_note   = "No ReadMe.txt",
+          responsible = NA,
+          status      = "No Data",
+          age_days    = NA_real_
+        )
+      )
     }
     
     out

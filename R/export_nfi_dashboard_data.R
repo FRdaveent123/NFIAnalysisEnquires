@@ -38,7 +38,7 @@ on.exit({
 # -------------------------------------------------------------------
 # 1. Build core dataframe
 # -------------------------------------------------------------------
-df <- build_request_data(root_path)
+df <- build_request_data(root_path, closed_request = FALSE)
 
 if (!"path" %in% names(df)) {
   stop("build_request_data() did not return a 'path' column")
@@ -48,9 +48,6 @@ folders <- df$path
 
 # -------------------------------------------------------------------
 # 2. Build timeline cache (MUST BE A LIST WITH $timeline)
-# -------------------------------------------------------------------
-# -------------------------------------------------------------------
-# 2. Build timeline cache (must match app.R structure exactly)
 # -------------------------------------------------------------------
 timeline_cache <- map(folders, function(p) {
   tl_obj <- parse_readme_safe(p)
