@@ -42,6 +42,17 @@ dashboard_ui <- dashboardPage(
   
   dashboardSidebar(
     width = 300,
+    
+    radioButtons(
+      "dashboard_type",
+      "Show",
+      choices = c(
+        "Open Requests" = "open",
+        "Closed Requests" = "closed"
+      ),
+      selected = "open"
+    ),
+    
     sidebarMenu(
       id = "tabs",
       menuItem("Overview", tabName = "overview", icon = icon("table")),
@@ -67,7 +78,7 @@ dashboard_ui <- dashboardPage(
         ),
         fluidRow(
           box(
-            title = "Open Requests",
+            title = textOutput("requests_title"),
             width = 8,
             status = "primary",
             solidHeader = TRUE,
@@ -132,7 +143,8 @@ dashboard_ui <- dashboardPage(
 
 server <- function(input, output, session) {
   
-  RDS_PATH <- "nfi_dashboard_export.rds"
+  OPEN_RDS_PATH <- "nfi_dashboard_export.rds"
+  CLOSED_RDS_PATH <- "CLOSED_nfi_dashboard_export.rds"
   
   uploaded_data <- reactiveVal(NULL)
   chart_status_filter <- reactiveVal(NULL)
@@ -141,24 +153,30 @@ server <- function(input, output, session) {
   
   # Load dashboard data  
   
-  observe({
-    if (!is.null(uploaded_data())) return()
+  observeEvent(input$dashboard_type, {
     
-    if (!file.exists(RDS_PATH)) {
+    rds_path <- if (input$dashboard_type == "closed") {
+      CLOSED_RDS_PATH
+    } else {
+      OPEN_RDS_PATH
+    }
+    
+    if (!file.exists(rds_path)) {
       showNotification(
-        "Dashboard data file not found.",
+        paste("Dashboard data file not found:", rds_path),
         type = "error",
         duration = NULL
       )
       return()
     }
     
-    obj <- try(readRDS(RDS_PATH), silent = TRUE)
+    obj <- try(readRDS(rds_path), silent = TRUE)
     
     required <- c("df", "timeline_cache", "header_meta")
+    
     if (inherits(obj, "try-error") || !all(required %in% names(obj))) {
       showNotification(
-        "Failed to load dashboard data. Check the export file.",
+        paste("Failed to load:", basename(rds_path)),
         type = "error",
         duration = NULL
       )
@@ -167,15 +185,36 @@ server <- function(input, output, session) {
     
     uploaded_data(obj)
     
+    chart_status_filter(NULL)
+    chart_owner_filter(NULL)
+    chart_org_filter(NULL)
+    
     showNotification(
-      paste("Data loaded automatically.", "Requests:", nrow(obj$df)),
+      paste(
+        if (input$dashboard_type == "closed")
+          "Closed requests loaded."
+        else
+          "Open requests loaded.",
+        "Requests:", nrow(obj$df)
+      ),
       type = "message"
     )
-  })
+    
+  }, ignoreInit = FALSE)
   
   observeEvent(input$requests_table_rows_selected, {
     req(uploaded_data())
     updateTabItems(session, "tabs", "detail")
+  })
+  
+  observeEvent(input$dashboard_type, {
+    
+    chart_status_filter(NULL)
+    chart_owner_filter(NULL)
+    chart_org_filter(NULL)
+    
+    selectRows(dataTableProxy("requests_table"), NULL)
+    
   })
   
   observeEvent(input$reset_chart_filter, {
@@ -232,7 +271,13 @@ server <- function(input, output, session) {
     )
   })
   
-  
+  output$requests_title <- renderText({
+    if (input$dashboard_type == "closed") {
+      "Closed Requests"
+    } else {
+      "Open Requests"
+    }
+  })
   
   add_buckets <- function(df) {
     df %>% mutate(
@@ -370,7 +415,11 @@ server <- function(input, output, session) {
   output$kpi_total <- renderValueBox({
     styledValueBox(
       nrow(filtered()),
-      "Open Requests",
+      ifelse(
+        input$dashboard_type == "closed",
+        "Closed Requests",
+        "Open Requests"
+      ),
       icon("inbox"),
       "purple"
     )
@@ -399,8 +448,19 @@ server <- function(input, output, session) {
   })
   
   output$kpi_last_refreshed <- renderValueBox({
+    
+    current_rds <- if (input$dashboard_type == "closed") {
+      CLOSED_RDS_PATH
+    } else {
+      OPEN_RDS_PATH
+    }
+    
     styledValueBox(
-      format(file.info(RDS_PATH)$mtime, "%Y-%m-%d %H:%M:%S", tz = "Europe/London"),
+      format(
+        file.info(current_rds)$mtime,
+        "%Y-%m-%d %H:%M:%S",
+        tz = "Europe/London"
+      ),
       "Data Last Refreshed",
       icon("sync"),
       "green"

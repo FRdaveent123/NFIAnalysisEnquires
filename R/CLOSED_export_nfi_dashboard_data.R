@@ -6,8 +6,8 @@ cat(Sys.time(), " - scheduler started\n",
 # NFI Dashboard Export Script (fully compatible with app.R)
 # ----------------------------------------------------------
 
-root_path <- "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests"
-setwd("C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R")
+root_path <- "U:/Forest Inventory/0600_Advice_Enquiries_Support/0603_Closed_Requests"
+setwd("C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/CLOSED_NFIAnalysisEnquires/R")
 
 library(dplyr)
 library(purrr)
@@ -125,28 +125,12 @@ export_object <- list(
 )
 
 # Location 1 (existing network location)
-path1 <- "O:/0600_Advice_Enquiries_Support/0602_Open_Requests/enquires_dashboard_files/nfi_dashboard_export.rds"
+path1 <- "O:/0600_Advice_Enquiries_Support/0602_Open_Requests/enquires_dashboard_files/CLOSED_nfi_dashboard_export.rds"
 
 # Location 2 (your OneDrive location)
-path2 <- "C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R/nfi_dashboard_export.rds"
+path2 <- "C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R/CLOSED_nfi_dashboard_export.rds"
 
 # Save both
 saveRDS(export_object, path1)
 saveRDS(export_object, path2)
 
-# -------------------------------------------------------------------
-# 5. Git commit & push
-# -------------------------------------------------------------------
-
-repo_path <- "C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires"
-
-# Build commit message with timestamp
-commit_msg <- paste("Automated update:", Sys.time())
-
-# Run git commands
-system(paste0('git -C "', repo_path, '" add .'))
-system(paste0('git -C "', repo_path, '" commit -m "', commit_msg, '"'))
-system(paste0('git -C "', repo_path, '" push origin main'))
-
-cat("✅ Git commit & push complete\n")
-cat("✅ Export complete →\n", path1, "\n", path2, "\n")
