@@ -25,7 +25,6 @@ library(htmltools)
 library(tidyr)
 library(shinycssloaders)
 library(shinyjs)
-library(shinyWidgets)
 source("helpers.R")
 source("fr_branding_css.R")
 
@@ -44,17 +43,14 @@ dashboard_ui <- dashboardPage(
   dashboardSidebar(
     width = 300,
     
-    pickerInput(
+    radioButtons(
       "dashboard_type",
       "Request Type",
       choices = c(
         "Open Requests" = "open",
         "Closed Requests" = "closed"
       ),
-      selected = "open",
-      options = list(
-        `style` = "btn-primary"
-      )
+      selected = "open"
     ),
     
     sidebarMenu(
