@@ -60,10 +60,34 @@ dashboard_ui <- dashboardPage(
       menuItem("Overview", tabName = "overview", icon = icon("table")),
       menuItem("Detail", tabName = "detail", icon = icon("file-alt"))
     ),
+    
     hr(),
+    
     tags$h4("Filters"),
-    textInput("search_text", "Search title / notes"),
+    
+    textInput(
+      "search_text",
+      "Search title / notes"
+    ),
+    
     uiOutput("age_filter_ui"),
+    
+    hr(),
+    
+    tags$h4("Templates"),
+    
+    actionLink(
+      "show_phd_template",
+      "📄 PhD / Masters Template"
+    ),
+    
+    br(), br(),
+    
+    actionLink(
+      "show_commercial_template",
+      "📄 Commercial Template"
+    ),
+    
     hr()
   ),
   
@@ -103,7 +127,7 @@ dashboard_ui <- dashboardPage(
               title = "Requests by Owner",
               width = 12,
               status = "info",
-              plotlyOutput("owner_plot", height = "240px") %>% withSpinner()
+              plotlyOutput("owner_plot", height = "300px") %>% withSpinner()
             ),
             
             box(
@@ -111,7 +135,7 @@ dashboard_ui <- dashboardPage(
               width = 12,
               status = "info",
               
-              plotlyOutput("statusid_plot", height = "240px") %>% withSpinner()
+              plotlyOutput("statusid_plot", height = "300px") %>% withSpinner()
             )
           )
         ),
@@ -121,7 +145,7 @@ dashboard_ui <- dashboardPage(
             title="Organisation Distribution",
             width=12,
             status="info",
-            plotlyOutput("organisation_plot") %>% withSpinner()
+            plotlyOutput("organisation_plot", height = "300px") %>% withSpinner()
           )
         )
       ),
@@ -259,6 +283,49 @@ server <- function(input, output, session) {
     df
   })
   
+  observeEvent(input$show_phd_template, {
+    
+    showModal(
+      modalDialog(
+        title = "PhD / Masters Template",
+        easyClose = TRUE,
+        size = "l",
+        
+        div(
+          style = "max-height:600px; overflow-y:auto;",
+          
+          tags$pre(
+            style = "white-space: pre-wrap;",
+            paste(readLines("PHD and Masters.txt"), collapse = "\n")
+          )
+        )
+      )
+    )
+    
+  })
+  
+  observeEvent(input$show_commercial_template, {
+    
+    showModal(
+      modalDialog(
+        title = "Commercial Template",
+        easyClose = TRUE,
+        size = "l",
+        
+        div(
+          style = "max-height:600px; overflow-y:auto;",
+          
+          tags$pre(
+            style = "white-space: pre-wrap;",
+            paste(readLines("Commercial.txt"), collapse = "\n")
+          )
+        )
+      )
+    )
+    
+  })
+    
+  
   output$age_filter_ui <- renderUI({
     df <- requests()
     req(df)
@@ -273,6 +340,7 @@ server <- function(input, output, session) {
       value = c(0, max_age)
     )
   })
+  
   
   output$requests_title <- renderText({
     if (input$dashboard_type == "closed") {
@@ -393,8 +461,13 @@ server <- function(input, output, session) {
         pageLength = 10,
         scrollX = TRUE,
         scrollCollapse = TRUE,
-        autoWidth = TRUE,
-        dom = "tip"
+        autoWidth = FALSE,
+        dom = "tip",
+        order = if (input$dashboard_type == "closed") {
+          list(list(7, "asc"))
+        } else {
+          list()
+        }
       )
     ) %>%
       formatStyle(

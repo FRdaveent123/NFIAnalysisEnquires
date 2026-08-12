@@ -107,18 +107,6 @@ fr_branding_css <- tags$head(
       margin-bottom: 2px !important;
     }
     
-    /* Open / Closed radio buttons */
-    .sidebar .radio label {
-      color: #000000 !important;
-      font-weight: 700 !important;
-      font-size: 14px !important;
-    }
-    
-    .sidebar .radio {
-      margin-top: 4px;
-      margin-bottom: 4px;
-    }
-
     /* Group filter controls visually */
     .sidebar .form-group {
       background-color: #F6F6F9;
@@ -238,14 +226,14 @@ fr_branding_css <- tags$head(
 
   /* Shrink sidebar hard */
   .main-sidebar {
-    width: 150px !important;
+    width: 220px !important;
     padding: 6px !important;
   }
 
   /* Force main content to move left */
   .content-wrapper,
   .right-side {
-    margin-left: 150px !important;
+    margin-left: 220px !important;
   }
 
   /* Compress sidebar menu */
@@ -334,5 +322,10 @@ fr_branding_css <- tags$head(
 .box-body {
   padding: 6px 10px !important;
 }
+
+body {
+  zoom: 0.75;
+}
+
 "))
 )
