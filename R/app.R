@@ -135,7 +135,7 @@ dashboard_ui <- dashboardPage(
               width = 12,
               status = "info",
               
-              plotlyOutput("statusid_plot", height = "300px") %>% withSpinner()
+              plotlyOutput("statusid_plot", height = "600px") %>% withSpinner()
             )
           )
         ),
@@ -324,7 +324,7 @@ server <- function(input, output, session) {
     )
     
   })
-    
+  
   
   output$age_filter_ui <- renderUI({
     df <- requests()
@@ -563,6 +563,12 @@ server <- function(input, output, session) {
       source = "owner_plot"
     ) %>%
       layout(
+        margin = list(
+          b = 80,
+          l = 40,
+          r = 20,
+          t = 20
+        ),
         yaxis = list(title = ""),
         xaxis = list(title = ""),
         showlegend = FALSE
@@ -582,6 +588,12 @@ server <- function(input, output, session) {
       source = "org_plot"
     ) %>%
       layout(
+        margin = list(
+          b = 80,
+          l = 40,
+          r = 20,
+          t = 20
+        ),
         yaxis = list(title = ""),
         xaxis = list(title = ""),
         showlegend = FALSE
@@ -603,10 +615,16 @@ server <- function(input, output, session) {
       source = "status_plot"
     ) %>%
       layout(
+        margin = list(b = 100),
         yaxis = list(title = ""),
-        xaxis = list(title = ""),
+        xaxis = list(
+          title = "",
+          tickangle = -25,
+          automargin = TRUE
+        ),
         showlegend = FALSE
       )
+    
   })
   
   # Capture chart interactions
