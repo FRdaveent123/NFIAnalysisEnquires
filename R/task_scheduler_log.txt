@@ -1,1 +1,8 @@
-1787227211 - Script started
+1788254954 - Script started
+Error: build_request_data() did not return a 'path' column
+Warning message:
+Unknown or uninitialised column: `path`. 
+Error in gzfile(file, mode) : cannot open the connection
+In addition: Warning message:
+In gzfile(file, mode) :
+  cannot open compressed file 'O:/0600_Advice_Enquiries_Support/0602_Open_Requests/enquires_dashboard_files/nfi_dashboard_export.rds', probable reason 'No such file or directory'
