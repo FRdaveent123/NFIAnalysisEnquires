@@ -71,6 +71,32 @@ timeline_cache <- map(folders, function(p) {
 
 names(timeline_cache) <- folders
 
+
+
+days_open <- map_dbl(folders, function(p) {
+  
+  tl_obj <- parse_readme_safe(p)
+  
+  if (
+    is.null(tl_obj) ||
+    is.null(tl_obj$timeline) ||
+    nrow(tl_obj$timeline) < 2
+  ) {
+    return(NA_real_)
+  }
+  
+  tl <- tl_obj$timeline
+  
+  as.numeric(
+    max(tl$date, na.rm = TRUE) -
+      min(tl$date, na.rm = TRUE)
+  )
+  
+})
+
+df$days_open <- days_open
+
+
 # -------------------------------------------------------------------
 # 3. Header parser
 # -------------------------------------------------------------------

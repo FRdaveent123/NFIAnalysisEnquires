@@ -98,8 +98,11 @@ dashboard_ui <- dashboardPage(
         tabName = "overview",
         fluidRow(
           valueBoxOutput("kpi_total", width = 3),
-          valueBoxOutput("kpi_overdue", width = 3),
-          valueBoxOutput("kpi_avg_age", width = 3),
+          
+          uiOutput("kpi_middle_1"),
+          
+          uiOutput("kpi_middle_2"),
+          
           valueBoxOutput("kpi_last_refreshed", width = 3)
         ),
         fluidRow(
@@ -130,12 +133,15 @@ dashboard_ui <- dashboardPage(
               plotlyOutput("owner_plot", height = "300px") %>% withSpinner()
             ),
             
-            box(
-              title = "Status Distribution",
-              width = 12,
-              status = "info",
+            conditionalPanel(
+              condition = "input.dashboard_type == 'open'",
               
-              plotlyOutput("statusid_plot", height = "600px") %>% withSpinner()
+              box(
+                title = "Status Distribution",
+                width = 12,
+                status = "info",
+                plotlyOutput("statusid_plot", height = "600px")
+              )
             )
           )
         ),
@@ -268,7 +274,10 @@ server <- function(input, output, session) {
   filtered_meta_with_charts <- reactive({
     df <- filtered_meta()
     
-    if (!is.null(chart_status_filter())) {
+    if (
+      input$dashboard_type == "open" &&
+      !is.null(chart_status_filter())
+    ) {
       df <- df %>% filter(Status == chart_status_filter())
     }
     
@@ -281,6 +290,34 @@ server <- function(input, output, session) {
     }
     
     df
+  })
+  
+  output$kpi_middle_1 <- renderUI({
+    
+    if (input$dashboard_type == "closed") {
+      
+      valueBoxOutput("kpi_chargeable_pct", width = 3)
+      
+    } else {
+      
+      valueBoxOutput("kpi_overdue", width = 3)
+      
+    }
+    
+  })
+  
+  output$kpi_middle_2 <- renderUI({
+    
+    if (input$dashboard_type == "closed") {
+      
+      valueBoxOutput("kpi_days_open", width = 3)
+      
+    } else {
+      
+      valueBoxOutput("kpi_avg_age", width = 3)
+      
+    }
+    
   })
   
   observeEvent(input$show_phd_template, {
@@ -383,10 +420,11 @@ server <- function(input, output, session) {
   })
   
   table_df <- reactive({
+    
     df <- filtered()
     meta <- header_meta_df()
     
-    df %>%
+    df <- df %>%
       left_join(meta, by = "path") %>%
       mutate(
         `Owner (initials)` = str_replace(`Owner (initials)`, "^\\(initials\\):\\s*", ""),
@@ -400,16 +438,34 @@ server <- function(input, output, session) {
           "5" = "On HOLD",
           .default = "(unknown)"
         )
-      ) %>%
-      select(
-        code, user, title,
-        Owner = `Owner (initials)`,
-        Status = StatusID,
-        Organisation,
-        Chargeable = `Chargeable (Y/N)`,
-        age_days,
-        path
       )
+    
+    if (input$dashboard_type == "closed") {
+      
+      df %>%
+        select(
+          code, user, title,
+          Owner = `Owner (initials)`,
+          Organisation,
+          Chargeable = `Chargeable (Y/N)`,
+          age_days,
+          path
+        )
+      
+    } else {
+      
+      df %>%
+        select(
+          code, user, title,
+          Owner = `Owner (initials)`,
+          Status = StatusID,
+          Organisation,
+          Chargeable = `Chargeable (Y/N)`,
+          age_days,
+          path
+        )
+      
+    }
   })
   
   filtered_meta <- reactive({
@@ -443,7 +499,10 @@ server <- function(input, output, session) {
     
     df <- table_df()
     
-    if (!is.null(chart_status_filter())) {
+    if (
+      input$dashboard_type == "open" &&
+      !is.null(chart_status_filter())
+    ) {
       df <- df %>% filter(Status == chart_status_filter())
     }
     
@@ -455,7 +514,7 @@ server <- function(input, output, session) {
       df <- df %>% filter(Organisation == chart_org_filter())
     }
     
-    datatable(
+    dt <- datatable(
       df %>% select(-path),
       filter = "top",
       rownames = FALSE,
@@ -467,21 +526,29 @@ server <- function(input, output, session) {
         autoWidth = FALSE,
         dom = "tip",
         order = if (input$dashboard_type == "closed") {
-          list(list(7, "asc"))
+          list(list(6, "asc"))
         } else {
           list()
         }
       )
-    ) %>%
-      formatStyle(
-        "Status",
-        backgroundColor = styleEqual(
-          names(status_colours),
-          unname(status_colours)
-        ),
-        color = "white",
-        fontWeight = "600"
-      )
+    )
+    
+    if (input$dashboard_type == "open") {
+      
+      dt <- dt %>%
+        formatStyle(
+          "Status",
+          backgroundColor = styleEqual(
+            names(status_colours),
+            unname(status_colours)
+          ),
+          color = "white",
+          fontWeight = "600"
+        )
+      
+    }
+    
+    dt
   })
   
   
@@ -513,6 +580,46 @@ server <- function(input, output, session) {
     )
   })
   
+  
+  output$kpi_chargeable_pct <- renderValueBox({
+    
+    df <- table_df()
+    
+    pct <- round(
+      100 * mean(
+        toupper(trimws(df$Chargeable)) == "Y",
+        na.rm = TRUE
+      ),
+      1
+    )
+    
+    styledValueBox(
+      paste0(pct, "%"),
+      "Chargeable",
+      icon("coins"),
+      "green"
+    )
+  })
+  
+  output$kpi_days_open <- renderValueBox({
+    
+    req("days_open" %in% names(requests()))
+    
+    med_days <- round(
+      median(
+        requests()$days_open,
+        na.rm = TRUE
+      ),
+      0
+    )
+    
+    styledValueBox(
+      med_days,
+      "Days Open",
+      icon("calendar-check"),
+      "purple"
+    )
+  })
   
   output$kpi_avg_age <- renderValueBox({
     df <- filtered()
