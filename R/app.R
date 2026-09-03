@@ -397,6 +397,7 @@ server <- function(input, output, session) {
           "2" = "work in progress",
           "3" = "internal meeting planned",
           "4" = "client review/completed",
+          "5" = "On HOLD",
           .default = "(unknown)"
         )
       ) %>%
@@ -424,7 +425,8 @@ server <- function(input, output, session) {
           "1" = "waiting on client",
           "2" = "work in progress",
           "3" = "internal meeting planned",
-          "4" = "client review/completed"
+          "4" = "client review/completed",
+          "5" = "On HOLD"
         )
       )
   })
@@ -433,7 +435,8 @@ server <- function(input, output, session) {
     "waiting on client"        = "#FF7F0E",
     "work in progress"         = "#1F77B4",
     "internal meeting planned" = "#9467BD",
-    "client review/completed"  = "#2CA02C"
+    "client review/completed"  = "#2CA02C",
+    "On HOLD"                  = "#7F7F7F"
   )
   
   output$requests_table <- renderDT({
@@ -673,6 +676,7 @@ server <- function(input, output, session) {
       hr(),
       strong("Owner:"), h$`Owner (initials)` %||% "(None)", br(),
       strong("Chargeable:"), h$`Chargeable (Y/N)` %||% "(None)", br(),
+      strong("Job Code:"), h$`Job Code` %||% "(None)", br(),
       strong("Organisation:"), h$Organisation %||% "(None)", br(),
       strong("Time Spent:"), h$`Time Spent (number counting days)` %||% "(None)", br(),
       strong("StatusID:"), h$StatusID %||% "(None)", br(),
