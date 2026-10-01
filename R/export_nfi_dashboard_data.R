@@ -172,3 +172,15 @@ system(paste0('git -C "', repo_path, '" push origin main'))
 
 cat("✅ Git commit & push complete\n")
 cat("✅ Export complete →\n", path1, "\n", path2, "\n")
+
+
+
+
+
+
+folders <- scan_request_folders(root_path)
+
+folders %>%
+  filter(grepl("PF0092", path, ignore.case = TRUE))
+
+
