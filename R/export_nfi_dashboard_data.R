@@ -176,11 +176,3 @@ cat("✅ Export complete →\n", path1, "\n", path2, "\n")
 
 
 
-
-
-folders <- scan_request_folders(root_path)
-
-folders %>%
-  filter(grepl("PF0092", path, ignore.case = TRUE))
-
-
