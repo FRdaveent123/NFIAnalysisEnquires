@@ -730,7 +730,12 @@ server <- function(input, output, session) {
       source = "status_plot"
     ) %>%
       layout(
-        margin = list(b = 100),
+        margin = list(
+          b = 180,
+          l = 40,
+          r = 20,
+          t = 20
+        ),
         yaxis = list(title = ""),
         xaxis = list(
           title = "",
