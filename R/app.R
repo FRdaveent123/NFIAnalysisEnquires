@@ -93,13 +93,7 @@ dashboard_ui <- dashboardPage(
   ),
   
   dashboardBody(
-    tags$script(HTML("
-  setInterval(function() {
-    $('.js-plotly-plot').each(function() {
-      Plotly.Plots.resize(this);
-    });
-  }, 1000);
-")),
+
     
     tabItems(
       
@@ -674,11 +668,31 @@ server <- function(input, output, session) {
       filter(!is.na(Owner), Owner != "") %>%
       count(Owner)
     
+    owner_colours <- c(
+      "#1F77B4",  # blue
+      "#FF7F0E",  # orange
+      "#2CA02C",  # green
+      "#D62728",  # red
+      "#9467BD",  # purple
+      "#8C564B",  # brown
+      "#E377C2",  # pink
+      "#7F7F7F",  # grey
+      "#BCBD22",  # olive
+      "#17BECF",  # cyan
+      "#4E79A7",
+      "#F28E2B",
+      "#59A14F",
+      "#E15759",
+      "#B07AA1"
+    )
+    
     plot_ly(
-      data   = d,
-      x      = ~Owner,
-      y      = ~n,
-      type   = "bar",
+      data = d,
+      x = ~Owner,
+      y = ~n,
+      type = "bar",
+      color = ~Owner,
+      colors = owner_colours,
       source = "owner_plot"
     ) %>%
       layout(
