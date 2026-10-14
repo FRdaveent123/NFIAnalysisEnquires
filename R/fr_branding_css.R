@@ -269,11 +269,6 @@ fr_branding_css <- tags$head(
 /* ===============================
    COMPACT PLOTLY CHARTS (LAPTOP)
    =============================== */
-@media (max-width: 1600px) {
-  .plotly.html-widget {
-    height: 600px !important;
-  }
-}
 
 /* Reduce vertical spacing between rows */
 .content .row {
@@ -321,10 +316,6 @@ fr_branding_css <- tags$head(
 
 .box-body {
   padding: 6px 10px !important;
-}
-
-body {
-  zoom: 0.75;
 }
 
 "))
