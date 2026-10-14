@@ -151,10 +151,10 @@ dashboard_ui <- dashboardPage(
         
         fluidRow(
           box(
-            title="Organisation Distribution",
-            width=12,
-            status="info",
-            plotlyOutput("organisation_plot", height = "600px") %>% withSpinner()
+            title = "Organisation Distribution",
+            width = 8,
+            status = "info",
+            plotlyOutput("organisation_plot", height = "500px") %>% withSpinner()
           )
         )
       ),
