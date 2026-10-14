@@ -675,7 +675,7 @@ server <- function(input, output, session) {
     ) %>%
       layout(
         margin = list(
-          b = 80,
+          b = 180,
           l = 40,
           r = 20,
           t = 20
