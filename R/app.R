@@ -683,7 +683,7 @@ server <- function(input, output, session) {
         yaxis = list(title = ""),
         xaxis = list(
           title = "",
-          tickangle = 90,
+          tickangle = 70,
           automargin = TRUE
         ),
         showlegend = FALSE
@@ -734,7 +734,7 @@ server <- function(input, output, session) {
         yaxis = list(title = ""),
         xaxis = list(
           title = "",
-          tickangle = 90,
+          tickangle = 70,
           automargin = TRUE
         ),
         showlegend = FALSE
