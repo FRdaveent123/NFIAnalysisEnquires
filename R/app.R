@@ -129,7 +129,7 @@ dashboard_ui <- dashboardPage(
             
             box(
               title = "Requests by Owner",
-              width = 12,
+              width = 14,
               status = "info",
               plotlyOutput("owner_plot", height = "180px") %>% withSpinner()
             ),
@@ -139,7 +139,7 @@ dashboard_ui <- dashboardPage(
               
               box(
                 title = "Status Distribution",
-                width = 12,
+                width = 14,
                 status = "info",
                 plotlyOutput("statusid_plot", height = "600px")
               )
