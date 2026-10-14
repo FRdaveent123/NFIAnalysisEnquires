@@ -690,3 +690,8 @@ Error in file(open = "w+b", encoding = "UTF-8") :
   path[1]="C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh": The system cannot find the file specifiedg
 G2;H2;Warningh in normalizePath(path.expand(path), winslash, mustWork) :
   path[1]="C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh": The system cannot find the file specifiedg
+[1] 0
+[1] 0
+[1] 0
+✅ Git commit & push complete
+Error: object 'path1' not found

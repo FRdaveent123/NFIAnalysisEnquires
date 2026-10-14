@@ -131,7 +131,7 @@ dashboard_ui <- dashboardPage(
               title = "Requests by Owner",
               width = 12,
               status = "info",
-              plotlyOutput("owner_plot", height = "300px") %>% withSpinner()
+              plotlyOutput("owner_plot", height = "180px") %>% withSpinner()
             ),
             
             conditionalPanel(
