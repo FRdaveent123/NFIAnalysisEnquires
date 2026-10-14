@@ -575,8 +575,16 @@ server <- function(input, output, session) {
   })
   
   output$kpi_overdue <- renderValueBox({
+    
+    overdue_count <- filtered_meta() %>%
+      filter(
+        age_days >= 90,
+        Status != "On HOLD"
+      ) %>%
+      nrow()
+    
     styledValueBox(
-      nrow(filtered() %>% filter(age_days >= 90)),
+      overdue_count,
       "90d+ Overdue",
       icon("hourglass-end"),
       "red"
@@ -625,8 +633,15 @@ server <- function(input, output, session) {
   })
   
   output$kpi_avg_age <- renderValueBox({
-    df <- filtered()
-    avg <- ifelse(nrow(df) == 0, 0, round(mean(df$age_days, na.rm = TRUE), 1))
+    
+    df <- filtered_meta() %>%
+      filter(Status != "On HOLD")
+    
+    avg <- ifelse(
+      nrow(df) == 0,
+      0,
+      round(mean(df$age_days, na.rm = TRUE), 1)
+    )
     
     styledValueBox(
       avg,
