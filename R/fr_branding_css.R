@@ -271,7 +271,7 @@ fr_branding_css <- tags$head(
    =============================== */
 @media (max-width: 1600px) {
   .plotly.html-widget {
-    height: 180px !important;
+    height: 600px !important;
   }
 }
 

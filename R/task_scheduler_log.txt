@@ -1,1 +1,692 @@
 1791979212 - Script started
+Warning messages:
+1: In NextMethod(.Generic) :
+  number of items to replace is not a multiple of replacement length
+2: In NextMethod(.Generic) :
+  number of items to replace is not a multiple of replacement length
+3: In NextMethod(.Generic) :
+  number of items to replace is not a multiple of replacement length
+Warning message:
+In NextMethod(.Generic) :
+  number of items to replace is not a multiple of replacement length
+Warning message:
+In NextMethod(.Generic) :
+  number of items to replace is not a multiple of replacement length
+[1] 0
+[1] 0
+[1] 0
+✅ Git commit & push complete
+✅ Export complete →
+ O:/0600_Advice_Enquiries_Support/0602_Open_Requests/enquires_dashboard_files/nfi_dashboard_export.rds 
+ C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R/nfi_dashboard_export.rds 
+Error in gzfile(file, mode) : cannot open the connection
+In addition: Warning message:
+In gzfile(file, mode) :
+  cannot open compressed file 'C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh\rstudio-available-packages-1bd845db36d6/time.rds', probable reason 'No such file or directory'
+G3;
+Attaching package: ‘shinydashboard’
+
+gG3;The following object is masked from ‘package:graphics’:
+
+    box
+
+gG3;
+Attaching package: ‘DT’
+
+gG3;The following objects are masked from ‘package:shiny’:
+
+    dataTableOutput, renderDataTable
+
+gG3;Loading required package: ggplot2
+gG3;
+Attaching package: ‘plotly’
+
+gG3;The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+gG3;The following object is masked from ‘package:stats’:
+
+    filter
+
+gG3;The following object is masked from ‘package:graphics’:
+
+    layout
+
+gG3;Love shinyjs? Consider donating:
+	https://github.com/sponsors/daattali
+gG3;
+Attaching package: ‘shinyjs’
+
+gG3;The following object is masked from ‘package:shiny’:
+
+    runExample
+
+gG3;The following object is masked from ‘package:lubridate’:
+
+    show
+
+gG3;The following objects are masked from ‘package:methods’:
+
+    removeClass, show
+
+gG3;
+Listening on http://127.0.0.1:5626
+gG2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  190: <Anonymous>
+  189: signalCondition
+  188: signal_abort
+  187: abort
+  186: <Anonymous>
+  185: signalCondition
+  184: signal_abort
+  183: abort
+  182: stop_vctrs
+  181: stop_scalar_type
+  180: obj_check_vector
+  179: vec_compare
+  178: between
+  177: eval
+  176: mask$eval_all_filter
+  174: filter_eval
+  173: filter_rows
+  172: filter.data.frame
+  171: filter
+  170: %>%
+  169: <reactive:filtered> [#232]
+  147: filtered
+  146: <reactive:table_df> [#249]
+  124: table_df
+  123: exprFunc [#325]
+  122: widgetFunc
+  121: ::
+htmlwidgets
+shinyRenderWidget
+  120: func
+  107: renderFunc
+  106: renderFunc
+  102: renderFunc
+  101: output$requests_table
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  131: <Anonymous>
+  130: stop
+  129: filtered
+  117: vbox_fun [#387]
+  116: renderUI
+  115: func
+  102: renderFunc
+  101: output$kpi_total
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  172: <Anonymous>
+  123: filter
+  122: count
+  120: renderPlotly [#489]
+  119: func
+  116: shinyRenderWidget
+  115: func
+  102: renderFunc
+  101: output$owner_plot
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  172: <Anonymous>
+  123: filter
+  122: count
+  120: renderPlotly [#489]
+  119: func
+  116: shinyRenderWidget
+  115: func
+  102: renderFunc
+  101: output$owner_plot
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  172: <Anonymous>
+  123: filter
+  122: count
+  120: renderPlotly [#489]
+  119: func
+  116: shinyRenderWidget
+  115: func
+  102: renderFunc
+  101: output$owner_plot
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG2;H2;Warningh: The 'plotly_click' event tied a source ID of 'org_plot' is not registered. In order to obtain this event data, please add `event_register(p, 'plotly_click')` to the plot (`p`) that you wish to obtain event data from.g
+G2;H2;Warningh: The 'plotly_click' event tied a source ID of 'status_plot' is not registered. In order to obtain this event data, please add `event_register(p, 'plotly_click')` to the plot (`p`) that you wish to obtain event data from.g
+G2;H2;Warningh: The 'plotly_click' event tied a source ID of 'owner_plot' is not registered. In order to obtain this event data, please add `event_register(p, 'plotly_click')` to the plot (`p`) that you wish to obtain event data from.g
+G2;H2;Warningh in file(open = "w+b", encoding = "UTF-8") :
+  cannot open file 'C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh\Rf1bd8e882f60': No such file or directoryg
+Error in file(open = "w+b", encoding = "UTF-8") : 
+  cannot open the connection
+G2;H2;Warningh in normalizePath(path.expand(path), winslash, mustWork) :
+  path[1]="C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh": The system cannot find the file specifiedg
+G2;H2;Warningh in normalizePath(path.expand(path), winslash, mustWork) :
+  path[1]="C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh": The system cannot find the file specifiedg
+G3;
+Listening on http://127.0.0.1:5626
+gG2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  190: <Anonymous>
+  189: signalCondition
+  188: signal_abort
+  187: abort
+  186: <Anonymous>
+  185: signalCondition
+  184: signal_abort
+  183: abort
+  182: stop_vctrs
+  181: stop_scalar_type
+  180: obj_check_vector
+  179: vec_compare
+  178: between
+  177: eval
+  176: mask$eval_all_filter
+  174: filter_eval
+  173: filter_rows
+  172: filter.data.frame
+  171: filter
+  170: %>%
+  169: <reactive:filtered> [#232]
+  147: filtered
+  146: <reactive:table_df> [#249]
+  124: table_df
+  123: exprFunc [#325]
+  122: widgetFunc
+  121: ::
+htmlwidgets
+shinyRenderWidget
+  120: func
+  107: renderFunc
+  106: renderFunc
+  102: renderFunc
+  101: output$requests_table
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  131: <Anonymous>
+  130: stop
+  129: filtered
+  117: vbox_fun [#387]
+  116: renderUI
+  115: func
+  102: renderFunc
+  101: output$kpi_total
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  172: <Anonymous>
+  123: filter
+  122: count
+  120: renderPlotly [#489]
+  119: func
+  116: shinyRenderWidget
+  115: func
+  102: renderFunc
+  101: output$owner_plot
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  172: <Anonymous>
+  123: filter
+  122: count
+  120: renderPlotly [#489]
+  119: func
+  116: shinyRenderWidget
+  115: func
+  102: renderFunc
+  101: output$owner_plot
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  172: <Anonymous>
+  123: filter
+  122: count
+  120: renderPlotly [#489]
+  119: func
+  116: shinyRenderWidget
+  115: func
+  102: renderFunc
+  101: output$owner_plot
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG2;H2;Warningh: The 'plotly_click' event tied a source ID of 'org_plot' is not registered. In order to obtain this event data, please add `event_register(p, 'plotly_click')` to the plot (`p`) that you wish to obtain event data from.g
+G2;H2;Warningh: The 'plotly_click' event tied a source ID of 'status_plot' is not registered. In order to obtain this event data, please add `event_register(p, 'plotly_click')` to the plot (`p`) that you wish to obtain event data from.g
+G2;H2;Warningh: The 'plotly_click' event tied a source ID of 'owner_plot' is not registered. In order to obtain this event data, please add `event_register(p, 'plotly_click')` to the plot (`p`) that you wish to obtain event data from.g
+G2;H2;Warningh in file(open = "w+b", encoding = "UTF-8") :
+  cannot open file 'C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh\Rf1bd870416e0d': No such file or directoryg
+Error in file(open = "w+b", encoding = "UTF-8") : 
+  cannot open the connection
+G2;H2;Warningh: Error in [[: attempt to select less than one element in get1indexg
+  116: ::
+htmlwidgets
+shinyRenderWidget [#622]
+  115: func
+  102: renderFunc
+  101: output$timeline_reactable
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh in normalizePath(path.expand(path), winslash, mustWork) :
+  path[1]="C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh": The system cannot find the file specifiedg
+G2;H2;Warningh in normalizePath(path.expand(path), winslash, mustWork) :
+  path[1]="C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh": The system cannot find the file specifiedg
+G3;
+Listening on http://127.0.0.1:5626
+gG2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  190: <Anonymous>
+  189: signalCondition
+  188: signal_abort
+  187: abort
+  186: <Anonymous>
+  185: signalCondition
+  184: signal_abort
+  183: abort
+  182: stop_vctrs
+  181: stop_scalar_type
+  180: obj_check_vector
+  179: vec_compare
+  178: between
+  177: eval
+  176: mask$eval_all_filter
+  174: filter_eval
+  173: filter_rows
+  172: filter.data.frame
+  171: filter
+  170: %>%
+  169: <reactive:filtered> [#232]
+  147: filtered
+  146: <reactive:table_df> [#249]
+  124: table_df
+  123: exprFunc [#325]
+  122: widgetFunc
+  121: ::
+htmlwidgets
+shinyRenderWidget
+  120: func
+  107: renderFunc
+  106: renderFunc
+  102: renderFunc
+  101: output$requests_table
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  131: <Anonymous>
+  130: stop
+  129: filtered
+  117: vbox_fun [#387]
+  116: renderUI
+  115: func
+  102: renderFunc
+  101: output$kpi_total
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  172: <Anonymous>
+  123: filter
+  122: count
+  120: renderPlotly [#489]
+  119: func
+  116: shinyRenderWidget
+  115: func
+  102: renderFunc
+  101: output$owner_plot
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  172: <Anonymous>
+  123: filter
+  122: count
+  120: renderPlotly [#489]
+  119: func
+  116: shinyRenderWidget
+  115: func
+  102: renderFunc
+  101: output$owner_plot
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  172: <Anonymous>
+  123: filter
+  122: count
+  120: renderPlotly [#489]
+  119: func
+  116: shinyRenderWidget
+  115: func
+  102: renderFunc
+  101: output$owner_plot
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG2;H2;Warningh: The 'plotly_click' event tied a source ID of 'org_plot' is not registered. In order to obtain this event data, please add `event_register(p, 'plotly_click')` to the plot (`p`) that you wish to obtain event data from.g
+G2;H2;Warningh: The 'plotly_click' event tied a source ID of 'status_plot' is not registered. In order to obtain this event data, please add `event_register(p, 'plotly_click')` to the plot (`p`) that you wish to obtain event data from.g
+G2;H2;Warningh: The 'plotly_click' event tied a source ID of 'owner_plot' is not registered. In order to obtain this event data, please add `event_register(p, 'plotly_click')` to the plot (`p`) that you wish to obtain event data from.g
+G2;H2;Warningh in file(open = "w+b", encoding = "UTF-8") :
+  cannot open file 'C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh\Rf1bd8726f4b1e': No such file or directoryg
+Error in file(open = "w+b", encoding = "UTF-8") : 
+  cannot open the connection
+G2;H2;Warningh in normalizePath(path.expand(path), winslash, mustWork) :
+  path[1]="C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh": The system cannot find the file specifiedg
+G2;H2;Warningh in normalizePath(path.expand(path), winslash, mustWork) :
+  path[1]="C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh": The system cannot find the file specifiedg
+G3;
+Listening on http://127.0.0.1:5626
+gG2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  190: <Anonymous>
+  189: signalCondition
+  188: signal_abort
+  187: abort
+  186: <Anonymous>
+  185: signalCondition
+  184: signal_abort
+  183: abort
+  182: stop_vctrs
+  181: stop_scalar_type
+  180: obj_check_vector
+  179: vec_compare
+  178: between
+  177: eval
+  176: mask$eval_all_filter
+  174: filter_eval
+  173: filter_rows
+  172: filter.data.frame
+  171: filter
+  170: %>%
+  169: <reactive:filtered> [#232]
+  147: filtered
+  146: <reactive:table_df> [#249]
+  124: table_df
+  123: exprFunc [#325]
+  122: widgetFunc
+  121: ::
+htmlwidgets
+shinyRenderWidget
+  120: func
+  107: renderFunc
+  106: renderFunc
+  102: renderFunc
+  101: output$requests_table
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  131: <Anonymous>
+  130: stop
+  129: filtered
+  117: vbox_fun [#387]
+  116: renderUI
+  115: func
+  102: renderFunc
+  101: output$kpi_total
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  172: <Anonymous>
+  123: filter
+  122: count
+  120: renderPlotly [#489]
+  119: func
+  116: shinyRenderWidget
+  115: func
+  102: renderFunc
+  101: output$owner_plot
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  172: <Anonymous>
+  123: filter
+  122: count
+  120: renderPlotly [#489]
+  119: func
+  116: shinyRenderWidget
+  115: func
+  102: renderFunc
+  101: output$owner_plot
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  172: <Anonymous>
+  123: filter
+  122: count
+  120: renderPlotly [#489]
+  119: func
+  116: shinyRenderWidget
+  115: func
+  102: renderFunc
+  101: output$owner_plot
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG2;H2;Warningh: The 'plotly_click' event tied a source ID of 'org_plot' is not registered. In order to obtain this event data, please add `event_register(p, 'plotly_click')` to the plot (`p`) that you wish to obtain event data from.g
+G2;H2;Warningh: The 'plotly_click' event tied a source ID of 'status_plot' is not registered. In order to obtain this event data, please add `event_register(p, 'plotly_click')` to the plot (`p`) that you wish to obtain event data from.g
+G2;H2;Warningh: The 'plotly_click' event tied a source ID of 'owner_plot' is not registered. In order to obtain this event data, please add `event_register(p, 'plotly_click')` to the plot (`p`) that you wish to obtain event data from.g
+G2;H2;Warningh in file(open = "w+b", encoding = "UTF-8") :
+  cannot open file 'C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh\Rf1bd813204aea': No such file or directoryg
+Error in file(open = "w+b", encoding = "UTF-8") : 
+  cannot open the connection
+G2;H2;Warningh in normalizePath(path.expand(path), winslash, mustWork) :
+  path[1]="C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh": The system cannot find the file specifiedg
+G2;H2;Warningh in normalizePath(path.expand(path), winslash, mustWork) :
+  path[1]="C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh": The system cannot find the file specifiedg
+G3;
+Listening on http://127.0.0.1:5626
+gG2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  190: <Anonymous>
+  189: signalCondition
+  188: signal_abort
+  187: abort
+  186: <Anonymous>
+  185: signalCondition
+  184: signal_abort
+  183: abort
+  182: stop_vctrs
+  181: stop_scalar_type
+  180: obj_check_vector
+  179: vec_compare
+  178: between
+  177: eval
+  176: mask$eval_all_filter
+  174: filter_eval
+  173: filter_rows
+  172: filter.data.frame
+  171: filter
+  170: %>%
+  169: <reactive:filtered> [#232]
+  147: filtered
+  146: <reactive:table_df> [#249]
+  124: table_df
+  123: exprFunc [#325]
+  122: widgetFunc
+  121: ::
+htmlwidgets
+shinyRenderWidget
+  120: func
+  107: renderFunc
+  106: renderFunc
+  102: renderFunc
+  101: output$requests_table
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  131: <Anonymous>
+  130: stop
+  129: filtered
+  117: vbox_fun [#387]
+  116: renderUI
+  115: func
+  102: renderFunc
+  101: output$kpi_total
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  172: <Anonymous>
+  123: filter
+  122: count
+  120: renderPlotly [#489]
+  119: func
+  116: shinyRenderWidget
+  115: func
+  102: renderFunc
+  101: output$owner_plot
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  172: <Anonymous>
+  123: filter
+  122: count
+  120: renderPlotly [#489]
+  119: func
+  116: shinyRenderWidget
+  115: func
+  102: renderFunc
+  101: output$owner_plot
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G2;H2;Warningh: Error in filter: ℹ In argument: `is.na(age_days) | between(age_days, input$age_filter[1],
+  input$age_filter[2])`.
+Caused by error in `vec_compare()`:
+! `y` must be a vector, not `NULL`.g
+  172: <Anonymous>
+  123: filter
+  122: count
+  120: renderPlotly [#489]
+  119: func
+  116: shinyRenderWidget
+  115: func
+  102: renderFunc
+  101: output$owner_plot
+    3: runApp
+    2: print.shiny.appobj
+    1: <Anonymous>
+G3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG3;Input to asJSON(keep_vec_names=TRUE) is a named vector. In a future version of jsonlite, this option will not be supported, and named vectors will be translated into arrays instead of objects. If you want JSON object output, please use a named list instead. See ?toJSON.
+gG2;H2;Warningh: The 'plotly_click' event tied a source ID of 'org_plot' is not registered. In order to obtain this event data, please add `event_register(p, 'plotly_click')` to the plot (`p`) that you wish to obtain event data from.g
+G2;H2;Warningh: The 'plotly_click' event tied a source ID of 'status_plot' is not registered. In order to obtain this event data, please add `event_register(p, 'plotly_click')` to the plot (`p`) that you wish to obtain event data from.g
+G2;H2;Warningh: The 'plotly_click' event tied a source ID of 'owner_plot' is not registered. In order to obtain this event data, please add `event_register(p, 'plotly_click')` to the plot (`p`) that you wish to obtain event data from.g
+G2;H2;Warningh in file(open = "w+b", encoding = "UTF-8") :
+  cannot open file 'C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh\Rf1bd871851e5e': No such file or directoryg
+Error in file(open = "w+b", encoding = "UTF-8") : 
+  cannot open the connection
+G2;H2;Warningh in normalizePath(path.expand(path), winslash, mustWork) :
+  path[1]="C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh": The system cannot find the file specifiedg
+G2;H2;Warningh in normalizePath(path.expand(path), winslash, mustWork) :
+  path[1]="C:\Users\DAVID~1.ENT\AppData\Local\Temp\RtmpSsyanh": The system cannot find the file specifiedg
