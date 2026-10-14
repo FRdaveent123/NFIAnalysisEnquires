@@ -154,7 +154,7 @@ dashboard_ui <- dashboardPage(
             title="Organisation Distribution",
             width=12,
             status="info",
-            plotlyOutput("organisation_plot", height = "300px") %>% withSpinner()
+            plotlyOutput("organisation_plot", height = "600px") %>% withSpinner()
           )
         )
       ),
@@ -728,26 +728,58 @@ server <- function(input, output, session) {
   })
   
   output$organisation_plot <- renderPlotly({
+    
     d <- filtered_meta_with_charts() %>%
-      filter(!is.na(Organisation), Organisation != "", Organisation != "0") %>%
+      filter(!is.na(Organisation),
+             Organisation != "",
+             Organisation != "0") %>%
       count(Organisation)
+    
+    organisation_colours <- c(
+      "#1F77B4",
+      "#FF7F0E",
+      "#2CA02C",
+      "#D62728",
+      "#9467BD",
+      "#8C564B",
+      "#E377C2",
+      "#7F7F7F",
+      "#BCBD22",
+      "#17BECF",
+      "#4E79A7",
+      "#F28E2B",
+      "#59A14F",
+      "#E15759",
+      "#B07AA1",
+      "#76B7B2",
+      "#EDC948",
+      "#9C755F",
+      "#BAB0AC",
+      "#86BCB6"
+    )
     
     plot_ly(
       data = d,
       x = ~Organisation,
       y = ~n,
       type = "bar",
+      color = ~Organisation,
+      colors = organisation_colours,
       source = "org_plot"
     ) %>%
       layout(
         margin = list(
-          b = 80,
+          b = 180,
           l = 40,
           r = 20,
           t = 20
         ),
         yaxis = list(title = ""),
-        xaxis = list(title = ""),
+        xaxis = list(
+          title = "",
+          tickangle = 70,
+          automargin = TRUE
+        ),
         showlegend = FALSE
       )
   })
