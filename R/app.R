@@ -93,14 +93,13 @@ dashboard_ui <- dashboardPage(
   ),
   
   dashboardBody(
-    
     tags$script(HTML("
-    $(window).resize(function() {
-      $('.plotly.html-widget').each(function() {
-        Plotly.Plots.resize(this);
-      });
+  setInterval(function() {
+    $('.js-plotly-plot').each(function() {
+      Plotly.Plots.resize(this);
     });
-  ")),
+  }, 1000);
+")),
     
     tabItems(
       
