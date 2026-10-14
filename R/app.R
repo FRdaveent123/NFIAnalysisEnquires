@@ -109,21 +109,33 @@ dashboard_ui <- dashboardPage(
           valueBoxOutput("kpi_last_refreshed", width = 3)
         ),
         fluidRow(
-          box(
-            title = textOutput("requests_title"),
+          
+          column(
             width = 8,
-            status = "primary",
-            solidHeader = TRUE,
             
-            actionButton(
-              "reset_chart_filter",
-              "Reset filter",
-              icon = icon("undo"),
-              class = "btn-default",
-              style = "margin-bottom:6px;"
+            box(
+              title = textOutput("requests_title"),
+              width = 12,
+              status = "primary",
+              solidHeader = TRUE,
+              
+              actionButton(
+                "reset_chart_filter",
+                "Reset filter",
+                icon = icon("undo"),
+                class = "btn-default",
+                style = "margin-bottom:6px;"
+              ),
+              
+              DTOutput("requests_table") %>% withSpinner()
             ),
             
-            DTOutput("requests_table") %>% withSpinner()
+            box(
+              title = "Organisation Distribution",
+              width = 12,
+              status = "info",
+              plotlyOutput("organisation_plot", height = "500px") %>% withSpinner()
+            )
           ),
           
           column(
@@ -131,7 +143,7 @@ dashboard_ui <- dashboardPage(
             
             box(
               title = "Requests by Owner",
-              width = 14,
+              width = 12,
               status = "info",
               plotlyOutput("owner_plot", height = "600px") %>% withSpinner()
             ),
@@ -141,20 +153,11 @@ dashboard_ui <- dashboardPage(
               
               box(
                 title = "Status Distribution",
-                width = 14,
+                width = 12,
                 status = "info",
                 plotlyOutput("statusid_plot", height = "600px")
               )
             )
-          )
-        ),
-        
-        fluidRow(
-          box(
-            title = "Organisation Distribution",
-            width = 8,
-            status = "info",
-            plotlyOutput("organisation_plot", height = "500px") %>% withSpinner()
           )
         )
       ),
