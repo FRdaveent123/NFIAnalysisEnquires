@@ -681,7 +681,11 @@ server <- function(input, output, session) {
           t = 20
         ),
         yaxis = list(title = ""),
-        xaxis = list(title = ""),
+        xaxis = list(
+          title = "",
+          tickangle = 90,
+          automargin = TRUE
+        ),
         showlegend = FALSE
       )
   })
