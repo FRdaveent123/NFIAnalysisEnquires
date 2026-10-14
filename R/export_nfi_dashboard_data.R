@@ -156,6 +156,27 @@ path2 <- "C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/
 saveRDS(export_object, path1)
 saveRDS(export_object, path2)
 
+# TEMPORARY JSON CREATE #
+library(jsonlite)
+
+json_path1 <- "O:/0600_Advice_Enquiries_Support/0602_Open_Requests/enquires_dashboard_files/dashboard_data.json"
+
+json_path2 <- "C:/Users/david.entwistle/OneDrive - Forest Research/Documents/Project/NFIAnalysisEnquires/R/dashboard_data.json"
+
+write_json(
+  export_object,
+  json_path1,
+  pretty = TRUE,
+  auto_unbox = TRUE
+)
+
+write_json(
+  export_object,
+  json_path2,
+  pretty = TRUE,
+  auto_unbox = TRUE
+)
+
 # -------------------------------------------------------------------
 # 5. Git commit & push
 # -------------------------------------------------------------------
