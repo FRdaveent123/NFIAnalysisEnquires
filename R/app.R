@@ -143,6 +143,7 @@ dashboard_ui <- dashboardPage(
                 status = "info",
                 plotlyOutput("statusid_plot", height = "600px")
               )
+            )
           )
         ),
         
@@ -729,7 +730,7 @@ server <- function(input, output, session) {
         yaxis = list(title = ""),
         xaxis = list(
           title = "",
-          tickangle = 90,
+          tickangle = -25,
           automargin = TRUE
         ),
         showlegend = FALSE
