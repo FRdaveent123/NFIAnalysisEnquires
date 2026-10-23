@@ -29,12 +29,12 @@
       "user": "Archer the Manor",
       "title": "Error in Mapping",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0047 - Archer the Manor - Error in Mapping",
-      "last_update": "2026-10-01",
-      "last_note": "chat with VC - we cannot remove the areas unless FS/ RPA advise we should. Emailed FS to request on update on their communication with RPA. Replied to client with the update. AD",
-      "responsible": "VC",
+      "last_update": "2026-10-23",
+      "last_note": "emailed RPA. AD",
+      "responsible": "RPA",
       "status": "Active",
       "age_days": 119,
-      "days_open": 97
+      "days_open": 119
     },
     {
       "code": "MAP0050",
@@ -491,6 +491,10 @@
         {
           "date": "2026-10-01",
           "text": "chat with VC - we cannot remove the areas unless FS/ RPA advise we should. Emailed FS to request on update on their communication with RPA. Replied to client with the update. AD"
+        },
+        {
+          "date": "2026-10-23",
+          "text": "emailed RPA. AD"
         }
       ]
     },
@@ -1351,6 +1355,10 @@
         {
           "date": "2026-10-22",
           "text": "Meeting to go through data request with Tom is today (22/10)."
+        },
+        {
+          "date": "2026-10-07",
+          "text": "Tom has requests .gdb copies of 2021 and 2022 SCDB Components for Kielder and for Queen Elizabeth Park. The images he's provided are stored in the Analysis part of this folder."
         }
       ]
     },
@@ -1641,5 +1649,5 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/TOW0034 - Naomi Mervin - FS - Regional breakdown by MCA"
     }
   ],
-  "exported_at": "2026-10-23 09:02:08"
+  "exported_at": "2026-10-23 13:01:23"
 }
