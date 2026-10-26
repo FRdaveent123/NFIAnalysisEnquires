@@ -299,11 +299,11 @@
       "user": "Tom Locatelli",
       "title": "SCDB historic data request",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/SCDB0019 - Tom Locatelli - SCDB historic data request",
-      "last_update": "2026-10-22",
-      "last_note": "Meeting to go through data request with Tom is today (22/10).",
-      "status": "Meeting Arranged",
+      "last_update": "2026-10-26",
+      "last_note": "Request completed. Awaiting confirmation from Tom",
+      "status": "Awaiting Info",
       "age_days": 19,
-      "days_open": 15
+      "days_open": 19
     },
     {
       "code": "TOW0034",
@@ -1357,8 +1357,12 @@
           "text": "Meeting to go through data request with Tom is today (22/10)."
         },
         {
-          "date": "2026-10-07",
+          "date": "2026-10-23",
           "text": "Tom has requests .gdb copies of 2021 and 2022 SCDB Components for Kielder and for Queen Elizabeth Park. The images he's provided are stored in the Analysis part of this folder."
+        },
+        {
+          "date": "2026-10-26",
+          "text": "Request completed. Awaiting confirmation from Tom"
         }
       ]
     },
@@ -1527,7 +1531,7 @@
       "Chargeable (Y/N)": "(Y/N): ",
       "Organisation": "",
       "Job Code": "",
-      "StatusID": "2",
+      "StatusID": "3",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0214 - Aditya Ganesh - Czech Uni - Douglas-fir field data request"
     },
@@ -1617,7 +1621,7 @@
       "Chargeable (Y/N)": "(Y/N): ",
       "Organisation": "RSPB",
       "Job Code": "N/A",
-      "StatusID": "2",
+      "StatusID": "3",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0098 - Andrew Weatherall - Sitka spruce in Scotland"
     },
@@ -1649,5 +1653,5 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/TOW0034 - Naomi Mervin - FS - Regional breakdown by MCA"
     }
   ],
-  "exported_at": "2026-10-26 09:01:47"
+  "exported_at": "2026-10-26 10:59:00"
 }
