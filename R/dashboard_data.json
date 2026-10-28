@@ -59,6 +59,17 @@
       "age_days": 30
     },
     {
+      "code": "MAP0053",
+      "user": "Jeremy Davis",
+      "title": "Dedesignation of woodland as Priority Habitat",
+      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0053 - Jeremy Davis - Dedesignation of woodland as Priority Habitat",
+      "last_update": "2026-10-28",
+      "last_note": "AD to review area in question. TQ5431 4573. 0°12'25.229\"E  51°3'53.858\"N. Requested more information from Jeremy. ",
+      "responsible": "AD",
+      "status": "Active",
+      "age_days": 0
+    },
+    {
       "code": "NFI0184",
       "user": "Andy Burt",
       "title": "Silvera - NFI squares data",
@@ -511,6 +522,14 @@
         {
           "date": "2026-09-28",
           "text": "AD replied to Alex, woodland area confirmed not on the NFI,  will be added to the NFI 2026. AD will reply to ALex and close the ticket once area has been mapped.  "
+        }
+      ]
+    },
+    "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0053 - Jeremy Davis - Dedesignation of woodland as Priority Habitat": {
+      "timeline": [
+        {
+          "date": "2026-10-28",
+          "text": "AD to review area in question. TQ5431 4573. 0°12'25.229\"E  51°3'53.858\"N. Requested more information from Jeremy. "
         }
       ]
     },
@@ -1446,6 +1465,15 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0051 - Alex Gilham - Missing woodland area SK 3707 7051"
     },
     {
+      "Owner (initials)": "(initials): Ana Dragalina\t",
+      "Chargeable (Y/N)": "(Y/N): N",
+      "Organisation": "Individual",
+      "Job Code": "190007 - 1001 - FIS advice and support",
+      "StatusID": "1",
+      "Time Spent (number counting days)": "(number counting days):",
+      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0053 - Jeremy Davis - Dedesignation of woodland as Priority Habitat"
+    },
+    {
       "Owner (initials)": "(initials): Vera Correia",
       "Chargeable (Y/N)": "(Y/N): N",
       "Organisation": "Sylvera",
@@ -1653,5 +1681,5 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/TOW0034 - Naomi Mervin - FS - Regional breakdown by MCA"
     }
   ],
-  "exported_at": "2026-10-28 09:01:33"
+  "exported_at": "2026-10-28 13:02:09"
 }
