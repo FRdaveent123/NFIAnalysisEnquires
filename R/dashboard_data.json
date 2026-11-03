@@ -29,34 +29,12 @@
       "user": "Archer the Manor",
       "title": "Error in Mapping",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0047 - Archer the Manor - Error in Mapping",
-      "last_update": "2026-10-23",
-      "last_note": "emailed RPA. AD",
+      "last_update": "2026-11-02",
+      "last_note": "emailed RPA again. AD",
       "responsible": "RPA",
       "status": "Active",
       "age_days": 130,
-      "days_open": 119
-    },
-    {
-      "code": "MAP0050",
-      "user": "Alex Gilham",
-      "title": "Woodland areas to be added",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0050 - Alex Gilham - Woodland areas to be added",
-      "last_update": "2026-09-17",
-      "last_note": "AD replied some of the areas are already on the map, the others will be added to the NFI 2026. AD will reply to Alex and close the ticket once the areas have been mapped. ",
-      "responsible": "AD",
-      "status": "Active",
-      "age_days": 47
-    },
-    {
-      "code": "MAP0051",
-      "user": "Alex Gilham",
-      "title": "Missing woodland area SK 3707 7051",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0051 - Alex Gilham - Missing woodland area SK 3707 7051",
-      "last_update": "2026-09-28",
-      "last_note": "AD replied to Alex, woodland area confirmed not on the NFI,  will be added to the NFI 2026. AD will reply to ALex and close the ticket once area has been mapped.  ",
-      "responsible": "AD",
-      "status": "Active",
-      "age_days": 36
+      "days_open": 129
     },
     {
       "code": "MAP0053",
@@ -64,7 +42,7 @@
       "title": "Dedesignation of woodland as Priority Habitat",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0053 - Jeremy Davis - Dedesignation of woodland as Priority Habitat",
       "last_update": "2026-10-30",
-      "last_note": "replied to Jeremy area cannot be removed from map as it complies with the NFI map. Minor adjustments suggested, waiting for his confirmation. AD",
+      "last_note": "replied to Jeremy area cannot be removed from map as it complies with the NFI rules. Minor adjustments suggested, waiting for his confirmation. AD",
       "responsible": "NFI",
       "status": "Active",
       "age_days": 6,
@@ -517,24 +495,16 @@
           "text": "chat with VC - we cannot remove the areas unless FS/ RPA advise we should. Emailed FS to request on update on their communication with RPA. Replied to client with the update. AD"
         },
         {
+          "date": "2026-10-01",
+          "text": "reply from client he is not directly affected by the issue and expressed concern that 2 gov bodies do not have matching information. AD"
+        },
+        {
           "date": "2026-10-23",
-          "text": "emailed RPA. AD"
-        }
-      ]
-    },
-    "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0050 - Alex Gilham - Woodland areas to be added": {
-      "timeline": [
+          "text": "emailed RPA to request clarification regarding the mismatch. AD"
+        },
         {
-          "date": "2026-09-17",
-          "text": "AD replied some of the areas are already on the map, the others will be added to the NFI 2026. AD will reply to Alex and close the ticket once the areas have been mapped. "
-        }
-      ]
-    },
-    "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0051 - Alex Gilham - Missing woodland area SK 3707 7051": {
-      "timeline": [
-        {
-          "date": "2026-09-28",
-          "text": "AD replied to Alex, woodland area confirmed not on the NFI,  will be added to the NFI 2026. AD will reply to ALex and close the ticket once area has been mapped.  "
+          "date": "2026-11-02",
+          "text": "emailed RPA again. AD"
         }
       ]
     },
@@ -546,7 +516,7 @@
         },
         {
           "date": "2026-10-30",
-          "text": "replied to Jeremy area cannot be removed from map as it complies with the NFI map. Minor adjustments suggested, waiting for his confirmation. AD"
+          "text": "replied to Jeremy area cannot be removed from map as it complies with the NFI rules. Minor adjustments suggested, waiting for his confirmation. AD"
         }
       ]
     },
@@ -1476,24 +1446,6 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0047 - Archer the Manor - Error in Mapping"
     },
     {
-      "Owner (initials)": "(initials): Ana Dragalina",
-      "Chargeable (Y/N)": "(Y/N): N",
-      "Organisation": "FC",
-      "Job Code": "190007 - 1001 - FIS advice and support",
-      "StatusID": "2",
-      "Time Spent (number counting days)": "(number counting days):",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0050 - Alex Gilham - Woodland areas to be added"
-    },
-    {
-      "Owner (initials)": "(initials): Ana Dragalina",
-      "Chargeable (Y/N)": "(Y/N): N",
-      "Organisation": "FC",
-      "Job Code": "190007 - 1001 - FIS advice and support",
-      "StatusID": "2",
-      "Time Spent (number counting days)": "(number counting days):",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0051 - Alex Gilham - Missing woodland area SK 3707 7051"
-    },
-    {
       "Owner (initials)": "(initials): Ana Dragalina\t",
       "Chargeable (Y/N)": "(Y/N): N",
       "Organisation": "Individual",
@@ -1504,10 +1456,10 @@
     },
     {
       "Owner (initials)": "(initials):VeraC",
-      "Chargeable (Y/N)": "(Y/N): ",
+      "Chargeable (Y/N)": "(Y/N): N",
       "Organisation": "Cairngorms National Park",
-      "Job Code": "",
-      "StatusID": "",
+      "Job Code": "190007 - 1001 - FIS advice and support",
+      "StatusID": "2",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0054 - David Hetherington - Cairngorms National Park - New planting data"
     },
@@ -1719,5 +1671,5 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/TOW0034 - Naomi Mervin - FS - Regional breakdown by MCA"
     }
   ],
-  "exported_at": "2026-11-03 09:13:25"
+  "exported_at": "2026-11-03 13:34:13"
 }
