@@ -9,7 +9,7 @@
       "last_note": "CB spoke to Vera and she is going to pass this work onto Niamh (NG) who will be working on it in the next couple weeks. using the on_hold status until then",
       "responsible": "CB",
       "status": "Active",
-      "age_days": 242,
+      "age_days": 243,
       "days_open": 187
     },
     {
@@ -21,7 +21,7 @@
       "last_note": "Reply from Tom, requested further info. AD looking into it. ",
       "responsible": "AD",
       "status": "Active",
-      "age_days": 188,
+      "age_days": 189,
       "days_open": 168
     },
     {
@@ -33,7 +33,7 @@
       "last_note": "emailed RPA again. AD",
       "responsible": "RPA",
       "status": "Active",
-      "age_days": 130,
+      "age_days": 131,
       "days_open": 129
     },
     {
@@ -45,7 +45,7 @@
       "last_note": "replied to Jeremy area cannot be removed from map as it complies with the NFI rules. Minor adjustments suggested, waiting for his confirmation. AD",
       "responsible": "NFI",
       "status": "Active",
-      "age_days": 6,
+      "age_days": 7,
       "days_open": 2
     },
     {
@@ -57,7 +57,7 @@
       "last_note": "David Hetherington has reached out flagging new planting areas in the NP which are still not featuring in the latest NFI map",
       "responsible": "NP",
       "status": "Active",
-      "age_days": 1
+      "age_days": 2
     },
     {
       "code": "NFI0184",
@@ -67,7 +67,7 @@
       "last_update": "2026-10-08",
       "last_note": "Ongoing",
       "status": "Active",
-      "age_days": 293,
+      "age_days": 294,
       "days_open": 267
     },
     {
@@ -79,7 +79,7 @@
       "last_note": "DB to chase VC. Putting on hold.",
       "responsible": "VC",
       "status": "On Hold",
-      "age_days": 284,
+      "age_days": 285,
       "days_open": 229
     },
     {
@@ -91,7 +91,7 @@
       "last_note": "Discussed requirements for Sarka. She requested WEC Cycle 2 deer browsing data which is not available yet. Dave has sent an email outlining this. Will close next session if nothing more is requested.",
       "responsible": "WEC",
       "status": "Active",
-      "age_days": 181,
+      "age_days": 182,
       "days_open": 175
     },
     {
@@ -102,7 +102,7 @@
       "last_update": "2026-10-22",
       "last_note": "Chloe has emailed Samuel pushing this work back until 2nd November.",
       "status": "Active",
-      "age_days": 180,
+      "age_days": 181,
       "days_open": 168
     },
     {
@@ -113,7 +113,7 @@
       "last_update": "2026-10-22",
       "last_note": "Internal Meeting planned with Dave/ Vanessza/ Lesley",
       "status": "Meeting Arranged",
-      "age_days": 130,
+      "age_days": 131,
       "days_open": 118
     },
     {
@@ -124,7 +124,7 @@
       "last_update": "2026-10-22",
       "last_note": "No updates. ",
       "status": "Active",
-      "age_days": 36,
+      "age_days": 37,
       "days_open": 24
     },
     {
@@ -135,7 +135,7 @@
       "last_update": "2026-10-22",
       "last_note": "Dave/ Vanessza/ Lesley internal meeting planned",
       "status": "Meeting Arranged",
-      "age_days": 36,
+      "age_days": 37,
       "days_open": 24
     },
     {
@@ -146,7 +146,7 @@
       "last_update": "2026-10-22",
       "last_note": "Internal meeting planned Dave/ Vanessza/ Lesley",
       "status": "Meeting Arranged",
-      "age_days": 36,
+      "age_days": 37,
       "days_open": 24
     },
     {
@@ -157,7 +157,7 @@
       "last_update": "2026-10-22",
       "last_note": "Work potentially complete. Need to check with Stefano before closing.",
       "status": "Completed",
-      "age_days": 36,
+      "age_days": 37,
       "days_open": 24
     },
     {
@@ -168,7 +168,7 @@
       "last_update": "2026-10-22",
       "last_note": "Internal meeting planned Dave/ Vanessza/ Lesley",
       "status": "Meeting Arranged",
-      "age_days": 26,
+      "age_days": 27,
       "days_open": 14
     },
     {
@@ -179,7 +179,7 @@
       "last_update": "2026-10-08",
       "last_note": "This work is ongoing. Related to Task 9 DESNZ.",
       "status": "Active",
-      "age_days": 417,
+      "age_days": 418,
       "days_open": 391
     },
     {
@@ -190,7 +190,7 @@
       "last_update": "2026-10-08",
       "last_note": "To be closed.",
       "status": "Active",
-      "age_days": 196,
+      "age_days": 197,
       "days_open": 170
     },
     {
@@ -202,7 +202,7 @@
       "last_note": "DB the FS upgrade (vsn 4.3.29) has been sent to FLS for testing and install. This enquiry can only be closed when they confirm it has fixed the issue. Ask stuart.kimsey@forestryandland.gov.scot for confirmation. Check Service Desl ticket 7423 is also updated and closed. reassigning to VCK",
       "responsible": "DB",
       "status": "Active",
-      "age_days": 249,
+      "age_days": 250,
       "days_open": 214
     },
     {
@@ -214,7 +214,7 @@
       "last_note": "Will check through with Rob G on his return. May need a QA.",
       "responsible": "G",
       "status": "Active",
-      "age_days": 172,
+      "age_days": 173,
       "days_open": 146
     },
     {
@@ -226,7 +226,7 @@
       "last_note": "DB got a update from Guy and Guy (see 01). They are talking about dates and expenses. Assumed trains, but GuyP will likely drive. Suggest to close end of Oct, as the setup is now complete and it will become BAU. Course may not run until much later. Reassiging to VCK",
       "responsible": "DB",
       "status": "Completed",
-      "age_days": 155,
+      "age_days": 156,
       "days_open": 120
     },
     {
@@ -237,7 +237,7 @@
       "last_update": "2026-10-08",
       "last_note": "Vanessza to investigate. May be worth us sending update to Ben on progress.",
       "status": "Active",
-      "age_days": 133,
+      "age_days": 134,
       "days_open": 107
     },
     {
@@ -248,7 +248,7 @@
       "last_update": "2026-10-08",
       "last_note": "Put on hold while other higher priorities.",
       "status": "On Hold",
-      "age_days": 127,
+      "age_days": 128,
       "days_open": 101
     },
     {
@@ -259,7 +259,7 @@
       "last_update": "2026-10-08",
       "last_note": "Vanessza to check InvGate ticket ",
       "status": "Active",
-      "age_days": 113,
+      "age_days": 114,
       "days_open": 87
     },
     {
@@ -270,7 +270,7 @@
       "last_update": "2026-10-08",
       "last_note": "Vanessza to check InvGate ticket 8308 (keep an eye on).",
       "status": "Active",
-      "age_days": 81,
+      "age_days": 82,
       "days_open": 55
     },
     {
@@ -282,7 +282,7 @@
       "last_note": "LH sent it to SD. SD replied to LH and the reply is stored in Correspondence.",
       "responsible": "LH",
       "status": "Active",
-      "age_days": 29,
+      "age_days": 30,
       "days_open": 0
     },
     {
@@ -293,7 +293,7 @@
       "last_update": "2026-10-08",
       "last_note": "These are three questions from Guy that supplemented the training course (in ticket PF087). Requires test data.",
       "status": "Active",
-      "age_days": 46,
+      "age_days": 47,
       "days_open": 20
     },
     {
@@ -304,7 +304,7 @@
       "last_update": "2026-10-26",
       "last_note": "Request completed. Awaiting confirmation from Tom",
       "status": "Awaiting Info",
-      "age_days": 27,
+      "age_days": 28,
       "days_open": 19
     },
     {
@@ -315,7 +315,7 @@
       "last_update": "2026-10-22",
       "last_note": "Dave to check in with VeraC",
       "status": "Active",
-      "age_days": 81,
+      "age_days": 82,
       "days_open": 69
     }
   ],
@@ -1671,5 +1671,5 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/TOW0034 - Naomi Mervin - FS - Regional breakdown by MCA"
     }
   ],
-  "exported_at": "2026-11-03 13:34:13"
+  "exported_at": "2026-11-04 09:01:32"
 }
