@@ -53,11 +53,12 @@
       "user": "David Hetherington",
       "title": "Cairngorms National Park - New planting data",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0054 - David Hetherington - Cairngorms National Park - New planting data",
-      "last_update": "2026-11-02",
-      "last_note": "David Hetherington has reached out flagging new planting areas in the NP which are still not featuring in the latest NFI map",
+      "last_update": "2026-11-03",
+      "last_note": "areas in questions not included in the NP data received from Scotland in the last 10 years. Emailed John at SF for clarification as to why they were not included. AD",
       "responsible": "NP",
       "status": "Active",
-      "age_days": 3
+      "age_days": 3,
+      "days_open": 1
     },
     {
       "code": "NFI0184",
@@ -99,11 +100,12 @@
       "user": "Harald Bugmann",
       "title": "EU project Wildcard",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0196 - Harald Bugmann - EU project Wildcard",
-      "last_update": "2026-10-22",
-      "last_note": "Chloe has emailed Samuel pushing this work back until 2nd November.",
+      "last_update": "2026-11-05",
+      "last_note": "started again this week, prepared input file for code, trouble with downloading 85GB of climate and soil data, in contact with IT.",
+      "responsible": "IT",
       "status": "Active",
       "age_days": 182,
-      "days_open": 168
+      "days_open": 182
     },
     {
       "code": "NFI0200",
@@ -111,7 +113,7 @@
       "title": "Oxford - NFI data for EO and woodland condition modelling",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0200 - Alex Dhond - Oxford - NFI data for EO and woodland condition modelling",
       "last_update": "2026-11-05",
-      "last_note": "No update from Alex. This ticket may get closed. Chaser email to be sent to Alex first.",
+      "last_note": "No update from Alex. This ticket may get closed. Chaser email to be sent to Alex first. To be closed.",
       "status": "Active",
       "age_days": 132,
       "days_open": 132
@@ -121,11 +123,11 @@
       "user": "Scott Dearden",
       "title": "biomass estimates",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0209 - Scott Dearden - biomass estimates",
-      "last_update": "2026-10-22",
-      "last_note": "No updates. ",
-      "status": "Active",
+      "last_update": "2026-11-05",
+      "last_note": "Dave, Lesley, Vanessza to hold a meeting on Biomass. Dave to plan meeting in. ",
+      "status": "Meeting Arranged",
       "age_days": 38,
-      "days_open": 24
+      "days_open": 38
     },
     {
       "code": "NFI0210",
@@ -144,7 +146,7 @@
       "title": "Total area managed by CCF",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0211 - Sonia Lorenzo - Total area managed by CCF",
       "last_update": "2026-11-05",
-      "last_note": "Work in progress.",
+      "last_note": "Work in progress. Dave to contact Dan Braby (stats) to see if he can help with the request. ",
       "status": "Active",
       "age_days": 38,
       "days_open": 38
@@ -165,11 +167,11 @@
       "user": "FLS Colin Hossack",
       "title": "SCDB vs NFI",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0054 - FLS Colin Hossack - SCDB vs NFI",
-      "last_update": "2026-10-08",
-      "last_note": "This work is ongoing. Related to Task 9 DESNZ.",
-      "status": "Active",
+      "last_update": "2026-11-05",
+      "last_note": "Rob, Lesley, Karolina to plan internal meeting.",
+      "status": "Meeting Arranged",
       "age_days": 419,
-      "days_open": 391
+      "days_open": 419
     },
     {
       "code": "PF0079",
@@ -177,8 +179,8 @@
       "title": "GB2026 Target Diameter M1",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0079 - FLS Colin Hossack - GB2026 Target Diameter M1",
       "last_update": "2026-10-08",
-      "last_note": "To be closed.",
-      "status": "Active",
+      "last_note": "Potentially to be closed. Internal meeting on Colin Hossack tasks to be planned in.",
+      "status": "Meeting Arranged",
       "age_days": 198,
       "days_open": 170
     },
@@ -187,12 +189,12 @@
       "user": "FLS Stuart Kimsey",
       "title": " PR increment report showing negatives (7423)",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0080 - FLS Stuart Kimsey -  PR increment report showing negatives (7423)",
-      "last_update": "2026-09-29",
-      "last_note": "DB the FS upgrade (vsn 4.3.29) has been sent to FLS for testing and install. This enquiry can only be closed when they confirm it has fixed the issue. Ask stuart.kimsey@forestryandland.gov.scot for confirmation. Check Service Desl ticket 7423 is also updated and closed. reassigning to VCK",
-      "responsible": "DB",
+      "last_update": "2026-11-05",
+      "last_note": "Request staying open until the new version of FS is tested/ deployed.",
+      "responsible": "FS",
       "status": "Active",
       "age_days": 251,
-      "days_open": 214
+      "days_open": 251
     },
     {
       "code": "PF0083",
@@ -211,34 +213,33 @@
       "user": "NRW Guy Bennett",
       "title": "Bespoke FS training",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0087 - NRW Guy Bennett - Bespoke FS training",
-      "last_update": "2026-09-29",
-      "last_note": "DB got a update from Guy and Guy (see 01). They are talking about dates and expenses. Assumed trains, but GuyP will likely drive. Suggest to close end of Oct, as the setup is now complete and it will become BAU. Course may not run until much later. Reassiging to VCK",
-      "responsible": "DB",
-      "status": "Completed",
+      "last_update": "2026-11-05",
+      "last_note": "",
+      "status": "Active",
       "age_days": 157,
-      "days_open": 120
+      "days_open": 157
     },
     {
       "code": "PF0089",
       "user": "FE Ben Robinson",
       "title": "50-year Forecast PAWS",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0089 - FE Ben Robinson - 50-year Forecast PAWS",
-      "last_update": "2026-10-08",
-      "last_note": "Vanessza to investigate. May be worth us sending update to Ben on progress.",
+      "last_update": "2026-11-05",
+      "last_note": "Rob Grierson to check emails etc around this request.",
       "status": "Active",
       "age_days": 135,
-      "days_open": 107
+      "days_open": 135
     },
     {
       "code": "PF0090",
       "user": "FR Lesley",
       "title": "Height measurements in GS",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0090 - FR Lesley - Height measurements in GS",
-      "last_update": "2026-10-08",
-      "last_note": "Put on hold while other higher priorities.",
-      "status": "On Hold",
+      "last_update": "2026-11-05",
+      "last_note": "This request to be discussed during the Biomass internal meeting (Dave, Vanessza, Lesley).",
+      "status": "Meeting Arranged",
       "age_days": 129,
-      "days_open": 101
+      "days_open": 129
     },
     {
       "code": "PF0092",
@@ -246,21 +247,10 @@
       "title": "Time tick tok layers questionable output (8083)",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0092 - FLS Stuart Kimsey - Time tick tok layers questionable output (8083)",
       "last_update": "2026-10-08",
-      "last_note": "Vanessza to check InvGate ticket ",
+      "last_note": "Vanessza to check InvGate ticket",
       "status": "Active",
       "age_days": 115,
       "days_open": 87
-    },
-    {
-      "code": "PF0095",
-      "user": "FE Peter Burnett",
-      "title": "MAX Mai Forecasts incorrect in Scenarios (8308)",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0095 - FE Peter Burnett - MAX Mai Forecasts incorrect in Scenarios (8308)",
-      "last_update": "2026-10-08",
-      "last_note": "Vanessza to check InvGate ticket 8308 (keep an eye on).",
-      "status": "Active",
-      "age_days": 83,
-      "days_open": 55
     },
     {
       "code": "PF0098",
@@ -268,7 +258,7 @@
       "title": "Sitka spruce in Scotland",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0098 - Andrew Weatherall - Sitka spruce in Scotland",
       "last_update": "2026-11-05",
-      "last_note": "Assgined to Lesley Halsall who has had some seperate correspondence on this one.",
+      "last_note": "Assgined to Lesley Halsall who is to review Shweta's results before passing on to Andrew.",
       "status": "Active",
       "age_days": 31,
       "days_open": 31
@@ -278,11 +268,11 @@
       "user": "Guy Pembroke",
       "title": "Three PF questions",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0099 - Guy Pembroke - Three PF questions",
-      "last_update": "2026-10-08",
-      "last_note": "These are three questions from Guy that supplemented the training course (in ticket PF087). Requires test data.",
+      "last_update": "2026-11-05",
+      "last_note": "Lesley to add questions to Correspondence PF0099, then Vanessza can pick up.",
       "status": "Active",
       "age_days": 48,
-      "days_open": 20
+      "days_open": 48
     },
     {
       "code": "SCDB0019",
@@ -513,6 +503,10 @@
         {
           "date": "2026-11-02",
           "text": "David Hetherington has reached out flagging new planting areas in the NP which are still not featuring in the latest NFI map"
+        },
+        {
+          "date": "2026-11-03",
+          "text": "areas in questions not included in the NP data received from Scotland in the last 10 years. Emailed John at SF for clarification as to why they were not included. AD"
         }
       ]
     },
@@ -757,6 +751,10 @@
         {
           "date": "2026-10-22",
           "text": "Chloe has emailed Samuel pushing this work back until 2nd November."
+        },
+        {
+          "date": "2026-11-05",
+          "text": "started again this week, prepared input file for code, trouble with downloading 85GB of climate and soil data, in contact with IT."
         }
       ]
     },
@@ -808,7 +806,7 @@
         },
         {
           "date": "2026-11-05",
-          "text": "No update from Alex. This ticket may get closed. Chaser email to be sent to Alex first."
+          "text": "No update from Alex. This ticket may get closed. Chaser email to be sent to Alex first. To be closed."
         }
       ]
     },
@@ -824,7 +822,11 @@
         },
         {
           "date": "2026-10-22",
-          "text": "No updates. "
+          "text": "No updates."
+        },
+        {
+          "date": "2026-11-05",
+          "text": "Dave, Lesley, Vanessza to hold a meeting on Biomass. Dave to plan meeting in. "
         }
       ]
     },
@@ -864,7 +866,7 @@
         },
         {
           "date": "2026-11-05",
-          "text": "Work in progress."
+          "text": "Work in progress. Dave to contact Dan Braby (stats) to see if he can help with the request. "
         }
       ]
     },
@@ -1000,7 +1002,7 @@
         },
         {
           "date": "2026-06-18",
-          "text": "RajniD is producing a breakdown how we did arrived to the published figures [conifers - 410000 ha & broaleaved - 58000 ha] "
+          "text": "RajniD is producing a breakdown how we did arrived to the published figures [conifers - 410000 ha & broadleaved - 58000 ha] "
         },
         {
           "date": "2026-07-09",
@@ -1025,6 +1027,10 @@
         {
           "date": "2026-10-08",
           "text": "This work is ongoing. Related to Task 9 DESNZ."
+        },
+        {
+          "date": "2026-11-05",
+          "text": "Rob, Lesley, Karolina to plan internal meeting."
         }
       ]
     },
@@ -1068,7 +1074,7 @@
         },
         {
           "date": "2026-10-08",
-          "text": "To be closed."
+          "text": "Potentially to be closed. Internal meeting on Colin Hossack tasks to be planned in."
         }
       ]
     },
@@ -1117,6 +1123,10 @@
         {
           "date": "2026-09-29",
           "text": "DB the FS upgrade (vsn 4.3.29) has been sent to FLS for testing and install. This enquiry can only be closed when they confirm it has fixed the issue. Ask stuart.kimsey@forestryandland.gov.scot for confirmation. Check Service Desl ticket 7423 is also updated and closed. reassigning to VCK"
+        },
+        {
+          "date": "2026-11-05",
+          "text": "Request staying open until the new version of FS is tested/ deployed."
         }
       ]
     },
@@ -1192,7 +1202,11 @@
         },
         {
           "date": "2026-09-29",
-          "text": "DB got a update from Guy and Guy (see 01). They are talking about dates and expenses. Assumed trains, but GuyP will likely drive. Suggest to close end of Oct, as the setup is now complete and it will become BAU. Course may not run until much later. Reassiging to VCK"
+          "text": "DB got a update from Guy and Guy (see 01). They are talking about dates and expenses. Assumed trains, but GuyP will likely drive. Suggest to close end of Oct, as the setup is now complete and it will become BAU. Course may not run until much later. Reassiging to VCK."
+        },
+        {
+          "date": "2026-11-05",
+          "text": ""
         }
       ]
     },
@@ -1237,6 +1251,10 @@
         {
           "date": "2026-10-08",
           "text": "Vanessza to investigate. May be worth us sending update to Ben on progress."
+        },
+        {
+          "date": "2026-11-05",
+          "text": "Rob Grierson to check emails etc around this request."
         }
       ]
     },
@@ -1261,6 +1279,10 @@
         {
           "date": "2026-10-08",
           "text": "Put on hold while other higher priorities."
+        },
+        {
+          "date": "2026-11-05",
+          "text": "This request to be discussed during the Biomass internal meeting (Dave, Vanessza, Lesley)."
         }
       ]
     },
@@ -1280,39 +1302,7 @@
         },
         {
           "date": "2026-10-08",
-          "text": "Vanessza to check InvGate ticket "
-        }
-      ]
-    },
-    "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0095 - FE Peter Burnett - MAX Mai Forecasts incorrect in Scenarios (8308)": {
-      "timeline": [
-        {
-          "date": "2026-08-14",
-          "text": "DB logged."
-        },
-        {
-          "date": "2026-08-26",
-          "text": "See SD ticket. seems to be FWEb, not FS. FWeb team investigating"
-        },
-        {
-          "date": "2026-09-02",
-          "text": "DB DSnoz in FW team has recreated the issue and requested second line investigation. see invgate"
-        },
-        {
-          "date": "2026-09-10",
-          "text": "handled on InvGate, with FWeb team. Keeping open for now."
-        },
-        {
-          "date": "2026-09-11",
-          "text": "some slow prgress in invgate. asked for an update fro DSnoz. https://forestresearch.sd.cloud.invgate.net/requests/show/index/id/8308"
-        },
-        {
-          "date": "2026-09-29",
-          "text": "Alexandros (FR Gis) and Peter Burnett (FE) are working together on this. Issue has been identified as something in FW, thus putting this on hold. Check occasionally on progress of 8308 and close this when that is closed. Assigning to VCK"
-        },
-        {
-          "date": "2026-10-08",
-          "text": "Vanessza to check InvGate ticket 8308 (keep an eye on)."
+          "text": "Vanessza to check InvGate ticket"
         }
       ]
     },
@@ -1328,7 +1318,7 @@
         },
         {
           "date": "2026-11-05",
-          "text": "Assgined to Lesley Halsall who has had some seperate correspondence on this one."
+          "text": "Assgined to Lesley Halsall who is to review Shweta's results before passing on to Andrew."
         }
       ]
     },
@@ -1345,6 +1335,10 @@
         {
           "date": "2026-10-08",
           "text": "These are three questions from Guy that supplemented the training course (in ticket PF087). Requires test data."
+        },
+        {
+          "date": "2026-11-05",
+          "text": "Lesley to add questions to Correspondence PF0099, then Vanessza can pick up."
         }
       ]
     },
@@ -1491,7 +1485,7 @@
       "Chargeable (Y/N)": "(Y/N): TBC",
       "Organisation": "ETH Zurich",
       "Job Code": "",
-      "StatusID": "1",
+      "StatusID": "2",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0196 - Harald Bugmann - EU project Wildcard"
     },
@@ -1509,7 +1503,7 @@
       "Chargeable (Y/N)": "(Y/N): N",
       "Organisation": "FR",
       "Job Code": "190007-1001",
-      "StatusID": "2",
+      "StatusID": "3",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0209 - Scott Dearden - biomass estimates"
     },
@@ -1518,7 +1512,7 @@
       "Chargeable (Y/N)": "(Y/N): ",
       "Organisation": "",
       "Job Code": "",
-      "StatusID": "3",
+      "StatusID": "1",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0210 - Yassine BENAMOR - NFI data biomass MRV application"
     },
@@ -1527,7 +1521,7 @@
       "Chargeable (Y/N)": "(Y/N): ",
       "Organisation": "Woodland Trust",
       "Job Code": "n/a",
-      "StatusID": "3",
+      "StatusID": "1",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0211 - Sonia Lorenzo - Total area managed by CCF"
     },
@@ -1536,13 +1530,12 @@
       "Chargeable (Y/N)": "(Y/N): ",
       "Organisation": "",
       "Job Code": "",
-      "StatusID": "3",
+      "StatusID": "2",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0214 - Aditya Ganesh - Czech Uni - Douglas-fir field data request"
     },
     {
-      "Owner (initials)": "(initials): Caitlin Buchanan",
-      "Chargeable (Y/N)": "(Y/N): N",
+      "Owner (initials)": "(initials): Rob Grierson",
       "Organisation": "FLS",
       "Job Code": "",
       "StatusID": "3",
@@ -1586,11 +1579,11 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0087 - NRW Guy Bennett - Bespoke FS training"
     },
     {
-      "Owner (initials)": "(initials): Vanessza Cseh-Koos",
+      "Owner (initials)": "(initials): Rob Grierson",
       "Chargeable (Y/N)": "(Y/N): N",
       "Organisation": "FE",
       "Job Code": "",
-      "StatusID": "1",
+      "StatusID": "2",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0089 - FE Ben Robinson - 50-year Forecast PAWS"
     },
@@ -1599,7 +1592,7 @@
       "Chargeable (Y/N)": "(Y/N): N",
       "Organisation": "FR",
       "Job Code": "",
-      "StatusID": "5",
+      "StatusID": "3",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0090 - FR Lesley - Height measurements in GS"
     },
@@ -1611,15 +1604,6 @@
       "StatusID": "5",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0092 - FLS Stuart Kimsey - Time tick tok layers questionable output (8083)"
-    },
-    {
-      "Owner (initials)": "(initials): Vanessza Cseh-Koos",
-      "Chargeable (Y/N)": "(Y/N): N",
-      "Organisation": "FE",
-      "Job Code": "189801-1001",
-      "StatusID": "5",
-      "Time Spent (number counting days)": "(number counting days):",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0095 - FE Peter Burnett - MAX Mai Forecasts incorrect in Scenarios (8308)"
     },
     {
       "Owner (initials)": "(initials): Lesley Halsall",
@@ -1658,5 +1642,5 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/TOW0034 - Naomi Mervin - FS - Regional breakdown by MCA"
     }
   ],
-  "exported_at": "2026-11-05 09:32:30"
+  "exported_at": "2026-11-05 13:01:31"
 }
