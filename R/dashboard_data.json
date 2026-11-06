@@ -198,7 +198,7 @@
       "title": " PR increment report showing negatives (7423)",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0080 - FLS Stuart Kimsey -  PR increment report showing negatives (7423)",
       "last_update": "2026-11-05",
-      "last_note": "Request staying open until the new version of FS is tested/ deployed.",
+      "last_note": "Request staying open until the new version of FS is tested/ deployed. Contacted Greig Crawford from FLS to get update on integration and progress at FLS. ",
       "responsible": "FS",
       "status": "Active",
       "age_days": 252,
@@ -1126,7 +1126,7 @@
         },
         {
           "date": "2026-11-05",
-          "text": "Request staying open until the new version of FS is tested/ deployed."
+          "text": "Request staying open until the new version of FS is tested/ deployed. Contacted Greig Crawford from FLS to get update on integration and progress at FLS. "
         }
       ]
     },
@@ -1622,5 +1622,5 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/TOW0034 - Naomi Mervin - FS - Regional breakdown by MCA"
     }
   ],
-  "exported_at": "2026-11-06 09:01:22"
+  "exported_at": "2026-11-06 13:01:21"
 }
