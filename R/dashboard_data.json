@@ -9,7 +9,7 @@
       "last_note": "CB spoke to Vera and she is going to pass this work onto Niamh (NG) who will be working on it in the next couple weeks. using the on_hold status until then",
       "responsible": "CB",
       "status": "Active",
-      "age_days": 250,
+      "age_days": 251,
       "days_open": 187
     },
     {
@@ -21,7 +21,7 @@
       "last_note": "Reply from Tom, requested further info. AD looking into it. ",
       "responsible": "AD",
       "status": "Active",
-      "age_days": 196,
+      "age_days": 197,
       "days_open": 168
     },
     {
@@ -33,7 +33,7 @@
       "last_note": "emailed RPA again. AD",
       "responsible": "RPA",
       "status": "Active",
-      "age_days": 138,
+      "age_days": 139,
       "days_open": 129
     },
     {
@@ -45,7 +45,7 @@
       "last_note": "replied to Jeremy area cannot be removed from map as it complies with the NFI rules. Minor adjustments suggested, waiting for his confirmation. AD",
       "responsible": "NFI",
       "status": "Active",
-      "age_days": 14,
+      "age_days": 15,
       "days_open": 2
     },
     {
@@ -57,7 +57,7 @@
       "last_note": "areas in questions not included in the NP data received from Scotland in the last 10 years. Emailed John at SF for clarification as to why they were not included. AD",
       "responsible": "NP",
       "status": "Active",
-      "age_days": 9,
+      "age_days": 10,
       "days_open": 1
     },
     {
@@ -68,7 +68,7 @@
       "last_update": "2026-10-08",
       "last_note": "Ongoing",
       "status": "Active",
-      "age_days": 301,
+      "age_days": 302,
       "days_open": 267
     },
     {
@@ -80,7 +80,7 @@
       "last_note": "DB to chase VC. Putting on hold.",
       "responsible": "VC",
       "status": "On Hold",
-      "age_days": 292,
+      "age_days": 293,
       "days_open": 229
     },
     {
@@ -92,7 +92,7 @@
       "last_note": "Discussed requirements for Sarka. She requested WEC Cycle 2 deer browsing data which is not available yet. Dave has sent an email outlining this. Will close next session if nothing more is requested.",
       "responsible": "WEC",
       "status": "Active",
-      "age_days": 189,
+      "age_days": 190,
       "days_open": 175
     },
     {
@@ -104,7 +104,7 @@
       "last_note": "started again this week, prepared input file for code, trouble with downloading 85GB of climate and soil data, in contact with IT.",
       "responsible": "IT",
       "status": "Active",
-      "age_days": 188,
+      "age_days": 189,
       "days_open": 182
     },
     {
@@ -115,7 +115,7 @@
       "last_update": "2026-11-05",
       "last_note": "No update from Alex. This ticket may get closed. Chaser email to be sent to Alex first. To be closed.",
       "status": "Active",
-      "age_days": 138,
+      "age_days": 139,
       "days_open": 132
     },
     {
@@ -126,7 +126,7 @@
       "last_update": "2026-11-05",
       "last_note": "Follow up query. Reopening",
       "status": "Active",
-      "age_days": 100,
+      "age_days": 101,
       "days_open": 94
     },
     {
@@ -137,7 +137,7 @@
       "last_update": "2026-11-05",
       "last_note": "Dave, Lesley, Vanessza to hold a meeting on Biomass. Dave to plan meeting in. ",
       "status": "Meeting Arranged",
-      "age_days": 44,
+      "age_days": 45,
       "days_open": 38
     },
     {
@@ -148,7 +148,7 @@
       "last_update": "2026-11-05",
       "last_note": "This is an extensive request for plot level data from a corporation. Emailed back to outline that plot level data is not available. ",
       "status": "Active",
-      "age_days": 44,
+      "age_days": 45,
       "days_open": 38
     },
     {
@@ -159,7 +159,7 @@
       "last_update": "2026-11-05",
       "last_note": "Work in progress. Dave to contact Dan Braby (stats) to see if he can help with the request. ",
       "status": "Active",
-      "age_days": 44,
+      "age_days": 45,
       "days_open": 38
     },
     {
@@ -170,7 +170,7 @@
       "last_update": "2026-11-05",
       "last_note": "This work is in progress. The scope of this request needs to be deterined and work planned in.",
       "status": "Active",
-      "age_days": 34,
+      "age_days": 35,
       "days_open": 28
     },
     {
@@ -197,19 +197,8 @@
       "last_update": "2026-11-05",
       "last_note": "Rob, Lesley, Karolina to plan internal meeting.",
       "status": "Meeting Arranged",
-      "age_days": 425,
+      "age_days": 426,
       "days_open": 419
-    },
-    {
-      "code": "PF0079",
-      "user": "FLS Colin Hossack",
-      "title": "GB2026 Target Diameter M1",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0079 - FLS Colin Hossack - GB2026 Target Diameter M1",
-      "last_update": "2026-10-08",
-      "last_note": "Potentially to be closed. Internal meeting on Colin Hossack tasks to be planned in.",
-      "status": "Meeting Arranged",
-      "age_days": 204,
-      "days_open": 170
     },
     {
       "code": "PF0080",
@@ -220,20 +209,8 @@
       "last_note": "Request staying open until the new version of FS is tested/ deployed. Contacted Greig Crawford from FLS to get update on integration and progress at FLS. ",
       "responsible": "FS",
       "status": "Active",
-      "age_days": 257,
+      "age_days": 258,
       "days_open": 251
-    },
-    {
-      "code": "PF0083",
-      "user": "Charlie Clark",
-      "title": "SCDB From-To Species-YC",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0083 - Charlie Clark - SCDB From-To Species-YC",
-      "last_update": "2026-10-08",
-      "last_note": "Will check through with Rob G on his return. May need a QA.",
-      "responsible": "G",
-      "status": "Active",
-      "age_days": 180,
-      "days_open": 146
     },
     {
       "code": "PF0087",
@@ -243,7 +220,7 @@
       "last_update": "2026-11-05",
       "last_note": "Guy Bennett plans two training days (Llandovery and the other in Welshpool) proposed time for training February 2027, Guy Pembroke proposed first two weeks of Feb 2027 Tues/Wed or Wed/Thurs, 5 people can attend. Action: Follow up needs on next steps to secure date. ",
       "status": "Active",
-      "age_days": 163,
+      "age_days": 164,
       "days_open": 157
     },
     {
@@ -254,7 +231,7 @@
       "last_update": "2026-11-05",
       "last_note": "Rob Grierson to check emails etc around this request.",
       "status": "Active",
-      "age_days": 141,
+      "age_days": 142,
       "days_open": 135
     },
     {
@@ -265,7 +242,7 @@
       "last_update": "2026-11-05",
       "last_note": "This request to be discussed during the Biomass internal meeting (Dave, Vanessza, Lesley).",
       "status": "Meeting Arranged",
-      "age_days": 135,
+      "age_days": 136,
       "days_open": 129
     },
     {
@@ -276,7 +253,7 @@
       "last_update": "2026-11-05",
       "last_note": "Assgined to Lesley Halsall who is to review Shweta's results before passing on to Andrew.",
       "status": "Active",
-      "age_days": 37,
+      "age_days": 38,
       "days_open": 31
     },
     {
@@ -287,7 +264,7 @@
       "last_update": "2026-11-05",
       "last_note": "Lesley to add questions to Correspondence PF0099, then Vanessza can pick up.",
       "status": "Active",
-      "age_days": 54,
+      "age_days": 55,
       "days_open": 48
     },
     {
@@ -298,7 +275,7 @@
       "last_update": "2026-11-05",
       "last_note": "Initial request completed. Additional years: 2002, 2006, 2008, 2012, 2021, 2023 for Queen Elizabeth Park have been requested now.",
       "status": "Completed",
-      "age_days": 35,
+      "age_days": 36,
       "days_open": 29
     },
     {
@@ -309,7 +286,7 @@
       "last_update": "2026-10-22",
       "last_note": "Dave to check in with VeraC",
       "status": "Active",
-      "age_days": 89,
+      "age_days": 90,
       "days_open": 69
     }
   ],
@@ -1080,50 +1057,6 @@
         }
       ]
     },
-    "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0079 - FLS Colin Hossack - GB2026 Target Diameter M1": {
-      "timeline": [
-        {
-          "date": "2026-04-21",
-          "text": "RG Received request and logged it. Steps required:"
-        },
-        {
-          "date": "2026-05-07",
-          "text": "Waiting on SCDB Upload checks before forecasting can begin. Colin knows it might take a while."
-        },
-        {
-          "date": "2026-06-11",
-          "text": "RG to start work on this as SCDB upload checks complete. DE to support. Internal meeting to be planned."
-        },
-        {
-          "date": "2026-06-25",
-          "text": "In progress. DE running a forecast on the NFI regions."
-        },
-        {
-          "date": "2026-07-09",
-          "text": "In progress. Forecaster outputs created in the process of creating the outputs for Colin now."
-        },
-        {
-          "date": "2026-08-06",
-          "text": "In progress. No updates."
-        },
-        {
-          "date": "2026-08-27",
-          "text": "No updates. "
-        },
-        {
-          "date": "2026-09-10",
-          "text": "RG to finish assumptions doc as accompaniment. To send today."
-        },
-        {
-          "date": "2026-09-11",
-          "text": "RG sent final outputs (in zipped folder) to Colin H on 10th. Acknowledgment of receipt. Tagged DvE as contact in my absence, if any questions arise. Close after 2 weeks if no follow ups."
-        },
-        {
-          "date": "2026-10-08",
-          "text": "Potentially to be closed. Internal meeting on Colin Hossack tasks to be planned in."
-        }
-      ]
-    },
     "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0080 - FLS Stuart Kimsey -  PR increment report showing negatives (7423)": {
       "timeline": [
         {
@@ -1173,46 +1106,6 @@
         {
           "date": "2026-11-05",
           "text": "Request staying open until the new version of FS is tested/ deployed. Contacted Greig Crawford from FLS to get update on integration and progress at FLS. "
-        }
-      ]
-    },
-    "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0083 - Charlie Clark - SCDB From-To Species-YC": {
-      "timeline": [
-        {
-          "date": "2026-05-15",
-          "text": "DB logged. RG aware. needs an intital chat"
-        },
-        {
-          "date": "2026-05-28",
-          "text": "RG organise a quick meet to plan on 2705"
-        },
-        {
-          "date": "2026-05-29",
-          "text": "RG discussed with DB (we think no overlap with DvE's work with the GHGI team) - think this is a simple request for a script. Responded to Charlie asking if he wants to meet or if we should crack on with producing a script."
-        },
-        {
-          "date": "2026-06-11",
-          "text": "RG received more information frmo Charlie. Task to add more details to script that is already written. "
-        },
-        {
-          "date": "2026-06-23",
-          "text": "RG sent provisional outputs to CC with caveat that these are provisional outputs with QA still to be done by NFI Analysis Team. (See Analysis folder)"
-        },
-        {
-          "date": "2026-08-06",
-          "text": "Ongoing work."
-        },
-        {
-          "date": "2026-08-27",
-          "text": "RG to sent output to CC and CW."
-        },
-        {
-          "date": "2026-09-10",
-          "text": "RG closing assuming no further questions."
-        },
-        {
-          "date": "2026-10-08",
-          "text": "Will check through with Rob G on his return. May need a QA."
         }
       ]
     },
@@ -1596,15 +1489,6 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0054 - FLS Colin Hossack - SCDB vs NFI"
     },
     {
-      "Owner (initials)": "(initials): Rob Grierson",
-      "Chargeable (Y/N)": "(Y/N): N",
-      "Organisation": "FLS",
-      "Job Code": "189801-5000",
-      "StatusID": "2",
-      "Time Spent (number counting days)": "(number counting days):",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0079 - FLS Colin Hossack - GB2026 Target Diameter M1"
-    },
-    {
       "Owner (initials)": "(initials): Vanessza Cseh-Koos",
       "Chargeable (Y/N)": "(Y/N): N",
       "Organisation": "FLS",
@@ -1612,15 +1496,6 @@
       "StatusID": "2",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0080 - FLS Stuart Kimsey -  PR increment report showing negatives (7423)"
-    },
-    {
-      "Owner (initials)": "(initials): Rob Grierson",
-      "Chargeable (Y/N)": "(Y/N): N",
-      "Organisation": "FR",
-      "Job Code": "TBC",
-      "StatusID": "2",
-      "Time Spent (number counting days)": "(number counting days):",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0083 - Charlie Clark - SCDB From-To Species-YC"
     },
     {
       "Owner (initials)": "(initials): Vanessza Cseh-Koos",
@@ -1686,5 +1561,5 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/TOW0034 - Naomi Mervin - FS - Regional breakdown by MCA"
     }
   ],
-  "exported_at": "2026-11-11 09:01:32"
+  "exported_at": "2026-11-12 09:01:22"
 }
