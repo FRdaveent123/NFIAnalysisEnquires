@@ -84,18 +84,6 @@
       "days_open": 229
     },
     {
-      "code": "NFI0195",
-      "user": "Sarka Ondrouchova",
-      "title": "NFI Data for deer densities",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0195 - Sarka Ondrouchova - NFI Data for deer densities",
-      "last_update": "2026-10-28",
-      "last_note": "Discussed requirements for Sarka. She requested WEC Cycle 2 deer browsing data which is not available yet. Dave has sent an email outlining this. Will close next session if nothing more is requested.",
-      "responsible": "WEC",
-      "status": "Active",
-      "age_days": 195,
-      "days_open": 175
-    },
-    {
       "code": "NFI0196",
       "user": "Harald Bugmann",
       "title": "EU project Wildcard",
@@ -112,11 +100,11 @@
       "user": "Alex Dhond",
       "title": "Oxford - NFI data for EO and woodland condition modelling",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0200 - Alex Dhond - Oxford - NFI data for EO and woodland condition modelling",
-      "last_update": "2026-11-05",
-      "last_note": "No update from Alex. This ticket may get closed. Chaser email to be sent to Alex first. To be closed.",
-      "status": "Active",
+      "last_update": "2026-11-17",
+      "last_note": "This ticket is on hold and would require more work which cannot be completed at this time. Some initial answers have been given but any analysis would take time.",
+      "status": "On Hold",
       "age_days": 144,
-      "days_open": 132
+      "days_open": 144
     },
     {
       "code": "NFI0204",
@@ -145,11 +133,11 @@
       "user": "Yassine BENAMOR",
       "title": "NFI data biomass MRV application",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0210 - Yassine BENAMOR - NFI data biomass MRV application",
-      "last_update": "2026-11-05",
-      "last_note": "This is an extensive request for plot level data from a corporation. Emailed back to outline that plot level data is not available. ",
+      "last_update": "2026-11-17",
+      "last_note": "Emailed back to outline that plot level data is not available. ",
       "status": "Active",
       "age_days": 50,
-      "days_open": 38
+      "days_open": 50
     },
     {
       "code": "NFI0211",
@@ -157,7 +145,8 @@
       "title": "Total area managed by CCF",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0211 - Sonia Lorenzo - Total area managed by CCF",
       "last_update": "2026-11-05",
-      "last_note": "Work in progress. Dave to contact Dan Braby (stats) to see if he can help with the request. ",
+      "last_note": "This is not something that NFI provides (CCF). Contacted Dan Braby (stats) to see if they can help with the request. ",
+      "responsible": "NFI",
       "status": "Active",
       "age_days": 50,
       "days_open": 38
@@ -183,9 +172,9 @@
     },
     {
       "code": "NFI0216",
-      "user": "Ana Maria",
+      "user": "Ana Maria Pachego",
       "title": "Biomass Calculations",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0216 - Ana Maria - Biomass Calculations",
+      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0216 - Ana Maria Pachego - Biomass Calculations",
       "last_note": "No ReadMe.txt",
       "status": "No Data"
     },
@@ -250,11 +239,11 @@
       "user": "Andrew Weatherall",
       "title": "Sitka spruce in Scotland",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0098 - Andrew Weatherall - Sitka spruce in Scotland",
-      "last_update": "2026-11-05",
-      "last_note": "Assgined to Lesley Halsall who is to review Shweta's results before passing on to Andrew.",
+      "last_update": "2026-11-16",
+      "last_note": "Andrew asked for an update.",
       "status": "Active",
       "age_days": 43,
-      "days_open": 31
+      "days_open": 42
     },
     {
       "code": "PF0099",
@@ -268,15 +257,23 @@
       "days_open": 48
     },
     {
+      "code": "PF0100",
+      "user": "Colin Hossack",
+      "title": "Economic forecast",
+      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0100 - Colin Hossack - Economic forecast",
+      "last_note": "No ReadMe.txt",
+      "status": "No Data"
+    },
+    {
       "code": "SCDB0019",
       "user": "Tom Locatelli",
       "title": "SCDB historic data request",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/SCDB0019 - Tom Locatelli - SCDB historic data request",
-      "last_update": "2026-11-05",
-      "last_note": "Initial request completed. Additional years: 2002, 2006, 2008, 2012, 2021, 2023 for Queen Elizabeth Park have been requested now.",
-      "status": "Completed",
+      "last_update": "2026-11-17",
+      "last_note": "Work postponed until start of December",
+      "status": "Active",
       "age_days": 41,
-      "days_open": 29
+      "days_open": 41
     },
     {
       "code": "TOW0034",
@@ -647,58 +644,6 @@
         }
       ]
     },
-    "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0195 - Sarka Ondrouchova - NFI Data for deer densities": {
-      "timeline": [
-        {
-          "date": "2026-05-06",
-          "text": "SD logged and replied to Sarka (used draft email for Masters)"
-        },
-        {
-          "date": "2026-05-28",
-          "text": "no reply. can close next time. SD sent an email to Sarka to confirm."
-        },
-        {
-          "date": "2026-05-29",
-          "text": "Received data perfoma. SD sent the form to Shiela for confirmation and contacted Chloe Bellamy and Kevin Watts if such dataset still exists since they both worked on the paper that the student is trying to replicate."
-        },
-        {
-          "date": "2026-06-11",
-          "text": "SD to connect with Chloe Bellamy and Kevin Watts and update"
-        },
-        {
-          "date": "2026-06-15",
-          "text": "Chloe and Kevin are on vacation. Send an email to chase them up."
-        },
-        {
-          "date": "2026-06-25",
-          "text": "Chloe B informed that Racheal Spark(who led the study) contacted Sarka, no reply yet. SD sent an email to Sarka to chase."
-        },
-        {
-          "date": "2026-06-26",
-          "text": "On Hold until Sept. Sarka on vacation."
-        },
-        {
-          "date": "2026-09-10",
-          "text": "SD to chase the enquirer to find out if info still required. SD send a reminder email to Sarka (cc Gavin)."
-        },
-        {
-          "date": "2026-10-08",
-          "text": "Dave E to take over."
-        },
-        {
-          "date": "2026-10-08",
-          "text": "Sarka emailed attaching a IT Data Request form and has agreed to the payment associated with the work. This will need to be discussed with Lesley."
-        },
-        {
-          "date": "2026-10-22",
-          "text": "Internal meeting planned with Vanessza/ Dave/ Lesley"
-        },
-        {
-          "date": "2026-10-28",
-          "text": "Discussed requirements for Sarka. She requested WEC Cycle 2 deer browsing data which is not available yet. Dave has sent an email outlining this. Will close next session if nothing more is requested."
-        }
-      ]
-    },
     "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0196 - Harald Bugmann - EU project Wildcard": {
       "timeline": [
         {
@@ -806,8 +751,8 @@
           "text": "Internal Meeting planned with Dave/ Vanessza/ Lesley"
         },
         {
-          "date": "2026-11-05",
-          "text": "No update from Alex. This ticket may get closed. Chaser email to be sent to Alex first. To be closed."
+          "date": "2026-11-17",
+          "text": "This ticket is on hold and would require more work which cannot be completed at this time. Some initial answers have been given but any analysis would take time."
         }
       ]
     },
@@ -871,7 +816,11 @@
         },
         {
           "date": "2026-11-05",
-          "text": "This is an extensive request for plot level data from a corporation. Emailed back to outline that plot level data is not available. "
+          "text": "This is an extensive request for plot level data from a corporation. "
+        },
+        {
+          "date": "2026-11-17",
+          "text": "Emailed back to outline that plot level data is not available. "
         }
       ]
     },
@@ -891,7 +840,7 @@
         },
         {
           "date": "2026-11-05",
-          "text": "Work in progress. Dave to contact Dan Braby (stats) to see if he can help with the request. "
+          "text": "This is not something that NFI provides (CCF). Contacted Dan Braby (stats) to see if they can help with the request. "
         }
       ]
     },
@@ -918,7 +867,7 @@
     "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0215 - John Mann - FS - WEC Reporting - Squares within CPIs and Rainforests": {
       "timeline": []
     },
-    "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0216 - Ana Maria - Biomass Calculations": {
+    "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0216 - Ana Maria Pachego - Biomass Calculations": {
       "timeline": []
     },
     "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0054 - FLS Colin Hossack - SCDB vs NFI": {
@@ -1246,6 +1195,10 @@
         {
           "date": "2026-11-05",
           "text": "Assgined to Lesley Halsall who is to review Shweta's results before passing on to Andrew."
+        },
+        {
+          "date": "2026-11-16",
+          "text": "Andrew asked for an update."
         }
       ]
     },
@@ -1268,6 +1221,9 @@
           "text": "Lesley to add questions to Correspondence PF0099, then Vanessza can pick up."
         }
       ]
+    },
+    "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0100 - Colin Hossack - Economic forecast": {
+      "timeline": []
     },
     "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/SCDB0019 - Tom Locatelli - SCDB historic data request": {
       "timeline": [
@@ -1298,6 +1254,10 @@
         {
           "date": "2026-11-05",
           "text": "Initial request completed. Additional years: 2002, 2006, 2008, 2012, 2021, 2023 for Queen Elizabeth Park have been requested now."
+        },
+        {
+          "date": "2026-11-17",
+          "text": "Work postponed until start of December"
         }
       ]
     },
@@ -1399,15 +1359,6 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0185 - Martin Mokros_UCL - Mobile laser scanning project"
     },
     {
-      "Owner (initials)": "(initials): Dave Entwistle",
-      "Chargeable (Y/N)": "(Y/N): TBC",
-      "Organisation": "University of Edinburgh",
-      "Job Code": "",
-      "StatusID": "1",
-      "Time Spent (number counting days)": "(number counting days):",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0195 - Sarka Ondrouchova - NFI Data for deer densities"
-    },
-    {
       "Owner (initials)": "(initials): Chloe Metcalfe",
       "Chargeable (Y/N)": "(Y/N): TBC",
       "Organisation": "ETH Zurich",
@@ -1421,7 +1372,7 @@
       "Chargeable (Y/N)": "(Y/N): TBC",
       "Organisation": "University of Oxford",
       "Job Code": "",
-      "StatusID": "1",
+      "StatusID": "5",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0200 - Alex Dhond - Oxford - NFI data for EO and woodland condition modelling"
     },
@@ -1486,7 +1437,7 @@
       "Job Code": "",
       "StatusID": "",
       "Time Spent (number counting days)": "(number counting days):",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0216 - Ana Maria - Biomass Calculations"
+      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0216 - Ana Maria Pachego - Biomass Calculations"
     },
     {
       "Owner (initials)": "(initials): Rob Grierson",
@@ -1537,7 +1488,7 @@
       "Chargeable (Y/N)": "(Y/N): ",
       "Organisation": "RSPB",
       "Job Code": "N/A",
-      "StatusID": "3",
+      "StatusID": "2",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0098 - Andrew Weatherall - Sitka spruce in Scotland"
     },
@@ -1551,11 +1502,20 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0099 - Guy Pembroke - Three PF questions"
     },
     {
+      "Owner (initials)": "(initials):",
+      "Chargeable (Y/N)": "(Y/N): ",
+      "Organisation": "",
+      "Job Code": "",
+      "StatusID": "",
+      "Time Spent (number counting days)": "(number counting days):",
+      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0100 - Colin Hossack - Economic forecast"
+    },
+    {
       "Owner (initials)": "(initials): Dave Entwistle",
       "Chargeable (Y/N)": "(Y/N): N",
       "Organisation": "Internal",
       "Job Code": "",
-      "StatusID": "2",
+      "StatusID": "5",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/SCDB0019 - Tom Locatelli - SCDB historic data request"
     },
@@ -1569,5 +1529,5 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/TOW0034 - Naomi Mervin - FS - Regional breakdown by MCA"
     }
   ],
-  "exported_at": "2026-11-17 09:48:10"
+  "exported_at": "2026-11-17 10:56:08"
 }
