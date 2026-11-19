@@ -175,8 +175,11 @@
       "user": "Ana Maria Pachego",
       "title": "Biomass Calculations",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0216 - Ana Maria Pachego - Biomass Calculations",
-      "last_note": "No ReadMe.txt",
-      "status": "No Data"
+      "last_update": "2026-11-18",
+      "last_note": "Data originally sent over is being compared with the scripts that we have available. Work in progress. ",
+      "status": "Active",
+      "age_days": 10,
+      "days_open": 9
     },
     {
       "code": "PF0054",
@@ -240,7 +243,7 @@
       "title": "Sitka spruce in Scotland",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0098 - Andrew Weatherall - Sitka spruce in Scotland",
       "last_update": "2026-11-18",
-      "last_note": "Lesley confirms that Shweta's numbers look fine. Need to confirm that this covers both public and private forestry and then craft a reply and send to Andrew.",
+      "last_note": "Lesley confirms that Shweta's numbers look fine, although need to get the species proportions from stocked area rather than woodland area. Need to confirm that this covers both public and private forestry and then write a reply and send to Andrew.",
       "status": "Active",
       "age_days": 45,
       "days_open": 44
@@ -880,7 +883,16 @@
       "timeline": []
     },
     "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0216 - Ana Maria Pachego - Biomass Calculations": {
-      "timeline": []
+      "timeline": [
+        {
+          "date": "2026-11-09",
+          "text": "Lesley passed over enquiry about biomass data sent over in 2023. There is a disrecepency in the data. For each plot, she converted TOTAL_BIOMASS to t/ha using the plot area: AGB (t/ha) = TOTAL_BIOMASS / (AREA / 10,000). Across all plots, the mean is 34 t/ha (median 28 t/ha) which is below the ESA CCI biomass map at the same plots."
+        },
+        {
+          "date": "2026-11-18",
+          "text": "Data originally sent over is being compared with the scripts that we have available. Work in progress. "
+        }
+      ]
     },
     "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0054 - FLS Colin Hossack - SCDB vs NFI": {
       "timeline": [
@@ -1214,7 +1226,7 @@
         },
         {
           "date": "2026-11-18",
-          "text": "Lesley confirms that Shweta's numbers look fine. Need to confirm that this covers both public and private forestry and then craft a reply and send to Andrew."
+          "text": "Lesley confirms that Shweta's numbers look fine, although need to get the species proportions from stocked area rather than woodland area. Need to confirm that this covers both public and private forestry and then write a reply and send to Andrew."
         }
       ]
     },
@@ -1449,9 +1461,9 @@
     {
       "Owner (initials)": "(initials): Dave Entwistle",
       "Chargeable (Y/N)": "(Y/N): ",
-      "Organisation": "",
+      "Organisation": "Manchester University",
       "Job Code": "",
-      "StatusID": "",
+      "StatusID": "2",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0216 - Ana Maria Pachego - Biomass Calculations"
     },
@@ -1545,5 +1557,5 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/TOW0034 - Naomi Mervin - FS - Regional breakdown by MCA"
     }
   ],
-  "exported_at": "2026-11-19 09:02:58"
+  "exported_at": "2026-11-19 09:20:41"
 }
