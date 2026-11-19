@@ -29,12 +29,12 @@
       "user": "Archer the Manor",
       "title": "Error in Mapping",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0047 - Archer the Manor - Error in Mapping",
-      "last_update": "2026-11-17",
-      "last_note": "reply from RPA, FC will conduct an inspection. Requested further clarification why the discrepancy between what the RPA website shows (area split into wooodland and arable and other land ), and the single polygon we received. AD",
-      "responsible": "RPA",
+      "last_update": "2026-11-19",
+      "last_note": "email from Forest services requesting info on the area for the inspection, replied. AD",
+      "responsible": "AD",
       "status": "Active",
       "age_days": 146,
-      "days_open": 144
+      "days_open": 146
     },
     {
       "code": "MAP0053",
@@ -88,12 +88,12 @@
       "user": "Harald Bugmann",
       "title": "EU project Wildcard",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0196 - Harald Bugmann - EU project Wildcard",
-      "last_update": "2026-11-16",
-      "last_note": "Samuel Zweifel has responded that it will be used for European Horizon project Wildcard (correcspondence folder 0.4) which analysises the impact of rewilding (ie the abandonment of agricultural and forest management(), AND to assess the potential for additional rewilding across europe for climate mitigation. They will use the models EFIISCEN-Space and ForClim to make model based predictions of the additional carbon that could be sequestered through rewilding under future climate scenarios across eruope. They are using 16 Europeans countries data. It has been confirmed the data we have provided will be used exclusively for the context of the wildcard project. All simulation results will be aggregated per country or ecoregion to ensure plot locations remain confidential. Data will be used by them and team at Wageningen (they do the EFISCEN - Space model). Offered co-authorship with oportunity to comment on any resulting manuscripts. Chloe M would like to see manuscripts before publication anyway. Chloe M is happy with the proposed use of this data, and will check one last time with Sheila W if we need a data sharing agreement before upload. ",
-      "responsible": "AND",
+      "last_update": "2026-11-19",
+      "last_note": "Chloe M wrote data sharing licence agreement and shared with Harold and Gert-Jan for signing before upload of data. ",
+      "responsible": "M",
       "status": "Active",
       "age_days": 196,
-      "days_open": 193
+      "days_open": 196
     },
     {
       "code": "NFI0200",
@@ -111,11 +111,12 @@
       "user": "Duncan Ray",
       "title": "LUES team - NFI Spruce area over 60cm diameter",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0204 - Duncan Ray - LUES team - NFI Spruce area over 60cm diameter",
-      "last_update": "2026-11-05",
-      "last_note": "Follow up query. Reopening",
-      "status": "Active",
+      "last_update": "2026-11-19",
+      "last_note": "Rob responded to Duncan and provided the data requested. Karolina QA'd Rob's work. Duncan confirmed receipt of the data - waiting to see if any follow-up. Suggest close next meeting if no response.",
+      "responsible": "QA",
+      "status": "Meeting Arranged",
       "age_days": 108,
-      "days_open": 94
+      "days_open": 108
     },
     {
       "code": "NFI0209",
@@ -144,12 +145,11 @@
       "user": "Sonia Lorenzo",
       "title": "Total area managed by CCF",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0211 - Sonia Lorenzo - Total area managed by CCF",
-      "last_update": "2026-11-05",
-      "last_note": "This is not something that NFI provides (CCF). Contacted Dan Braby (stats) to see if they can help with the request. ",
-      "responsible": "NFI",
+      "last_update": "2026-11-19",
+      "last_note": "Contacted Mirabelle. ",
       "status": "Active",
       "age_days": 52,
-      "days_open": 38
+      "days_open": 52
     },
     {
       "code": "NFI0214",
@@ -176,7 +176,7 @@
       "title": "Biomass Calculations",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0216 - Ana Maria Pachego - Biomass Calculations",
       "last_update": "2026-11-18",
-      "last_note": "Data originally sent over is being compared with the scripts that we have available. Work in progress. ",
+      "last_note": "Data originally sent over is being compared with the scripts that we have available. Work in progress.",
       "status": "Active",
       "age_days": 10,
       "days_open": 9
@@ -187,7 +187,7 @@
       "title": "SCDB vs NFI",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0054 - FLS Colin Hossack - SCDB vs NFI",
       "last_update": "2026-11-05",
-      "last_note": "Rob, Lesley, Karolina to plan internal meeting.",
+      "last_note": "Rob, Lesley, Karolina, Vera to plan internal meeting. UPDATE: Vera suggests that work (related to DESNZ) is ongoing that will answer Colin's question conclusively and siggests we do not spend time on this task.",
       "status": "Meeting Arranged",
       "age_days": 433,
       "days_open": 419
@@ -197,45 +197,44 @@
       "user": "FLS Stuart Kimsey",
       "title": " PR increment report showing negatives (7423)",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0080 - FLS Stuart Kimsey -  PR increment report showing negatives (7423)",
-      "last_update": "2026-11-05",
-      "last_note": "Request staying open until the new version of FS is tested/ deployed. Contacted Greig Crawford from FLS to get update on integration and progress at FLS. ",
-      "responsible": "FS",
+      "last_update": "2026-11-19",
+      "last_note": "Still waiting on Greig's response - may be in Vanessza's inbox. Updated version has been released to Greig. Vanessza contacted Greig but no response from him yet. Wait to hear futher from Vanessza. ",
       "status": "Active",
       "age_days": 265,
-      "days_open": 251
+      "days_open": 265
     },
     {
       "code": "PF0087",
       "user": "NRW Guy Bennett",
       "title": "Bespoke FS training",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0087 - NRW Guy Bennett - Bespoke FS training",
-      "last_update": "2026-11-05",
-      "last_note": "Guy Bennett plans two training days (Llandovery and the other in Welshpool) proposed time for training February 2027, Guy Pembroke proposed first two weeks of Feb 2027 Tues/Wed or Wed/Thurs, 5 people can attend. Action: Follow up needs on next steps to secure date. ",
+      "last_update": "2026-11-19",
+      "last_note": "Lesley updates that the training is happening in Feb. Wait for update from Vanessza.",
       "status": "Active",
       "age_days": 171,
-      "days_open": 157
+      "days_open": 171
     },
     {
       "code": "PF0089",
       "user": "FE Ben Robinson",
       "title": "50-year Forecast PAWS",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0089 - FE Ben Robinson - 50-year Forecast PAWS",
-      "last_update": "2026-11-05",
-      "last_note": "Rob Grierson to check emails etc around this request.",
+      "last_update": "2026-11-19",
+      "last_note": "Rob: couldn't find any info around this query. David sent forecasts to Rupert - Rupert suggested a cause related to fell year = 0, but no conclusion yet. Rob to do some testing.",
       "status": "Active",
       "age_days": 149,
-      "days_open": 135
+      "days_open": 149
     },
     {
       "code": "PF0090",
       "user": "FR Lesley",
       "title": "Height measurements in GS",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0090 - FR Lesley - Height measurements in GS",
-      "last_update": "2026-11-05",
-      "last_note": "This request to be discussed during the Biomass internal meeting (Dave, Vanessza, Lesley).",
-      "status": "Meeting Arranged",
+      "last_update": "2026-11-19",
+      "last_note": "This will be discussed in the next biomass catch up on Thursday the 26th of November. ",
+      "status": "Active",
       "age_days": 143,
-      "days_open": 129
+      "days_open": 143
     },
     {
       "code": "PF0098",
@@ -253,19 +252,22 @@
       "user": "Guy Pembroke",
       "title": "Three PF questions",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0099 - Guy Pembroke - Three PF questions",
-      "last_update": "2026-11-05",
-      "last_note": "Lesley to add questions to Correspondence PF0099, then Vanessza can pick up.",
-      "status": "Active",
+      "last_update": "2026-11-19",
+      "last_note": "Guy's follow up questions need to be dealt with, potentially with some test data. Questions are currently with Lesley. Rob to work through these questions with Karolina once set up complete. ",
+      "status": "Completed",
       "age_days": 62,
-      "days_open": 48
+      "days_open": 62
     },
     {
       "code": "PF0100",
       "user": "Colin Hossack",
       "title": "Economic forecast",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0100 - Colin Hossack - Economic forecast",
-      "last_note": "No ReadMe.txt",
-      "status": "No Data"
+      "last_update": "2026-11-19",
+      "last_note": "Lesley to chat with Rob and Vanessza. Chris Tracey's district in Scotland. Lesley to find user instructions. Maximum discounted revenue forecasts.",
+      "status": "Active",
+      "age_days": 0,
+      "days_open": 0
     },
     {
       "code": "SCDB0019",
@@ -283,11 +285,11 @@
       "user": "Naomi Mervin",
       "title": "FS - Regional breakdown by MCA",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/TOW0034 - Naomi Mervin - FS - Regional breakdown by MCA",
-      "last_update": "2026-10-22",
-      "last_note": "Dave to check in with VeraC",
+      "last_update": "2026-11-19",
+      "last_note": "Dave checking in with VeraC.",
       "status": "Active",
       "age_days": 97,
-      "days_open": 69
+      "days_open": 97
     }
   ],
   "timeline_cache": {
@@ -480,6 +482,10 @@
         {
           "date": "2026-11-17",
           "text": "reply from RPA, FC will conduct an inspection. Requested further clarification why the discrepancy between what the RPA website shows (area split into wooodland and arable and other land ), and the single polygon we received. AD"
+        },
+        {
+          "date": "2026-11-19",
+          "text": "email from Forest services requesting info on the area for the inspection, replied. AD"
         }
       ]
     },
@@ -716,6 +722,10 @@
         {
           "date": "2026-11-16",
           "text": "Samuel Zweifel has responded that it will be used for European Horizon project Wildcard (correcspondence folder 0.4) which analysises the impact of rewilding (ie the abandonment of agricultural and forest management(), AND to assess the potential for additional rewilding across europe for climate mitigation. They will use the models EFIISCEN-Space and ForClim to make model based predictions of the additional carbon that could be sequestered through rewilding under future climate scenarios across eruope. They are using 16 Europeans countries data. It has been confirmed the data we have provided will be used exclusively for the context of the wildcard project. All simulation results will be aggregated per country or ecoregion to ensure plot locations remain confidential. Data will be used by them and team at Wageningen (they do the EFISCEN - Space model). Offered co-authorship with oportunity to comment on any resulting manuscripts. Chloe M would like to see manuscripts before publication anyway. Chloe M is happy with the proposed use of this data, and will check one last time with Sheila W if we need a data sharing agreement before upload. "
+        },
+        {
+          "date": "2026-11-19",
+          "text": "Chloe M wrote data sharing licence agreement and shared with Harold and Gert-Jan for signing before upload of data. "
         }
       ]
     },
@@ -792,6 +802,10 @@
         {
           "date": "2026-11-05",
           "text": "Follow up query. Reopening"
+        },
+        {
+          "date": "2026-11-19",
+          "text": "Rob responded to Duncan and provided the data requested. Karolina QA'd Rob's work. Duncan confirmed receipt of the data - waiting to see if any follow-up. Suggest close next meeting if no response."
         }
       ]
     },
@@ -856,6 +870,10 @@
         {
           "date": "2026-11-05",
           "text": "This is not something that NFI provides (CCF). Contacted Dan Braby (stats) to see if they can help with the request. "
+        },
+        {
+          "date": "2026-11-19",
+          "text": "Contacted Mirabelle. "
         }
       ]
     },
@@ -890,7 +908,7 @@
         },
         {
           "date": "2026-11-18",
-          "text": "Data originally sent over is being compared with the scripts that we have available. Work in progress. "
+          "text": "Data originally sent over is being compared with the scripts that we have available. Work in progress."
         }
       ]
     },
@@ -1034,7 +1052,7 @@
         },
         {
           "date": "2026-11-05",
-          "text": "Rob, Lesley, Karolina to plan internal meeting."
+          "text": "Rob, Lesley, Karolina, Vera to plan internal meeting. UPDATE: Vera suggests that work (related to DESNZ) is ongoing that will answer Colin's question conclusively and siggests we do not spend time on this task."
         }
       ]
     },
@@ -1087,6 +1105,10 @@
         {
           "date": "2026-11-05",
           "text": "Request staying open until the new version of FS is tested/ deployed. Contacted Greig Crawford from FLS to get update on integration and progress at FLS. "
+        },
+        {
+          "date": "2026-11-19",
+          "text": "Still waiting on Greig's response - may be in Vanessza's inbox. Updated version has been released to Greig. Vanessza contacted Greig but no response from him yet. Wait to hear futher from Vanessza. "
         }
       ]
     },
@@ -1127,6 +1149,10 @@
         {
           "date": "2026-11-05",
           "text": "Guy Bennett plans two training days (Llandovery and the other in Welshpool) proposed time for training February 2027, Guy Pembroke proposed first two weeks of Feb 2027 Tues/Wed or Wed/Thurs, 5 people can attend. Action: Follow up needs on next steps to secure date. "
+        },
+        {
+          "date": "2026-11-19",
+          "text": "Lesley updates that the training is happening in Feb. Wait for update from Vanessza."
         }
       ]
     },
@@ -1175,6 +1201,10 @@
         {
           "date": "2026-11-05",
           "text": "Rob Grierson to check emails etc around this request."
+        },
+        {
+          "date": "2026-11-19",
+          "text": "Rob: couldn't find any info around this query. David sent forecasts to Rupert - Rupert suggested a cause related to fell year = 0, but no conclusion yet. Rob to do some testing."
         }
       ]
     },
@@ -1203,6 +1233,10 @@
         {
           "date": "2026-11-05",
           "text": "This request to be discussed during the Biomass internal meeting (Dave, Vanessza, Lesley)."
+        },
+        {
+          "date": "2026-11-19",
+          "text": "This will be discussed in the next biomass catch up on Thursday the 26th of November. "
         }
       ]
     },
@@ -1247,11 +1281,28 @@
         {
           "date": "2026-11-05",
           "text": "Lesley to add questions to Correspondence PF0099, then Vanessza can pick up."
+        },
+        {
+          "date": "2026-11-19",
+          "text": "Guy's follow up questions need to be dealt with, potentially with some test data. Questions are currently with Lesley. Rob to work through these questions with Karolina once set up complete. "
         }
       ]
     },
     "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0100 - Colin Hossack - Economic forecast": {
-      "timeline": []
+      "timeline": [
+        {
+          "date": "2026-11-19",
+          "text": "Lesley to chat with Rob and Vanessza. Chris Tracey's district in Scotland. Lesley to find user instructions. Maximum discounted revenue forecasts."
+        },
+        {
+          "date": "2026-11-19",
+          "text": "Source for MaXMAI information note: U:\\Common\\Shared_Files\\Production Forecast\\Forester 4.3 release notes\\MaxMAI forecast."
+        },
+        {
+          "date": "2026-11-19",
+          "text": "Reference materials found."
+        }
+      ]
     },
     "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/SCDB0019 - Tom Locatelli - SCDB historic data request": {
       "timeline": [
@@ -1317,7 +1368,11 @@
         },
         {
           "date": "2026-10-22",
-          "text": "Dave to check in with VeraC"
+          "text": "Dave to check in with VeraC."
+        },
+        {
+          "date": "2026-11-19",
+          "text": "Dave checking in with VeraC."
         }
       ]
     }
@@ -1409,7 +1464,7 @@
       "Chargeable (Y/N)": "(Y/N): ",
       "Organisation": "FR",
       "Job Code": "214101-1001",
-      "StatusID": "4",
+      "StatusID": "1",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0204 - Duncan Ray - LUES team - NFI Spruce area over 60cm diameter"
     },
@@ -1454,7 +1509,7 @@
       "Chargeable (Y/N)": "(Y/N): N",
       "Organisation": "FS",
       "Job Code": "",
-      "StatusID": "2",
+      "StatusID": "1",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/NFI0215 - John Mann - FS - WEC Reporting - Squares within CPIs and Rainforests"
     },
@@ -1471,7 +1526,7 @@
       "Owner (initials)": "(initials): Rob Grierson",
       "Organisation": "FLS",
       "Job Code": "",
-      "StatusID": "3",
+      "StatusID": "2",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0054 - FLS Colin Hossack - SCDB vs NFI"
     },
@@ -1521,7 +1576,7 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0098 - Andrew Weatherall - Sitka spruce in Scotland"
     },
     {
-      "Owner (initials)": "(initials): Vanessza Cseh-Koos",
+      "Owner (initials)": "(initials): Rob Grierson",
       "Chargeable (Y/N)": "(Y/N): N",
       "Organisation": "",
       "Job Code": "",
@@ -1530,11 +1585,11 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0099 - Guy Pembroke - Three PF questions"
     },
     {
-      "Owner (initials)": "(initials):",
+      "Owner (initials)": "(initials): Lesley Halsall",
       "Chargeable (Y/N)": "(Y/N): ",
-      "Organisation": "",
+      "Organisation": "FLS",
       "Job Code": "",
-      "StatusID": "",
+      "StatusID": "3",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/PF0100 - Colin Hossack - Economic forecast"
     },
@@ -1557,5 +1612,5 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/TOW0034 - Naomi Mervin - FS - Regional breakdown by MCA"
     }
   ],
-  "exported_at": "2026-11-19 09:20:41"
+  "exported_at": "2026-11-19 13:01:03"
 }
