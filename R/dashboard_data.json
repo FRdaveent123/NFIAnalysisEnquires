@@ -9,20 +9,8 @@
       "last_note": "CB spoke to Vera and she is going to pass this work onto Niamh (NG) who will be working on it in the next couple weeks. using the on_hold status until then",
       "responsible": "CB",
       "status": "Active",
-      "age_days": 262,
+      "age_days": 263,
       "days_open": 187
-    },
-    {
-      "code": "MAP0043",
-      "user": "Thomas Sim",
-      "title": "Site selection for research",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0043 - Thomas Sim - Site selection for research",
-      "last_update": "2026-10-22",
-      "last_note": "reply from Tom he will look into it and will let me know if any questions. AD",
-      "responsible": "AD",
-      "status": "Active",
-      "age_days": 208,
-      "days_open": 176
     },
     {
       "code": "MAP0047",
@@ -33,32 +21,20 @@
       "last_note": "email from Forest services requesting info on the area for the inspection, replied. AD",
       "responsible": "AD",
       "status": "Active",
-      "age_days": 150,
+      "age_days": 151,
       "days_open": 146
-    },
-    {
-      "code": "MAP0053",
-      "user": "Jeremy Davis",
-      "title": "Dedesignation of woodland as Priority Habitat",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0053 - Jeremy Davis - Dedesignation of woodland as Priority Habitat",
-      "last_update": "2026-11-17",
-      "last_note": "no reply from client. AD",
-      "responsible": "AD",
-      "status": "Active",
-      "age_days": 26,
-      "days_open": 20
     },
     {
       "code": "MAP0054",
       "user": "David Hetherington",
       "title": "Cairngorms National Park - New planting data",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0054 - David Hetherington - Cairngorms National Park - New planting data",
-      "last_update": "2026-11-19",
-      "last_note": "replied to David to let him know the status of the missing woodlands. AD",
-      "responsible": "AD",
+      "last_update": "2026-11-20",
+      "last_note": "David acknowledged receipt of email. Will close ticket once SF sends the data for the second area. AD",
+      "responsible": "SF",
       "status": "Active",
-      "age_days": 21,
-      "days_open": 17
+      "age_days": 22,
+      "days_open": 18
     },
     {
       "code": "NFI0184",
@@ -68,7 +44,7 @@
       "last_update": "2026-10-08",
       "last_note": "Ongoing",
       "status": "Active",
-      "age_days": 313,
+      "age_days": 314,
       "days_open": 267
     },
     {
@@ -80,7 +56,7 @@
       "last_note": "DB to chase VC. Putting on hold.",
       "responsible": "VC",
       "status": "On Hold",
-      "age_days": 304,
+      "age_days": 305,
       "days_open": 229
     },
     {
@@ -92,7 +68,7 @@
       "last_note": "Chloe M wrote data sharing licence agreement and shared with Harold and Gert-Jan for signing before upload of data. ",
       "responsible": "M",
       "status": "Active",
-      "age_days": 200,
+      "age_days": 201,
       "days_open": 196
     },
     {
@@ -103,7 +79,7 @@
       "last_update": "2026-11-17",
       "last_note": "This ticket is on hold and would require more work which cannot be completed at this time. Some initial answers have been given but any analysis would take time.",
       "status": "On Hold",
-      "age_days": 150,
+      "age_days": 151,
       "days_open": 144
     },
     {
@@ -115,7 +91,7 @@
       "last_note": "Rob responded to Duncan and provided the data requested. Karolina QA'd Rob's work. Duncan confirmed receipt of the data - waiting to see if any follow-up. Suggest close next meeting if no response.",
       "responsible": "QA",
       "status": "Meeting Arranged",
-      "age_days": 112,
+      "age_days": 113,
       "days_open": 108
     },
     {
@@ -126,7 +102,7 @@
       "last_update": "2026-11-05",
       "last_note": "Dave, Lesley, Vanessza to hold a meeting on Biomass. Dave to plan meeting in. ",
       "status": "Meeting Arranged",
-      "age_days": 56,
+      "age_days": 57,
       "days_open": 38
     },
     {
@@ -137,7 +113,7 @@
       "last_update": "2026-11-17",
       "last_note": "Emailed back to outline that plot level data is not available. ",
       "status": "Active",
-      "age_days": 56,
+      "age_days": 57,
       "days_open": 50
     },
     {
@@ -148,7 +124,7 @@
       "last_update": "2026-11-19",
       "last_note": "Contacted Mirabelle. ",
       "status": "Active",
-      "age_days": 56,
+      "age_days": 57,
       "days_open": 52
     },
     {
@@ -159,7 +135,7 @@
       "last_update": "2026-11-05",
       "last_note": "This work is in progress. The scope of this request needs to be deterined and work planned in.",
       "status": "Active",
-      "age_days": 46,
+      "age_days": 47,
       "days_open": 28
     },
     {
@@ -178,7 +154,7 @@
       "last_update": "2026-11-18",
       "last_note": "Data originally sent over is being compared with the scripts that we have available. Work in progress.",
       "status": "Active",
-      "age_days": 14,
+      "age_days": 15,
       "days_open": 9
     },
     {
@@ -190,7 +166,7 @@
       "last_note": "On the back of the publication of the FFF in Oct26, ColinH asked the question again. DanB confirmed that he has been in touch with ColinH regarding this enquire and Colin was happy with our reply.",
       "responsible": "FFF",
       "status": "Active",
-      "age_days": 437,
+      "age_days": 438,
       "days_open": 433
     },
     {
@@ -201,7 +177,7 @@
       "last_update": "2026-11-19",
       "last_note": "Still waiting on Greig's response - may be in Vanessza's inbox. Updated version has been released to Greig. Vanessza contacted Greig but no response from him yet. Wait to hear futher from Vanessza. ",
       "status": "Active",
-      "age_days": 269,
+      "age_days": 270,
       "days_open": 265
     },
     {
@@ -212,7 +188,7 @@
       "last_update": "2026-11-19",
       "last_note": "Lesley updates that the training is happening in Feb. Wait for update from Vanessza.",
       "status": "Active",
-      "age_days": 175,
+      "age_days": 176,
       "days_open": 171
     },
     {
@@ -223,7 +199,7 @@
       "last_update": "2026-11-19",
       "last_note": "Rob: couldn't find any info around this query. David sent forecasts to Rupert - Rupert suggested a cause related to fell year = 0, but no conclusion yet. Rob to do some testing.",
       "status": "Active",
-      "age_days": 153,
+      "age_days": 154,
       "days_open": 149
     },
     {
@@ -234,7 +210,7 @@
       "last_update": "2026-11-19",
       "last_note": "This will be discussed in the next biomass catch up on Thursday the 26th of November. ",
       "status": "Active",
-      "age_days": 147,
+      "age_days": 148,
       "days_open": 143
     },
     {
@@ -245,7 +221,7 @@
       "last_update": "2026-11-18",
       "last_note": "Lesley confirms that Shweta's numbers look fine, although need to get the species proportions from stocked area rather than woodland area. Need to confirm that this covers both public and private forestry and then write a reply and send to Andrew.",
       "status": "Active",
-      "age_days": 49,
+      "age_days": 50,
       "days_open": 44
     },
     {
@@ -256,7 +232,7 @@
       "last_update": "2026-11-19",
       "last_note": "Guy's follow up questions need to be dealt with, potentially with some test data. Questions are currently with Lesley. Rob to work through these questions with Karolina once set up complete. ",
       "status": "Completed",
-      "age_days": 66,
+      "age_days": 67,
       "days_open": 62
     },
     {
@@ -267,7 +243,7 @@
       "last_update": "2026-11-19",
       "last_note": "Lesley to chat with Rob and Vanessza. Chris Tracey's district in Scotland. Lesley to find user instructions. Maximum discounted revenue forecasts.",
       "status": "Active",
-      "age_days": 4,
+      "age_days": 5,
       "days_open": 0
     },
     {
@@ -278,7 +254,7 @@
       "last_update": "2026-11-17",
       "last_note": "Work postponed until start of December",
       "status": "Active",
-      "age_days": 47,
+      "age_days": 48,
       "days_open": 41
     },
     {
@@ -289,7 +265,7 @@
       "last_update": "2026-11-19",
       "last_note": "Dave checking in with VeraC.",
       "status": "Active",
-      "age_days": 101,
+      "age_days": 102,
       "days_open": 97
     }
   ],
@@ -343,78 +319,6 @@
         {
           "date": "2026-09-09",
           "text": "CB spoke to Vera and she is going to pass this work onto Niamh (NG) who will be working on it in the next couple weeks. using the on_hold status until then"
-        }
-      ]
-    },
-    "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0043 - Thomas Sim - Site selection for research": {
-      "timeline": [
-        {
-          "date": "2026-04-29",
-          "text": "a meeting with TomS, VeraC & CaitlinB was set up for the 5th May to discuss the requirements"
-        },
-        {
-          "date": "2026-05-07",
-          "text": "Waiting on more details from TomS, may need some data from the SCDB."
-        },
-        {
-          "date": "2026-05-27",
-          "text": "CB sent Tom email with details needed to carry out work. Waiting for reponse."
-        },
-        {
-          "date": "2026-06-08",
-          "text": "CB met with Tom."
-        },
-        {
-          "date": "2026-06-09",
-          "text": "CB passed this work on to AD - Deadline not until end of Summer."
-        },
-        {
-          "date": "2026-06-11",
-          "text": "In progress with AD"
-        },
-        {
-          "date": "2026-06-25",
-          "text": "In progress. AD putting together layers required for the site selection.   "
-        },
-        {
-          "date": "2026-07-09",
-          "text": "In progress. AD"
-        },
-        {
-          "date": "2026-08-06",
-          "text": "In Progress. AD"
-        },
-        {
-          "date": "2026-08-17",
-          "text": "produced a sample of the data, emailed Tom"
-        },
-        {
-          "date": "2026-08-20",
-          "text": "reply from Tom, proceed as per data sent."
-        },
-        {
-          "date": "2026-09-10",
-          "text": "work complete, emailed files to Tom, waiting for his reply, if any queries. AD"
-        },
-        {
-          "date": "2026-09-30",
-          "text": "emailed Tom to request an update, if data is ok or any changes required. AD"
-        },
-        {
-          "date": "2026-10-01",
-          "text": "Tom replied he's had a quick look, will review the data more carefully and email back if any queries. AD"
-        },
-        {
-          "date": "2026-10-14",
-          "text": "Reply from Tom, requested further info and coordinates. AD"
-        },
-        {
-          "date": "2026-10-21",
-          "text": "reproduced data to include coordinates. AD"
-        },
-        {
-          "date": "2026-10-22",
-          "text": "reply from Tom he will look into it and will let me know if any questions. AD"
         }
       ]
     },
@@ -490,22 +394,6 @@
         }
       ]
     },
-    "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0053 - Jeremy Davis - Dedesignation of woodland as Priority Habitat": {
-      "timeline": [
-        {
-          "date": "2026-10-28",
-          "text": "AD to review area in question. TQ5431 4573. 0°12'25.229\"E  51°3'53.858\"N. Requested more information from Jeremy. "
-        },
-        {
-          "date": "2026-10-30",
-          "text": "replied to Jeremy area cannot be removed from map as it complies with the NFI rules. Minor adjustments suggested, waiting for his confirmation. AD"
-        },
-        {
-          "date": "2026-11-17",
-          "text": "no reply from client. AD"
-        }
-      ]
-    },
     "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0054 - David Hetherington - Cairngorms National Park - New planting data": {
       "timeline": [
         {
@@ -523,6 +411,10 @@
         {
           "date": "2026-11-19",
           "text": "replied to David to let him know the status of the missing woodlands. AD"
+        },
+        {
+          "date": "2026-11-20",
+          "text": "David acknowledged receipt of email. Will close ticket once SF sends the data for the second area. AD"
         }
       ]
     },
@@ -1398,15 +1290,6 @@
     },
     {
       "Owner (initials)": "(initials): Ana Dragalina",
-      "Chargeable (Y/N)": "(Y/N): Y",
-      "Organisation": "FR",
-      "Job Code": "217603-1001 - FRD_Embedding RFs_WP03 Network Participation",
-      "StatusID": "4",
-      "Time Spent (number counting days)": "(number counting days):",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0043 - Thomas Sim - Site selection for research"
-    },
-    {
-      "Owner (initials)": "(initials): Ana Dragalina",
       "Chargeable (Y/N)": "(Y/N): N",
       "Organisation": "Individual",
       "Job Code": "190007 - 1001 - FIS advice and support",
@@ -1415,20 +1298,11 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0047 - Archer the Manor - Error in Mapping"
     },
     {
-      "Owner (initials)": "(initials): Ana Dragalina",
-      "Chargeable (Y/N)": "(Y/N): N",
-      "Organisation": "Individual",
-      "Job Code": "190007 - 1001 - FIS advice and support",
-      "StatusID": "1",
-      "Time Spent (number counting days)": "(number counting days):",
-      "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0053 - Jeremy Davis - Dedesignation of woodland as Priority Habitat"
-    },
-    {
       "Owner (initials)": "(initials):Vera Correia",
       "Chargeable (Y/N)": "(Y/N): N",
       "Organisation": "Cairngorms National Park",
       "Job Code": "190007 - 1001 - FIS advice and support",
-      "StatusID": "1",
+      "StatusID": "2",
       "Time Spent (number counting days)": "(number counting days):",
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/MAP0054 - David Hetherington - Cairngorms National Park - New planting data"
     },
@@ -1621,5 +1495,5 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/TOW0034 - Naomi Mervin - FS - Regional breakdown by MCA"
     }
   ],
-  "exported_at": "2026-11-23 09:01:34"
+  "exported_at": "2026-11-24 09:01:23"
 }
