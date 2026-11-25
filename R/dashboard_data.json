@@ -9,7 +9,7 @@
       "last_note": "CB spoke to Vera and she is going to pass this work onto Niamh (NG) who will be working on it in the next couple weeks. using the on_hold status until then",
       "responsible": "CB",
       "status": "Active",
-      "age_days": 263,
+      "age_days": 264,
       "days_open": 187
     },
     {
@@ -21,7 +21,7 @@
       "last_note": "email from Forest services requesting info on the area for the inspection, replied. AD",
       "responsible": "AD",
       "status": "Active",
-      "age_days": 151,
+      "age_days": 152,
       "days_open": 146
     },
     {
@@ -33,7 +33,7 @@
       "last_note": "David acknowledged receipt of email. Will close ticket once SF sends the data for the second area. AD",
       "responsible": "SF",
       "status": "Active",
-      "age_days": 22,
+      "age_days": 23,
       "days_open": 18
     },
     {
@@ -44,7 +44,7 @@
       "last_update": "2026-10-08",
       "last_note": "Ongoing",
       "status": "Active",
-      "age_days": 314,
+      "age_days": 315,
       "days_open": 267
     },
     {
@@ -56,7 +56,7 @@
       "last_note": "DB to chase VC. Putting on hold.",
       "responsible": "VC",
       "status": "On Hold",
-      "age_days": 305,
+      "age_days": 306,
       "days_open": 229
     },
     {
@@ -68,7 +68,7 @@
       "last_note": "Chloe M wrote data sharing licence agreement and shared with Harold and Gert-Jan for signing before upload of data. ",
       "responsible": "M",
       "status": "Active",
-      "age_days": 201,
+      "age_days": 202,
       "days_open": 196
     },
     {
@@ -79,7 +79,7 @@
       "last_update": "2026-11-17",
       "last_note": "This ticket is on hold and would require more work which cannot be completed at this time. Some initial answers have been given but any analysis would take time.",
       "status": "On Hold",
-      "age_days": 151,
+      "age_days": 152,
       "days_open": 144
     },
     {
@@ -91,7 +91,7 @@
       "last_note": "Rob responded to Duncan and provided the data requested. Karolina QA'd Rob's work. Duncan confirmed receipt of the data - waiting to see if any follow-up. Suggest close next meeting if no response.",
       "responsible": "QA",
       "status": "Meeting Arranged",
-      "age_days": 113,
+      "age_days": 114,
       "days_open": 108
     },
     {
@@ -102,7 +102,7 @@
       "last_update": "2026-11-05",
       "last_note": "Dave, Lesley, Vanessza to hold a meeting on Biomass. Dave to plan meeting in. ",
       "status": "Meeting Arranged",
-      "age_days": 57,
+      "age_days": 58,
       "days_open": 38
     },
     {
@@ -113,7 +113,7 @@
       "last_update": "2026-11-17",
       "last_note": "Emailed back to outline that plot level data is not available. ",
       "status": "Active",
-      "age_days": 57,
+      "age_days": 58,
       "days_open": 50
     },
     {
@@ -124,7 +124,7 @@
       "last_update": "2026-11-19",
       "last_note": "Contacted Mirabelle. ",
       "status": "Active",
-      "age_days": 57,
+      "age_days": 58,
       "days_open": 52
     },
     {
@@ -135,7 +135,7 @@
       "last_update": "2026-11-05",
       "last_note": "This work is in progress. The scope of this request needs to be deterined and work planned in.",
       "status": "Active",
-      "age_days": 47,
+      "age_days": 48,
       "days_open": 28
     },
     {
@@ -154,7 +154,7 @@
       "last_update": "2026-11-18",
       "last_note": "Data originally sent over is being compared with the scripts that we have available. Work in progress.",
       "status": "Active",
-      "age_days": 15,
+      "age_days": 16,
       "days_open": 9
     },
     {
@@ -166,7 +166,7 @@
       "last_note": "On the back of the publication of the FFF in Oct26, ColinH asked the question again. DanB confirmed that he has been in touch with ColinH regarding this enquire and Colin was happy with our reply.",
       "responsible": "FFF",
       "status": "Active",
-      "age_days": 438,
+      "age_days": 439,
       "days_open": 433
     },
     {
@@ -177,7 +177,7 @@
       "last_update": "2026-11-19",
       "last_note": "Still waiting on Greig's response - may be in Vanessza's inbox. Updated version has been released to Greig. Vanessza contacted Greig but no response from him yet. Wait to hear futher from Vanessza. ",
       "status": "Active",
-      "age_days": 270,
+      "age_days": 271,
       "days_open": 265
     },
     {
@@ -188,7 +188,7 @@
       "last_update": "2026-11-19",
       "last_note": "Lesley updates that the training is happening in Feb. Wait for update from Vanessza.",
       "status": "Active",
-      "age_days": 176,
+      "age_days": 177,
       "days_open": 171
     },
     {
@@ -199,7 +199,7 @@
       "last_update": "2026-11-19",
       "last_note": "Rob: couldn't find any info around this query. David sent forecasts to Rupert - Rupert suggested a cause related to fell year = 0, but no conclusion yet. Rob to do some testing.",
       "status": "Active",
-      "age_days": 154,
+      "age_days": 155,
       "days_open": 149
     },
     {
@@ -210,7 +210,7 @@
       "last_update": "2026-11-19",
       "last_note": "This will be discussed in the next biomass catch up on Thursday the 26th of November. ",
       "status": "Active",
-      "age_days": 148,
+      "age_days": 149,
       "days_open": 143
     },
     {
@@ -221,7 +221,7 @@
       "last_update": "2026-11-18",
       "last_note": "Lesley confirms that Shweta's numbers look fine, although need to get the species proportions from stocked area rather than woodland area. Need to confirm that this covers both public and private forestry and then write a reply and send to Andrew.",
       "status": "Active",
-      "age_days": 50,
+      "age_days": 51,
       "days_open": 44
     },
     {
@@ -232,7 +232,7 @@
       "last_update": "2026-11-19",
       "last_note": "Guy's follow up questions need to be dealt with, potentially with some test data. Questions are currently with Lesley. Rob to work through these questions with Karolina once set up complete. ",
       "status": "Completed",
-      "age_days": 67,
+      "age_days": 68,
       "days_open": 62
     },
     {
@@ -243,7 +243,7 @@
       "last_update": "2026-11-19",
       "last_note": "Lesley to chat with Rob and Vanessza. Chris Tracey's district in Scotland. Lesley to find user instructions. Maximum discounted revenue forecasts.",
       "status": "Active",
-      "age_days": 5,
+      "age_days": 6,
       "days_open": 0
     },
     {
@@ -254,7 +254,7 @@
       "last_update": "2026-11-17",
       "last_note": "Work postponed until start of December",
       "status": "Active",
-      "age_days": 48,
+      "age_days": 49,
       "days_open": 41
     },
     {
@@ -265,7 +265,7 @@
       "last_update": "2026-11-19",
       "last_note": "Dave checking in with VeraC.",
       "status": "Active",
-      "age_days": 102,
+      "age_days": 103,
       "days_open": 97
     }
   ],
@@ -1495,5 +1495,5 @@
       "path": "U:/Forest Inventory/0600_Advice_Enquiries_Support/0602_Open_Requests/TOW0034 - Naomi Mervin - FS - Regional breakdown by MCA"
     }
   ],
-  "exported_at": "2026-11-24 13:01:36"
+  "exported_at": "2026-11-25 09:01:15"
 }
